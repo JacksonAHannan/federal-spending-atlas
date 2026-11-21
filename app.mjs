@@ -618,7 +618,7 @@ async function init() {
     console.error(error);
   }
 }
-for (const id of ["method-open", "method-inline", "footer-method"])
+for (const id of ["method-open", "footer-method"])
   $(id).onclick = () => $("method").showModal();
 $("method-close").onclick = () => $("method").close();
 $("method").addEventListener("click", (e) => {
