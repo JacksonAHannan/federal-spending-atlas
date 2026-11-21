@@ -536,21 +536,8 @@ select {
 .live-item strong {
   font-weight: 600;
 }
-.data-note {
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--muted);
-  padding: 18px 0 25px;
-  max-width: 1100px;
-}
-.data-note strong {
-  color: var(--ink);
-  font-weight: 600;
-}
-.data-note button {
-  margin-left: 5px;
-}
 .rank-panel {
+  margin-top: 28px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 9px;

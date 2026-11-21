@@ -1,0 +1,11 @@
+# Actual payments (outlays)
+
+Verified November 21, 2026. This investigation answers whether payment data exist; it does not add a payments series to the dashboard.
+
+[USAspending's Analyst Guide](https://www.usaspending.gov/federal-spending-guide) defines outlays as money paid out. Its award-spending section says monthly reporting of award outlays became mandatory for all agencies in FY2022. COVID-supplemental-funded award reporting began in April 2020; reporting before those requirements was optional and may be incomplete. Thus FY2022 is the practical starting point to evaluate a broadly covered district payments series, not an assurance of perfect linkage or geographic accuracy.
+
+The [geography API contract](https://github.com/fedspendingtransparency/usaspending-api/blob/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_geography.md) exposes `total_outlays` only at `spending_level: awards`. The dashboard's transaction-level snapshots do not contain this field. A read-only request for AL-05, using FY2025 award filters, returned `total_outlays: 18451949420.92`. The complete request, response, and retrieval time are preserved in `data/raw/usaspending-outlays-probe.json`. This amount is exploratory evidence of availability, not a validated FY2025 district payment total and is not shown in the UI.
+
+The [endpoint implementation](https://github.com/fedspendingtransparency/usaspending-api/blob/master/usaspending_api/search/v2/views/spending_by_geography.py) sums award `total_outlays` after applying award search filters. It does not restrict those payments to a payment-date period. Inference: simply replacing annual obligations with this field would mislabel cumulative payment amounts as annual spending. A defensible annual payments map needs separate financial-report aggregation, verified fiscal-period handling, award linkage, and district joins. The guide explains that some financial/account records cannot be linked to an award.
+
+No metric values, data files used by the dashboard, or geographic assignments changed in this update. The requested inline explanation and its redundant Details button were removed; About the data remains accessible from the header and footer.

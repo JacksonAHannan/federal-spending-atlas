@@ -90,6 +90,11 @@
     "sha256": "fecd63a9786149048f4978fd6f03c45e872310eaca7548361ba93163a8995085"
   },
   {
+    "path": "data/raw/usaspending-outlays-probe.json",
+    "bytes": 1567,
+    "sha256": "f209e3d68a403f7a69ac51fc7426e0e1c3ae2874490679e8cbe91392acc407de"
+  },
+  {
     "path": "data/raw/usaspending-probe.json",
     "bytes": 53169,
     "sha256": "4449db6af6fed54670f40863a3247d77b8d10090a10be88b2d2f85204b1d84d8"

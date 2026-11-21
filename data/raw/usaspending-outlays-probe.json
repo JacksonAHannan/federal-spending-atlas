@@ -1,0 +1,53 @@
+{
+  "fetched_at": "2026-11-21T20:50:00.817083+00:00",
+  "endpoint": "https://api.usaspending.gov/api/v2/search/spending_by_geography/",
+  "request": {
+    "scope": "place_of_performance",
+    "geo_layer": "district",
+    "spending_level": "awards",
+    "filters": {
+      "time_period": [
+        {
+          "start_date": "2024-10-01",
+          "end_date": "2025-09-30"
+        }
+      ],
+      "award_type_codes": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "02",
+        "03",
+        "04",
+        "05"
+      ],
+      "place_of_performance_locations": [
+        {
+          "country": "USA",
+          "state": "AL",
+          "district_current": "05"
+        }
+      ]
+    }
+  },
+  "response": {
+    "scope": "place_of_performance",
+    "geo_layer": "district",
+    "spending_level": "awards",
+    "results": [
+      {
+        "shape_code": "0105",
+        "display_name": "AL-05",
+        "aggregated_amount": 98515605603.0,
+        "population": 729384,
+        "per_capita": 135066.86,
+        "total_outlays": 18451949420.92
+      }
+    ],
+    "messages": [
+      "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+      "The 'subawards' field will be deprecated in the future. Set 'spending_level' to 'subawards' instead. See documentation for more information."
+    ]
+  }
+}
