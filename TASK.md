@@ -1,11 +1,11 @@
 # Federal Spending Atlas
 
-Goal: deliver a local interactive congressional district dashboard using verified federal data.
+Goal: deliver an interactive congressional district dashboard on GitHub Pages using verified federal data.
 Non-goals: representative credit inferred from award totals, invented earmark locations, all federal expenditures.
 Constraints: preserve unrelated projects; GitHub publication authorized by the user on November 21, 2026; retain raw source data and reproducible transforms.
 
 ## Design
-Palette: ink #142f44, ocean #146b85, water #eaf3f7, mint #8cd4c0, white #ffffff, caution #9a5800. System sans for controls; Georgia display headline. Map is the main canvas, with ranked district list and selected district inspector. Spacious light blue cartographic workspace, restrained navy chrome. No decorative metric cards; statistics form one horizontal ledger. This is a data exploration tool, so map and filters lead rather than a marketing hero.
+Palette: ink #142f44, ocean #146b85, water #eaf3f7, mint #8cd4c0, white #ffffff, caution #9a5800. Arial/Helvetica throughout, following the user’s common-font preference. Map is the main canvas, with ranked district list and selected district inspector. Spacious light blue cartographic workspace, restrained navy chrome. No decorative metric cards; statistics form one horizontal ledger. This is a data exploration tool, so map and filters lead rather than a marketing hero.
 
 ## Checklist
 - [x] Verify USAspending geography endpoint, aggregation semantics, geographic vintage, and fetch real annual grant/contract snapshots.
@@ -54,7 +54,7 @@ Non-goals: assigning GAO projects to districts; using lifetime outlays as annual
 - [x] Load payment data and cycle obligations; validate joins and amount partitioning, including unmapped and unlinked records.
 - [x] Extend existing filters/map/rankings/exports and district trends with Payments / Obligations, cycle totals, and combined five-cycle view. Keep agency/program detail aligned or explicitly unavailable for unsupported measure.
 - [x] Add focused aggregation/data tests, browser-check desktop/mobile views and downloads; update method/run documentation.
-- [ ] Republish GitHub Pages and verify deployed behavior and asset hashes.
+- [x] Republish GitHub Pages and verify deployed behavior and asset hashes.
 
 Research delegation: bounded independent API feasibility investigation owns research/annual-outlays-api.md and data/raw/outlay-research-*; parent owns data pipeline, UI, integration, checks and publication.
 
@@ -67,3 +67,5 @@ UI checkpoint: Payments/Obligations measure selector, fiscal/cycle period select
 Accepted implementation: all fourteen national financial exports finished. All 462,491,832 CSV rows processed, exact annual ledgers reconcile mapped + unmatched and eligible + other/unlinked amounts. Earlier optional-reporting years remain labeled. Annual FY2022–2026, four measurable calendar cycles, four-cycle payment total, cumulative payments, five obligation cycles, and five-cycle obligation total are loaded. First 2017–2018 payments remain null and export as missing. Initial data payload remains compact; payment detail is loaded per period on demand. Asset/data version queries protect returning browsers from mixing old JSON/module schemas.
 
 Verification: 8 Node logic tests and 3 financial-parser fixtures pass; complete data checks pass for fourteen source ledgers, their selected period masks, all annual/cycle arithmetic, independent 2017 hash audit, first-quarter gap, cumulative-outlay field selection and combined agency rankings. Desktop/390px browser checks pass annual/cumulative payments, cycle navigation, unavailable CSV fields, actual payment detail, obligation request dates, map controls, GAO search and dialogs; no JS errors. Publication is next.
+
+Published and verified: main implementation 1b2e8ec; GitHub Pages commit 42d9380fa8840bf43937db9ce8c0ba07b0493127 reports built. Full browser checks pass against https://jacksonahannan.github.io/federal-spending-atlas/?v=20261121-payments-cycles, including annual/cumulative payments, cycle comparisons, first-cycle missing CSV values, period-aligned detail, mobile and navigation. All 17 changed hosted HTML/JS/CSS/data/detail assets match local SHA-256 hashes. Final source and working tree reconciled; no remaining blockers. Original File C archives retained in ignored data/downloads (6.8 GiB); exact source ledgers and provenance are tracked in GitHub.
