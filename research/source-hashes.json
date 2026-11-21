@@ -1,0 +1,97 @@
+[
+  {
+    "path": "data/raw/cb_2025_us_cd119_500k.zip",
+    "bytes": 7067743,
+    "sha256": "8e804518d333d67e24e25c61767c6a7c78fd0a0852179e8cc19c36fd66011010"
+  },
+  {
+    "path": "data/raw/gao-1. Overall data.csv",
+    "bytes": 7506662,
+    "sha256": "be0751965ceed9739b65b0ed387cacf5fe5bce8372df1c6f682b18774185f792"
+  },
+  {
+    "path": "data/raw/gao-2. Map - data by location.csv",
+    "bytes": 33674,
+    "sha256": "9728f4af3946a3693cb166207635f75f05c44a9639cd3ea3d2ebc2cfb0cd472b"
+  },
+  {
+    "path": "data/raw/gao-2022-2024.zip",
+    "bytes": 7172772,
+    "sha256": "6d1edfe1e16b80641ef3d2872550f49ec668cf74b2d1f8ba4ecbcc94dc02c6a4"
+  },
+  {
+    "path": "data/raw/gao-3. Map - data by loc, agency.csv",
+    "bytes": 817987,
+    "sha256": "532630f0be66e5faa92bc8d0c60901801d9b92b2a6ceda02cb2174296c183322"
+  },
+  {
+    "path": "data/raw/gao-4. Projects by requester SEE WARNING on XLSX readme tab.csv",
+    "bytes": 11888307,
+    "sha256": "8937bfdee94cf37cf47f8b04a600cc63d58d99beb7e51ef38c507aa646f2aef8"
+  },
+  {
+    "path": "data/raw/gao-source-1.html",
+    "bytes": 207988,
+    "sha256": "a36c8dd3ae455c6b82bf4c457d9f841d12c9240eeef05ed8bb13464656e0344f"
+  },
+  {
+    "path": "data/raw/gao-summary.json",
+    "bytes": 595,
+    "sha256": "9d6ea7724c32bd339b34db7e053b4e8806103721ecff72fc8206401b0688257b"
+  },
+  {
+    "path": "data/raw/usaspending-2022-contracts.json",
+    "bytes": 81745,
+    "sha256": "11b4ebc32aa4c4c3c2090799ab33c99e742dcae71f7c1323f068847884f546dd"
+  },
+  {
+    "path": "data/raw/usaspending-2022-grants.json",
+    "bytes": 81442,
+    "sha256": "efcd4f8472dcc9187fe7ee9266cc0504d5f2037940afa9bdf54a75883c228b8f"
+  },
+  {
+    "path": "data/raw/usaspending-2023-contracts.json",
+    "bytes": 81796,
+    "sha256": "5f436c8dd32e39b41155b0a94ea6d453409d999b788dc4691ded80972965a17b"
+  },
+  {
+    "path": "data/raw/usaspending-2023-grants.json",
+    "bytes": 81486,
+    "sha256": "7607b5ff4ed30bf5c4649fa4cb7c2f28afe5e913271a27fe87d8373c62882080"
+  },
+  {
+    "path": "data/raw/usaspending-2024-contracts.json",
+    "bytes": 81784,
+    "sha256": "4fb4ceebd2ce44840f4e69fefe106dd9f7bf65884b59563ae0751aa07bf50af2"
+  },
+  {
+    "path": "data/raw/usaspending-2024-grants.json",
+    "bytes": 81535,
+    "sha256": "891dc7c69dec98c2d1127e67c3b9e21063ef13adb8878b1b0881d29d4fd2ad54"
+  },
+  {
+    "path": "data/raw/usaspending-2025-contracts.json",
+    "bytes": 81775,
+    "sha256": "7ce0f9c44c40f51d1e4768548d01ecc601c52531403e92e0044451aea7c29d95"
+  },
+  {
+    "path": "data/raw/usaspending-2025-grants.json",
+    "bytes": 81521,
+    "sha256": "1d35526d8ef41c02ce08b501c3625f41dfbbcc729cfea06554186d6359432654"
+  },
+  {
+    "path": "data/raw/usaspending-2026-contracts.json",
+    "bytes": 81748,
+    "sha256": "addb9c4a34d6716e103864c09cb3a2e5606ba9bd3699978b56752747bd214b47"
+  },
+  {
+    "path": "data/raw/usaspending-2026-grants.json",
+    "bytes": 81294,
+    "sha256": "fecd63a9786149048f4978fd6f03c45e872310eaca7548361ba93163a8995085"
+  },
+  {
+    "path": "data/raw/usaspending-probe.json",
+    "bytes": 53169,
+    "sha256": "4449db6af6fed54670f40863a3247d77b8d10090a10be88b2d2f85204b1d84d8"
+  }
+]

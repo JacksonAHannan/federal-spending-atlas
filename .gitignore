@@ -1,0 +1,5 @@
+.venv/
+.firecrawl/
+__pycache__/
+research/*.png
+research/test-export.csv

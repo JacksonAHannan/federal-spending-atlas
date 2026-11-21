@@ -1,0 +1,26 @@
+{
+  "source": "https://files.gao.gov/multimedia/gao-26-107944/interactive/GAO_Tracking_the_Funds_data_2022-2024_GAO-26-107944.zip",
+  "retrieved_at": "2026-11-21",
+  "summary": {
+    "2022": {
+      "projects": 4963,
+      "appropriated": "9064392164",
+      "agencies": 18
+    },
+    "2023": {
+      "projects": 7233,
+      "appropriated": "15328321787",
+      "agencies": 19
+    },
+    "2024": {
+      "projects": 8098,
+      "appropriated": "14564834043",
+      "agencies": 19
+    },
+    "all": {
+      "projects": 20294,
+      "appropriated": "38957547994",
+      "agencies": 19
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# Preserve original government downloads byte-for-byte; omit raw-data diffs.
+data/raw/** -text -diff

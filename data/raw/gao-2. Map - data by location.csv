@@ -1,0 +1,441 @@
+State,Fiscal_year,View,Per_capita,Amount,Population,Number_of_projects_per_state,Agencies_with_projects
+Alabama,2022,Amount Appropriated Per Capita,True,116.70020158855642,,40,12
+Alaska,2022,Amount Appropriated Per Capita,True,338.2213980137301,,73,13
+Arizona,2022,Amount Appropriated Per Capita,True,16.06754808138232,,80,14
+Arkansas,2022,Amount Appropriated Per Capita,True,35.57877386667847,,14,6
+California,2022,Amount Appropriated Per Capita,True,19.77668620540361,,493,15
+Colorado,2022,Amount Appropriated Per Capita,True,32.194577447878,,109,13
+Connecticut,2022,Amount Appropriated Per Capita,True,41.3837099995163,,126,16
+Delaware,2022,Amount Appropriated Per Capita,True,95.11713760825826,,52,15
+District of Columbia,2022,Amount Appropriated Per Capita,True,22.369734488054334,,13,5
+Florida,2022,Amount Appropriated Per Capita,True,10.201698112971481,,159,13
+Georgia,2022,Amount Appropriated Per Capita,True,15.176656553972558,,96,14
+Guam,2022,Amount Appropriated Per Capita,True,17.742450587275115,,1,1
+Hawaii,2022,Amount Appropriated Per Capita,True,184.34987388560765,,77,15
+Idaho,2022,Amount Appropriated Per Capita,True,18.451159738585183,,11,7
+Illinois,2022,Amount Appropriated Per Capita,True,24.848258538016932,,240,17
+Indiana,2022,Amount Appropriated Per Capita,True,3.0284087547090417,,16,7
+Iowa,2022,Amount Appropriated Per Capita,True,11.722232907250488,,26,8
+Kansas,2022,Amount Appropriated Per Capita,True,45.724441702719886,,65,13
+Kentucky,2022,Amount Appropriated Per Capita,True,8.247977351150388,,37,10
+Louisiana,2022,Amount Appropriated Per Capita,True,38.905619261515085,,42,13
+Maine,2022,Amount Appropriated Per Capita,True,136.4336734913964,,127,16
+Maryland,2022,Amount Appropriated Per Capita,True,23.09824230374917,,139,16
+Massachusetts,2022,Amount Appropriated Per Capita,True,19.956372887708426,,121,15
+Michigan,2022,Amount Appropriated Per Capita,True,21.085049692678556,,175,14
+Minnesota,2022,Amount Appropriated Per Capita,True,27.232094541040034,,98,13
+Mississippi,2022,Amount Appropriated Per Capita,True,91.55970651620292,,90,14
+Missouri,2022,Amount Appropriated Per Capita,True,51.80461956887361,,81,13
+Montana,2022,Amount Appropriated Per Capita,True,0.5904771241039561,,2,1
+Nebraska,2022,Amount Appropriated Per Capita,True,8.633304364668504,,5,4
+Nevada,2022,Amount Appropriated Per Capita,True,32.90883312466278,,66,14
+New Hampshire,2022,Amount Appropriated Per Capita,True,54.10864494178331,,94,12
+New Jersey,2022,Amount Appropriated Per Capita,True,19.770733194573914,,171,16
+New Mexico,2022,Amount Appropriated Per Capita,True,88.1706059359295,,105,16
+New York,2022,Amount Appropriated Per Capita,True,21.670318014712052,,325,16
+North Carolina,2022,Amount Appropriated Per Capita,True,21.624145476436727,,84,13
+North Dakota,2022,Amount Appropriated Per Capita,True,0.0,781057.0,0,0
+Northern Mariana Islands,2022,Amount Appropriated Per Capita,True,87.95595920349686,,9,6
+Ohio,2022,Amount Appropriated Per Capita,True,16.866353554130402,,136,15
+Oklahoma,2022,Amount Appropriated Per Capita,True,32.89430382623541,,45,9
+Oregon,2022,Amount Appropriated Per Capita,True,43.56326099997838,,163,14
+Pennsylvania,2022,Amount Appropriated Per Capita,True,14.266521851108747,,185,15
+Puerto Rico,2022,Amount Appropriated Per Capita,True,0.7440677213422908,,5,3
+Rhode Island,2022,Amount Appropriated Per Capita,True,119.9133522753111,,119,16
+South Carolina,2022,Amount Appropriated Per Capita,True,70.49376911781253,,37,11
+South Dakota,2022,Amount Appropriated Per Capita,True,68.48238419826696,,5,4
+Tennessee,2022,Amount Appropriated Per Capita,True,4.3516849494388845,,24,8
+Texas,2022,Amount Appropriated Per Capita,True,9.368838276057563,,146,14
+Utah,2022,Amount Appropriated Per Capita,True,8.039330284853524,,18,7
+Vermont,2022,Amount Appropriated Per Capita,True,319.7153185567361,,138,17
+Virgin Islands,2022,Amount Appropriated Per Capita,True,51.5970515970516,,6,3
+Virginia,2022,Amount Appropriated Per Capita,True,17.86067249257361,,105,14
+Washington,2022,Amount Appropriated Per Capita,True,33.685160472833175,,162,15
+West Virginia,2022,Amount Appropriated Per Capita,True,161.94470761955958,,165,15
+Wisconsin,2022,Amount Appropriated Per Capita,True,27.283892123526936,,77,14
+Wyoming,2022,Amount Appropriated Per Capita,True,1.1384819161058126,,2,1
+Alabama,2022,Amount Appropriated Per State,False,592391346.0,,40,12
+Alaska,2022,Amount Appropriated Per State,False,248404000.0,,73,13
+Arizona,2022,Amount Appropriated Per State,False,118539396.42857143,,80,14
+Arkansas,2022,Amount Appropriated Per State,False,108433571.42857143,,14,6
+California,2022,Amount Appropriated Per State,False,774107239.0,,493,15
+Colorado,2022,Amount Appropriated Per State,False,188368380.0,,109,13
+Connecticut,2022,Amount Appropriated Per State,False,149723159.0,,126,16
+Delaware,2022,Amount Appropriated Per State,False,97078928.57142857,,52,15
+District of Columbia,2022,Amount Appropriated Per State,False,15138158.57142857,,13,5
+Florida,2022,Amount Appropriated Per State,False,228306985.0,,159,13
+Georgia,2022,Amount Appropriated Per State,False,165908250.0,,96,14
+Guam,2022,Amount Appropriated Per State,False,3000000.0,,1,1
+Hawaii,2022,Amount Appropriated Per State,False,265530000.0,,77,15
+Idaho,2022,Amount Appropriated Per State,False,35874571.428571425,,11,7
+Illinois,2022,Amount Appropriated Per State,False,313630271.42857146,,240,17
+Indiana,2022,Amount Appropriated Per State,False,20728080.0,,16,7
+Iowa,2022,Amount Appropriated Per State,False,37544202.0,,26,8
+Kansas,2022,Amount Appropriated Per State,False,134307500.0,,65,13
+Kentucky,2022,Amount Appropriated Per State,False,37274531.42857143,,37,10
+Louisiana,2022,Amount Appropriated Per State,False,178720237.42857143,,42,13
+Maine,2022,Amount Appropriated Per State,False,189768598.0,,127,16
+Maryland,2022,Amount Appropriated Per State,False,143034479.57142857,,139,16
+Massachusetts,2022,Amount Appropriated Per State,False,140142990.0,,121,15
+Michigan,2022,Amount Appropriated Per State,False,211923241.0,,175,14
+Minnesota,2022,Amount Appropriated Per State,False,155811724.0,,98,13
+Mississippi,2022,Amount Appropriated Per State,False,269363071.42857146,,90,14
+Missouri,2022,Amount Appropriated Per State,False,320122191.42857146,,81,13
+Montana,2022,Amount Appropriated Per State,False,662571.4285714286,,2,1
+Nebraska,2022,Amount Appropriated Per State,False,17027000.0,,5,4
+Nevada,2022,Amount Appropriated Per State,False,104522271.42857143,,66,14
+New Hampshire,2022,Amount Appropriated Per State,False,75572354.0,,94,12
+New Jersey,2022,Amount Appropriated Per State,False,183773453.0,,171,16
+New Mexico,2022,Amount Appropriated Per State,False,186381022.42857143,,105,16
+New York,2022,Amount Appropriated Per State,False,426986463.57142854,,325,16
+North Carolina,2022,Amount Appropriated Per State,False,231611746.0,,84,13
+North Dakota,2022,Amount Appropriated Per State,False,0.0,781057.0,0,0
+Northern Mariana Islands,2022,Amount Appropriated Per State,False,4527533.0,,9,6
+Ohio,2022,Amount Appropriated Per State,False,198649787.0,,136,15
+Oklahoma,2022,Amount Appropriated Per State,False,132440000.0,,45,9
+Oregon,2022,Amount Appropriated Per State,False,185029375.0,,163,14
+Pennsylvania,2022,Amount Appropriated Per State,False,185250643.57142857,,185,15
+Puerto Rico,2022,Amount Appropriated Per State,False,2396000.0,,5,3
+Rhode Island,2022,Amount Appropriated Per State,False,131844491.0,,119,16
+South Carolina,2022,Amount Appropriated Per State,False,372766469.0,,37,11
+South Dakota,2022,Amount Appropriated Per State,False,62300000.0,,5,4
+Tennessee,2022,Amount Appropriated Per State,False,30732543.42857143,,24,8
+Texas,2022,Amount Appropriated Per State,False,282128399.0,,146,14
+Utah,2022,Amount Appropriated Per State,False,27261457.42857143,,18,7
+Vermont,2022,Amount Appropriated Per State,False,207220926.0,,138,17
+Virgin Islands,2022,Amount Appropriated Per State,False,5439000.0,,6,3
+Virginia,2022,Amount Appropriated Per State,False,155091613.57142857,,105,14
+Washington,2022,Amount Appropriated Per State,False,262546284.0,,162,15
+West Virginia,2022,Amount Appropriated Per State,False,287309668.57142854,,165,15
+Wisconsin,2022,Amount Appropriated Per State,False,161083417.0,,77,14
+Wyoming,2022,Amount Appropriated Per State,False,662571.4285714286,,2,1
+Alabama,2023,Amount Appropriated Per Capita,True,152.2455537897791,,70,14
+Alaska,2023,Amount Appropriated Per Capita,True,663.6461147845919,,132,16
+Arizona,2023,Amount Appropriated Per Capita,True,28.848270453191205,,127,13
+Arkansas,2023,Amount Appropriated Per Capita,True,51.40964396703921,,36,13
+California,2023,Amount Appropriated Per Capita,True,35.20936812867717,,732,15
+Colorado,2023,Amount Appropriated Per Capita,True,29.705266211617385,,127,13
+Connecticut,2023,Amount Appropriated Per Capita,True,65.38304781496026,,173,15
+Delaware,2023,Amount Appropriated Per Capita,True,100.70116159135793,,59,13
+District of Columbia,2023,Amount Appropriated Per Capita,True,33.65228334817349,,18,5
+Florida,2023,Amount Appropriated Per Capita,True,30.41290598138353,,287,14
+Georgia,2023,Amount Appropriated Per Capita,True,29.37921286876724,,194,16
+Guam,2023,Amount Appropriated Per Capita,True,8.267879288962382,,1,1
+Hawaii,2023,Amount Appropriated Per Capita,True,399.7159999361731,,97,14
+Idaho,2023,Amount Appropriated Per Capita,True,18.671472389836854,,14,6
+Illinois,2023,Amount Appropriated Per Capita,True,36.96419374100789,,346,15
+Indiana,2023,Amount Appropriated Per Capita,True,5.657260014380539,,30,7
+Iowa,2023,Amount Appropriated Per Capita,True,23.681647855123675,,40,10
+Kansas,2023,Amount Appropriated Per Capita,True,78.09409893274605,,81,14
+Kentucky,2023,Amount Appropriated Per Capita,True,24.037076470219827,,60,10
+Louisiana,2023,Amount Appropriated Per Capita,True,70.556667497081,,79,15
+Maine,2023,Amount Appropriated Per Capita,True,250.25000464403143,,216,15
+Maryland,2023,Amount Appropriated Per Capita,True,42.71265478774381,,207,17
+Massachusetts,2023,Amount Appropriated Per Capita,True,34.54966173112607,,171,15
+Michigan,2023,Amount Appropriated Per Capita,True,33.38837615174948,,213,13
+Minnesota,2023,Amount Appropriated Per Capita,True,44.799339063397376,,143,16
+Mississippi,2023,Amount Appropriated Per Capita,True,108.86435587182807,,146,16
+Missouri,2023,Amount Appropriated Per Capita,True,82.39182749847859,,123,13
+Montana,2023,Amount Appropriated Per Capita,True,0.0,1131302.0,0,0
+Nebraska,2023,Amount Appropriated Per Capita,True,14.028877227013517,,11,8
+Nevada,2023,Amount Appropriated Per Capita,True,59.3270364921448,,101,14
+New Hampshire,2023,Amount Appropriated Per Capita,True,82.9421950807268,,117,15
+New Jersey,2023,Amount Appropriated Per Capita,True,39.852486907282795,,258,15
+New Mexico,2023,Amount Appropriated Per Capita,True,106.3017993893919,,154,17
+New York,2023,Amount Appropriated Per Capita,True,33.484720682348325,,445,17
+North Carolina,2023,Amount Appropriated Per Capita,True,22.98245954555149,,115,15
+North Dakota,2023,Amount Appropriated Per Capita,True,0.0,789047.0,0,0
+Northern Mariana Islands,2023,Amount Appropriated Per Capita,True,523.2124378594405,,14,5
+Ohio,2023,Amount Appropriated Per Capita,True,28.34422795130664,,204,15
+Oklahoma,2023,Amount Appropriated Per Capita,True,144.8706633214252,,80,13
+Oregon,2023,Amount Appropriated Per Capita,True,62.39128179943215,,163,15
+Pennsylvania,2023,Amount Appropriated Per Capita,True,28.31640046671764,,263,16
+Puerto Rico,2023,Amount Appropriated Per Capita,True,6.08123124097944,,10,4
+Rhode Island,2023,Amount Appropriated Per Capita,True,178.961690330778,,138,16
+South Carolina,2023,Amount Appropriated Per Capita,True,55.81496056854056,,63,12
+South Dakota,2023,Amount Appropriated Per Capita,True,74.02224751035875,,10,4
+Tennessee,2023,Amount Appropriated Per Capita,True,13.896741380892589,,58,10
+Texas,2023,Amount Appropriated Per Capita,True,25.96405373099161,,247,16
+Utah,2023,Amount Appropriated Per Capita,True,24.76507178450882,,41,9
+Vermont,2023,Amount Appropriated Per Capita,True,410.4438915505897,,104,16
+Virgin Islands,2023,Amount Appropriated Per Capita,True,288.793636874863,,14,7
+Virginia,2023,Amount Appropriated Per Capita,True,33.73540579883535,,182,16
+Washington,2023,Amount Appropriated Per Capita,True,58.98033311612619,,217,15
+West Virginia,2023,Amount Appropriated Per Capita,True,170.35377507420228,,219,17
+Wisconsin,2023,Amount Appropriated Per Capita,True,40.18120920915181,,91,15
+Wyoming,2023,Amount Appropriated Per Capita,True,8.599015155529196,,3,3
+Alabama,2023,Amount Appropriated Per State,False,779142960.0,,70,14
+Alaska,2023,Amount Appropriated Per State,False,488782000.0,,132,16
+Arizona,2023,Amount Appropriated Per State,False,215583904.0,,127,13
+Arkansas,2023,Amount Appropriated Per State,False,157800000.0,,36,13
+California,2023,Amount Appropriated Per State,False,1380161212.0,,732,15
+Colorado,2023,Amount Appropriated Per State,False,175300846.0,,127,13
+Connecticut,2023,Amount Appropriated Per State,False,238191947.0,,173,15
+Delaware,2023,Amount Appropriated Per State,False,104369000.0,,59,13
+District of Columbia,2023,Amount Appropriated Per State,False,23130022.0,,18,5
+Florida,2023,Amount Appropriated Per State,False,696603597.0,,287,14
+Georgia,2023,Amount Appropriated Per State,False,325064303.0,,194,16
+Guam,2023,Amount Appropriated Per State,False,1400000.0,,1,1
+Hawaii,2023,Amount Appropriated Per State,False,576145446.0,,97,14
+Idaho,2023,Amount Appropriated Per State,False,36803750.0,,14,6
+Illinois,2023,Amount Appropriated Per State,False,467310911.0,,346,15
+Indiana,2023,Amount Appropriated Per State,False,38922690.0,,30,7
+Iowa,2023,Amount Appropriated Per State,False,76217347.0,,40,10
+Kansas,2023,Amount Appropriated Per State,False,230494733.0,,81,14
+Kentucky,2023,Amount Appropriated Per State,False,109383000.0,,60,10
+Louisiana,2023,Amount Appropriated Per State,False,323719000.0,,79,15
+Maine,2023,Amount Appropriated Per State,False,350261418.0,,216,15
+Maryland,2023,Amount Appropriated Per State,False,265547223.0,,207,17
+Massachusetts,2023,Amount Appropriated Per State,False,244147534.0,,171,15
+Michigan,2023,Amount Appropriated Per State,False,336666883.0,,213,13
+Minnesota,2023,Amount Appropriated Per State,False,257732748.0,,143,16
+Mississippi,2023,Amount Appropriated Per State,False,320406524.0,,146,16
+Missouri,2023,Amount Appropriated Per State,False,511491596.0,,123,13
+Montana,2023,Amount Appropriated Per State,False,0.0,1131302.0,0,0
+Nebraska,2023,Amount Appropriated Per State,False,27887500.0,,11,8
+Nevada,2023,Amount Appropriated Per State,False,190698631.0,,101,14
+New Hampshire,2023,Amount Appropriated Per State,False,116301463.0,,117,15
+New Jersey,2023,Amount Appropriated Per State,False,373802060.0,,258,15
+New Mexico,2023,Amount Appropriated Per State,False,225483550.0,,154,17
+New York,2023,Amount Appropriated Per State,False,660900221.0,,445,17
+North Carolina,2023,Amount Appropriated Per State,False,250076486.0,,115,15
+North Dakota,2023,Amount Appropriated Per State,False,0.0,789047.0,0,0
+Northern Mariana Islands,2023,Amount Appropriated Per State,False,26838182.0,,14,5
+Ohio,2023,Amount Appropriated Per State,False,335143115.0,,204,15
+Oklahoma,2023,Amount Appropriated Per State,False,588737281.0,,80,13
+Oregon,2023,Amount Appropriated Per State,False,265390863.0,,163,15
+Pennsylvania,2023,Amount Appropriated Per State,False,368615001.0,,263,16
+Puerto Rico,2023,Amount Appropriated Per State,False,19483000.0,,10,4
+Rhode Island,2023,Amount Appropriated Per State,False,197471519.0,,138,16
+South Carolina,2023,Amount Appropriated Per State,False,300721519.0,,63,12
+South Dakota,2023,Amount Appropriated Per State,False,67975000.0,,10,4
+Tennessee,2023,Amount Appropriated Per State,False,99338132.0,,58,10
+Texas,2023,Amount Appropriated Per State,False,797820587.0,,247,16
+Utah,2023,Amount Appropriated Per State,False,85271640.0,,41,9
+Vermont,2023,Amount Appropriated Per State,False,266258236.0,,104,16
+Virgin Islands,2023,Amount Appropriated Per State,False,30299362.0,,14,7
+Virginia,2023,Amount Appropriated Per State,False,294668143.0,,182,16
+Washington,2023,Amount Appropriated Per State,False,463427351.0,,217,15
+West Virginia,2023,Amount Appropriated Per State,False,301610507.0,,219,17
+Wisconsin,2023,Amount Appropriated Per State,False,238290844.0,,91,15
+Wyoming,2023,Amount Appropriated Per State,False,5031000.0,,3,3
+Alabama,2024,Amount Appropriated Per Capita,True,82.56713571950068,,140,12
+Alaska,2024,Amount Appropriated Per Capita,True,635.8467451120276,,194,16
+Arizona,2024,Amount Appropriated Per Capita,True,21.705097443156234,,108,13
+Arkansas,2024,Amount Appropriated Per Capita,True,148.1203320603791,,54,12
+California,2024,Amount Appropriated Per Capita,True,26.750862355081036,,766,16
+Colorado,2024,Amount Appropriated Per Capita,True,26.427643809233196,,161,15
+Connecticut,2024,Amount Appropriated Per Capita,True,47.24493989092449,,181,14
+Delaware,2024,Amount Appropriated Per Capita,True,139.56090990702373,,71,15
+District of Columbia,2024,Amount Appropriated Per Capita,True,19.76838447846209,,12,6
+Florida,2024,Amount Appropriated Per Capita,True,20.75014141078764,,268,10
+Georgia,2024,Amount Appropriated Per Capita,True,27.3747887539184,,197,16
+Guam,2024,Amount Appropriated Per Capita,True,42.49345256352783,,6,2
+Hawaii,2024,Amount Appropriated Per Capita,True,338.17695447071054,,125,16
+Idaho,2024,Amount Appropriated Per Capita,True,40.26481941439833,,21,7
+Illinois,2024,Amount Appropriated Per Capita,True,29.148814829839296,,316,14
+Indiana,2024,Amount Appropriated Per Capita,True,3.893847803560661,,28,7
+Iowa,2024,Amount Appropriated Per Capita,True,33.800834678394615,,46,9
+Kansas,2024,Amount Appropriated Per Capita,True,91.42083332491752,,95,14
+Kentucky,2024,Amount Appropriated Per Capita,True,35.18419270858305,,65,8
+Louisiana,2024,Amount Appropriated Per Capita,True,71.10958253402757,,95,13
+Maine,2024,Amount Appropriated Per Capita,True,428.15813815113347,,260,16
+Maryland,2024,Amount Appropriated Per Capita,True,38.66825977691982,,216,18
+Massachusetts,2024,Amount Appropriated Per Capita,True,29.797132523870328,,201,16
+Michigan,2024,Amount Appropriated Per Capita,True,32.58278496072022,,242,15
+Minnesota,2024,Amount Appropriated Per Capita,True,42.828010697459796,,154,15
+Mississippi,2024,Amount Appropriated Per Capita,True,183.48102152702384,,199,17
+Missouri,2024,Amount Appropriated Per Capita,True,19.671034955598184,,57,7
+Montana,2024,Amount Appropriated Per Capita,True,32.527680406239156,,18,4
+Nebraska,2024,Amount Appropriated Per Capita,True,97.87412644947678,,66,10
+Nevada,2024,Amount Appropriated Per Capita,True,60.16138696165213,,114,14
+New Hampshire,2024,Amount Appropriated Per Capita,True,83.75728017532599,,121,16
+New Jersey,2024,Amount Appropriated Per Capita,True,28.997986250565006,,231,14
+New Mexico,2024,Amount Appropriated Per Capita,True,83.83045163183608,,215,17
+New York,2024,Amount Appropriated Per Capita,True,32.941502517107544,,454,16
+North Carolina,2024,Amount Appropriated Per Capita,True,24.622360045569337,,149,12
+North Dakota,2024,Amount Appropriated Per Capita,True,0.0,796568.0,0,0
+Northern Mariana Islands,2024,Amount Appropriated Per Capita,True,252.40688211588875,,15,5
+Ohio,2024,Amount Appropriated Per Capita,True,30.21652151623825,,263,16
+Oklahoma,2024,Amount Appropriated Per Capita,True,62.7311723197261,,49,10
+Oregon,2024,Amount Appropriated Per Capita,True,54.904716842240546,,154,16
+Pennsylvania,2024,Amount Appropriated Per Capita,True,30.837586300608272,,388,17
+Puerto Rico,2024,Amount Appropriated Per Capita,True,3.6918235754121924,,14,3
+Rhode Island,2024,Amount Appropriated Per Capita,True,148.31533801788711,,156,16
+South Carolina,2024,Amount Appropriated Per Capita,True,75.13655266972094,,83,14
+South Dakota,2024,Amount Appropriated Per Capita,True,157.6531710266052,,15,7
+Tennessee,2024,Amount Appropriated Per Capita,True,49.88136529348687,,67,8
+Texas,2024,Amount Appropriated Per Capita,True,23.931580628203907,,330,10
+Utah,2024,Amount Appropriated Per Capita,True,32.00047196178019,,58,7
+Vermont,2024,Amount Appropriated Per Capita,True,155.02737269330592,,83,16
+Virgin Islands,2024,Amount Appropriated Per Capita,True,97.50499631144793,,12,4
+Virginia,2024,Amount Appropriated Per Capita,True,29.23551364674905,,197,18
+Washington,2024,Amount Appropriated Per Capita,True,56.10779298784389,,241,15
+West Virginia,2024,Amount Appropriated Per Capita,True,219.35883796738096,,271,18
+Wisconsin,2024,Amount Appropriated Per Capita,True,32.90104655698103,,115,15
+Wyoming,2024,Amount Appropriated Per Capita,True,28.999160290237146,,11,3
+Alabama,2024,Amount Appropriated Per State,False,425856433.3333333,,140,12
+Alaska,2024,Amount Appropriated Per State,False,470611159.0,,194,16
+Arizona,2024,Amount Appropriated Per State,False,164576383.57142857,,108,13
+Arkansas,2024,Amount Appropriated Per State,False,457448020.0,,54,12
+California,2024,Amount Appropriated Per State,False,1054820289.0,,766,16
+Colorado,2024,Amount Appropriated Per State,False,157442503.0,,161,15
+Connecticut,2024,Amount Appropriated Per State,False,173628414.0,,181,14
+Delaware,2024,Amount Appropriated Per State,False,146806493.6666667,,71,15
+District of Columbia,2024,Amount Appropriated Per State,False,13882348.0,,12,6
+Florida,2024,Amount Appropriated Per State,False,484976766.3333333,,268,10
+Georgia,2024,Amount Appropriated Per State,False,306074173.3333333,,197,16
+Guam,2024,Amount Appropriated Per State,False,7204000.0,,6,2
+Hawaii,2024,Amount Appropriated Per State,False,489053250.0,,125,16
+Idaho,2024,Amount Appropriated Per State,False,80594827.57142858,,21,7
+Illinois,2024,Amount Appropriated Per State,False,370486042.0,,316,14
+Indiana,2024,Amount Appropriated Per State,False,26962073.0,,28,7
+Iowa,2024,Amount Appropriated Per State,False,109565000.0,,46,9
+Kansas,2024,Amount Appropriated Per State,False,271575276.0,,95,14
+Kentucky,2024,Amount Appropriated Per State,False,161438164.66666666,,65,8
+Louisiana,2024,Amount Appropriated Per State,False,326943372.0,,95,13
+Maine,2024,Amount Appropriated Per State,False,601567322.0,,260,16
+Maryland,2024,Amount Appropriated Per State,False,242187818.0,,216,18
+Massachusetts,2024,Amount Appropriated Per State,False,212637433.0,,201,16
+Michigan,2024,Amount Appropriated Per State,False,330404395.0,,242,15
+Minnesota,2024,Amount Appropriated Per State,False,248109133.0,,154,15
+Mississippi,2024,Amount Appropriated Per State,False,539992903.0,,199,17
+Missouri,2024,Amount Appropriated Per State,False,122854780.0,,57,7
+Montana,2024,Amount Appropriated Per State,False,36991551.57142857,,18,4
+Nebraska,2024,Amount Appropriated Per State,False,196283135.0,,66,10
+Nevada,2024,Amount Appropriated Per State,False,196575346.57142857,,114,14
+New Hampshire,2024,Amount Appropriated Per State,False,118016688.0,,121,16
+New Jersey,2024,Amount Appropriated Per State,False,275505546.6666667,,231,14
+New Mexico,2024,Amount Appropriated Per State,False,178580322.57142857,,215,17
+New York,2024,Amount Appropriated Per State,False,654457000.0,,454,16
+North Carolina,2024,Amount Appropriated Per State,False,271979180.0,,149,12
+North Dakota,2024,Amount Appropriated Per State,False,0.0,796568.0,0,0
+Northern Mariana Islands,2024,Amount Appropriated Per State,False,12902535.0,,15,5
+Ohio,2024,Amount Appropriated Per State,False,359072111.0,,263,16
+Oklahoma,2024,Amount Appropriated Per State,False,256908804.0,,49,10
+Oregon,2024,Amount Appropriated Per State,False,234573320.0,,154,16
+Pennsylvania,2024,Amount Appropriated Per State,False,403317112.6666667,,388,17
+Puerto Rico,2024,Amount Appropriated Per State,False,11826000.0,,14,3
+Rhode Island,2024,Amount Appropriated Per State,False,164972337.0,,156,16
+South Carolina,2024,Amount Appropriated Per State,False,411660474.0,,83,14
+South Dakota,2024,Amount Appropriated Per State,False,145777000.0,,15,7
+Tennessee,2024,Amount Appropriated Per State,False,360530038.0,,67,8
+Texas,2024,Amount Appropriated Per State,False,748839045.0,,330,10
+Utah,2024,Amount Appropriated Per State,False,112117269.57142857,,58,7
+Vermont,2024,Amount Appropriated Per State,False,100534166.0,,83,16
+Virgin Islands,2024,Amount Appropriated Per State,False,10177279.0,,12,4
+Virginia,2024,Amount Appropriated Per State,False,257599811.66666666,,197,18
+Washington,2024,Amount Appropriated Per State,False,446515916.0,,241,15
+West Virginia,2024,Amount Appropriated Per State,False,388260536.6666666,,271,18
+Wisconsin,2024,Amount Appropriated Per State,False,196122316.0,,115,15
+Wyoming,2024,Amount Appropriated Per State,False,17040428.571428575,,11,3
+Alabama,All years,Amount Appropriated Per Capita,True,351.51289109783613,,250,16
+Alaska,All years,Amount Appropriated Per Capita,True,1637.7142579103484,,399,16
+Arizona,All years,Amount Appropriated Per Capita,True,66.62091597772977,,315,16
+Arkansas,All years,Amount Appropriated Per Capita,True,235.10874989409672,,104,16
+California,All years,Amount Appropriated Per Capita,True,81.73691668916166,,1991,16
+Colorado,All years,Amount Appropriated Per Capita,True,88.32748746872859,,397,17
+Connecticut,All years,Amount Appropriated Per Capita,True,154.01169770540108,,480,17
+Delaware,All years,Amount Appropriated Per Capita,True,335.3792091066399,,182,16
+District of Columbia,All years,Amount Appropriated Per Capita,True,75.79040231468991,,43,9
+Florida,All years,Amount Appropriated Per Capita,True,61.3647455051426,,714,15
+Georgia,All years,Amount Appropriated Per Capita,True,71.9306581766582,,487,17
+Guam,All years,Amount Appropriated Per Capita,True,68.50378243976533,,8,2
+Hawaii,All years,Amount Appropriated Per Capita,True,922.2428282924917,,299,17
+Idaho,All years,Amount Appropriated Per Capita,True,77.38745154282036,,46,11
+Illinois,All years,Amount Appropriated Per Capita,True,90.96126710886428,,902,18
+Indiana,All years,Amount Appropriated Per Capita,True,12.579516572650244,,74,10
+Iowa,All years,Amount Appropriated Per Capita,True,69.20471544076875,,112,13
+Kansas,All years,Amount Appropriated Per Capita,True,215.2393739603835,,241,16
+Kentucky,All years,Amount Appropriated Per Capita,True,67.46924652995324,,162,12
+Louisiana,All years,Amount Appropriated Per Capita,True,180.5718692926237,,216,15
+Maine,All years,Amount Appropriated Per Capita,True,814.8418162865611,,603,16
+Maryland,All years,Amount Appropriated Per Capita,True,104.47915686841296,,562,18
+Massachusetts,All years,Amount Appropriated Per Capita,True,84.30316714270461,,493,16
+Michigan,All years,Amount Appropriated Per Capita,True,87.05621080514828,,630,15
+Minnesota,All years,Amount Appropriated Per Capita,True,114.85944430189714,,395,16
+Mississippi,All years,Amount Appropriated Per Capita,True,383.90508391505495,,435,17
+Missouri,All years,Amount Appropriated Per Capita,True,153.86748202295024,,261,13
+Montana,All years,Amount Appropriated Per Capita,True,33.11815753034311,,20,4
+Nebraska,All years,Amount Appropriated Per Capita,True,120.53630804115876,,82,13
+Nevada,All years,Amount Appropriated Per Capita,True,152.39725657845975,,281,15
+New Hampshire,All years,Amount Appropriated Per Capita,True,220.80812019783642,,332,16
+New Jersey,All years,Amount Appropriated Per Capita,True,88.62120635242175,,660,17
+New Mexico,All years,Amount Appropriated Per Capita,True,278.30285695715713,,474,19
+New York,All years,Amount Appropriated Per Capita,True,88.09654121416786,,1224,17
+North Carolina,All years,Amount Appropriated Per Capita,True,69.22896506755747,,348,16
+North Dakota,All years,Amount Appropriated Per Capita,True,0.0,,0,0
+Northern Mariana Islands,All years,Amount Appropriated Per Capita,True,863.575279178826,,38,8
+Ohio,All years,Amount Appropriated Per Capita,True,75.42710302167526,,603,16
+Oklahoma,All years,Amount Appropriated Per Capita,True,240.49613946738648,,174,15
+Oregon,All years,Amount Appropriated Per Capita,True,160.85925964165105,,480,16
+Pennsylvania,All years,Amount Appropriated Per Capita,True,73.42050861843461,,836,17
+Puerto Rico,All years,Amount Appropriated Per Capita,True,10.517122537733922,,29,5
+Rhode Island,All years,Amount Appropriated Per Capita,True,447.1903806239762,,413,17
+South Carolina,All years,Amount Appropriated Per Capita,True,201.4452823560741,,183,15
+South Dakota,All years,Amount Appropriated Per Capita,True,300.1578027352309,,30,7
+Tennessee,All years,Amount Appropriated Per Capita,True,68.12979162381835,,149,12
+Texas,All years,Amount Appropriated Per Capita,True,59.264472635253256,,723,16
+Utah,All years,Amount Appropriated Per Capita,True,64.80487403114252,,117,11
+Vermont,All years,Amount Appropriated Per Capita,True,885.1865828006312,,325,18
+Virgin Islands,All years,Amount Appropriated Per Capita,True,437.8956847833626,,32,9
+Virginia,All years,Amount Appropriated Per Capita,True,80.83159193815789,,484,18
+Washington,All years,Amount Appropriated Per Capita,True,148.77328657680334,,620,15
+West Virginia,All years,Amount Appropriated Per Capita,True,551.6573206611429,,655,18
+Wisconsin,All years,Amount Appropriated Per Capita,True,100.36614788965969,,283,16
+Wyoming,All years,Amount Appropriated Per Capita,True,38.736657361872155,,16,4
+Alabama,All years,Amount Appropriated Per State,False,1797390739.3333333,,250,16
+Alaska,All years,Amount Appropriated Per State,False,1207797159.0,,399,16
+Arizona,All years,Amount Appropriated Per State,False,498699684.0,,315,16
+Arkansas,All years,Amount Appropriated Per State,False,723681591.4285715,,104,16
+California,All years,Amount Appropriated Per State,False,3209088740.0,,1991,16
+Colorado,All years,Amount Appropriated Per State,False,521111729.0,,397,17
+Connecticut,All years,Amount Appropriated Per State,False,561543520.0,,480,17
+Delaware,All years,Amount Appropriated Per State,False,348254422.2380952,,182,16
+District of Columbia,All years,Amount Appropriated Per State,False,52150528.57142857,,43,9
+Florida,All years,Amount Appropriated Per State,False,1409887348.3333333,,714,15
+Georgia,All years,Amount Appropriated Per State,False,797046726.3333333,,487,17
+Guam,All years,Amount Appropriated Per State,False,11604000.0,,8,2
+Hawaii,All years,Amount Appropriated Per State,False,1330728696.0,,299,17
+Idaho,All years,Amount Appropriated Per State,False,153273149.0,,46,11
+Illinois,All years,Amount Appropriated Per State,False,1151427224.4285715,,902,18
+Indiana,All years,Amount Appropriated Per State,False,86612843.0,,74,10
+Iowa,All years,Amount Appropriated Per State,False,223326549.0,,112,13
+Kansas,All years,Amount Appropriated Per State,False,636377509.0,,241,16
+Kentucky,All years,Amount Appropriated Per State,False,308095696.0952381,,162,12
+Louisiana,All years,Amount Appropriated Per State,False,829382609.4285715,,216,15
+Maine,All years,Amount Appropriated Per State,False,1141597338.0,,603,16
+Maryland,All years,Amount Appropriated Per State,False,650769520.5714285,,562,18
+Massachusetts,All years,Amount Appropriated Per State,False,596927957.0,,493,16
+Michigan,All years,Amount Appropriated Per State,False,878994519.0,,630,15
+Minnesota,All years,Amount Appropriated Per State,False,661653605.0,,395,16
+Mississippi,All years,Amount Appropriated Per State,False,1129762498.4285715,,435,17
+Missouri,All years,Amount Appropriated Per State,False,954468567.4285715,,261,13
+Montana,All years,Amount Appropriated Per State,False,37654123.0,,20,4
+Nebraska,All years,Amount Appropriated Per State,False,241197635.0,,82,13
+Nevada,All years,Amount Appropriated Per State,False,491796249.0,,281,15
+New Hampshire,All years,Amount Appropriated Per State,False,309890505.0,,332,16
+New Jersey,All years,Amount Appropriated Per State,False,833081059.6666666,,660,17
+New Mexico,All years,Amount Appropriated Per State,False,590444895.0,,474,19
+New York,All years,Amount Appropriated Per State,False,1742343684.5714285,,1224,17
+North Carolina,All years,Amount Appropriated Per State,False,753667412.0,,348,16
+North Dakota,All years,Amount Appropriated Per State,False,0.0,,0,0
+Northern Mariana Islands,All years,Amount Appropriated Per State,False,44268250.0,,38,8
+Ohio,All years,Amount Appropriated Per State,False,892865013.0,,603,16
+Oklahoma,All years,Amount Appropriated Per State,False,978086085.0,,174,15
+Oregon,All years,Amount Appropriated Per State,False,684993558.0,,480,16
+Pennsylvania,All years,Amount Appropriated Per State,False,957182757.2380953,,836,17
+Puerto Rico,All years,Amount Appropriated Per State,False,33705000.0,,29,5
+Rhode Island,All years,Amount Appropriated Per State,False,494288347.0,,413,17
+South Carolina,All years,Amount Appropriated Per State,False,1085148462.0,,183,15
+South Dakota,All years,Amount Appropriated Per State,False,276052000.0,,30,7
+Tennessee,All years,Amount Appropriated Per State,False,490600713.42857146,,149,12
+Texas,All years,Amount Appropriated Per State,False,1828788031.0,,723,16
+Utah,All years,Amount Appropriated Per State,False,224650367.0,,117,11
+Vermont,All years,Amount Appropriated Per State,False,574013328.0,,325,18
+Virgin Islands,All years,Amount Appropriated Per State,False,45915641.0,,32,9
+Virginia,All years,Amount Appropriated Per State,False,707359568.2380953,,484,18
+Washington,All years,Amount Appropriated Per State,False,1172489551.0,,620,15
+West Virginia,All years,Amount Appropriated Per State,False,977180712.2380953,,655,18
+Wisconsin,All years,Amount Appropriated Per State,False,595496577.0,,283,16
+Wyoming,All years,Amount Appropriated Per State,False,22734000.0,,16,4

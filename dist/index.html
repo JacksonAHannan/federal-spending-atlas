@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#142f44" />
+    <meta
+      name="description"
+      content="Explore federal grant and contract obligations by congressional district, with GAO earmark project records and transparent sources."
+    />
+    <title>Federal Spending Atlas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vendor/d3.min.js" defer></script>
+    <script src="app.mjs" type="module"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to dashboard</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Federal Spending Atlas home"
+        ><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <path
+            d="M3 25h26M5 11h22L16 4 5 11Zm3 4v7m8-7v7m8-7v7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.3"
+          /></svg
+        ><span>Federal Spending <strong>Atlas</strong></span></a
+      >
+      <nav aria-label="Main">
+        <button class="nav active" data-view="districts" aria-pressed="true">
+          District map</button
+        ><button class="nav" data-view="earmarks" aria-pressed="false">
+          Earmark explorer</button
+        ><button id="method-open" class="nav">About the data</button>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="intro">
+        <div>
+          <h1>Federal spending by district</h1>
+          <p>Federal grants, contracts, and enacted earmark projects.</p>
+        </div>
+        <span id="snapshot" class="snapshot">Loading official data…</span>
+      </div>
+      <div id="loading" role="status" class="loading">
+        Loading the district map and spending snapshots…
+      </div>
+      <div id="app" hidden>
+        <section id="district-view" aria-label="District spending dashboard">
+          <div class="filterbar">
+            <label
+              >Fiscal year<select id="year">
+                <option value="2026">FY 2026</option>
+                <option value="2025" selected>FY 2025</option>
+                <option value="2024">FY 2024</option>
+                <option value="2023">FY 2023</option>
+                <option value="2022">FY 2022</option>
+              </select></label
+            ><label
+              >Award types<select id="kind">
+                <option value="all">Grants & contracts</option>
+                <option value="grants">Grants</option>
+                <option value="contracts">Contracts</option>
+              </select></label
+            ><label
+              >Compare by<select id="metric">
+                <option value="total">Total obligations</option>
+                <option value="capita">Obligations per resident</option>
+              </select></label
+            ><label
+              >State or territory<select id="state">
+                <option value="">All states & territories</option>
+              </select></label
+            ><button id="download" class="outline download">
+              Download CSV
+            </button>
+          </div>
+          <div class="ledger" aria-live="polite">
+            <div>
+              <span id="total-label">Mapped obligations</span
+              ><strong id="total">—</strong>
+            </div>
+            <div>
+              <span>Districts covered</span
+              ><strong id="district-count">—</strong>
+            </div>
+            <div>
+              <span>Median district</span><strong id="median">—</strong>
+            </div>
+          </div>
+          <div class="dashboard">
+            <section class="map-panel">
+              <div class="panel-head">
+                <div>
+                  <h2 id="map-title">Federal award obligations</h2>
+                  <p id="map-subtitle">Place of performance</p>
+                </div>
+                <button id="reset-map" class="text-button">Reset map</button>
+              </div>
+              <div class="map-stage">
+                <svg
+                  id="map"
+                  viewBox="0 0 960 650"
+                  role="group"
+                  aria-label="Interactive congressional district spending map. Use the searchable ranking list for a keyboard alternative."
+                ></svg>
+                <div class="map-controls" aria-label="Map zoom">
+                  <button id="zoom-in" aria-label="Zoom in">+</button
+                  ><button id="zoom-out" aria-label="Zoom out">−</button>
+                </div>
+                <div id="tooltip" role="tooltip" hidden></div>
+              </div>
+              <div class="map-legend">
+                <span id="legend-title">Net obligations</span>
+                <div id="legend"></div>
+              </div>
+              <p class="map-note">
+                Insets use separate scales. Select a district for details.
+              </p>
+            </section>
+            <aside class="inspector" aria-label="Selected district">
+              <div id="district-detail" aria-live="polite"></div>
+            </aside>
+          </div>
+          <div class="data-note">
+            <strong>Obligations are commitments, not payments.</strong> Award
+            totals do not measure a representative’s influence.
+            <button class="text-button" id="method-inline">Details</button>
+          </div>
+          <section class="rank-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Compare districts</h2>
+                <p id="rank-subtitle"></p>
+              </div>
+              <label class="search-label"
+                ><span class="sr-only">Search districts</span
+                ><input
+                  id="search"
+                  type="search"
+                  placeholder="Search district or state, e.g. AL-05"
+                  autocomplete="off"
+              /></label>
+            </div>
+            <div
+              class="table-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="District rankings, scroll horizontally for all columns"
+            >
+              <table>
+                <caption class="sr-only">
+                  Congressional district federal award obligations, ranked by
+                  selected measure
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">District</th>
+                    <th scope="col">Net obligations</th>
+                    <th scope="col">Per resident</th>
+                    <th scope="col">Grant / contract mix</th>
+                  </tr>
+                </thead>
+                <tbody id="rankings"></tbody>
+              </table>
+            </div>
+            <div class="table-footer">
+              <span id="rank-count" role="status"></span>
+              <div>
+                <button id="prev" class="outline">Previous</button
+                ><span id="page-number"></span
+                ><button id="next" class="outline">Next</button>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section id="earmark-view" hidden aria-label="GAO earmark explorer">
+          <div class="earmark-heading">
+            <div>
+              <h2>Enacted earmarks</h2>
+              <p>GAO project records, FY2022–FY2024.</p>
+            </div>
+            <a
+              href="https://www.gao.gov/tracking-funds"
+              target="_blank"
+              rel="noreferrer"
+              >Open GAO source</a
+            >
+          </div>
+          <div class="notice">
+            <strong>State-level locations, not district allocations.</strong>
+            GAO records identify states and requesters. They do not identify
+            project districts. Joint requests count once.
+          </div>
+          <div class="filterbar">
+            <label
+              >Appropriation year<select id="ear-year">
+                <option value="">All covered years</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+              </select></label
+            ><label
+              >Location<select id="ear-state">
+                <option value="">All locations</option>
+              </select></label
+            ><label class="grow"
+              >Find projects or requesters<input
+                id="ear-search"
+                type="search"
+                placeholder="Project, recipient, agency, or member name" /></label
+            ><button id="ear-download" class="outline download">
+              Download projects CSV
+            </button>
+          </div>
+          <div class="ear-summary" aria-live="polite">
+            <strong id="ear-total"></strong><span id="ear-count"></span
+            ><span>Appropriations, not payments</span>
+          </div>
+          <p class="muted">
+            Multi-state projects remain separate. No new earmarks were
+            designated in FY2025; FY2026 is not in this compilation.
+          </p>
+          <div id="ear-projects"></div>
+          <div class="table-footer">
+            <span id="ear-page-count" role="status"></span>
+            <div>
+              <button id="ear-prev" class="outline">Previous</button
+              ><button id="ear-next" class="outline">Next</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <span>Federal Spending Atlas</span
+      ><button id="footer-method" class="text-button">About the data</button>
+    </footer>
+    <dialog id="method">
+      <div class="dialog-head">
+        <h2>About the data</h2>
+        <button id="method-close" aria-label="Close methodology">×</button>
+      </div>
+      <div class="dialog-content">
+        <h3>What the map measures</h3>
+        <p>
+          Transaction-level net obligations for federal prime grants (award
+          types 02–05) and contracts (A–D), grouped by primary place of
+          performance. Dates run October 1–September 30 for each fiscal year.
+          Negative obligations reduce earlier commitments and remain in the
+          totals. Loans, direct payments, subawards, federal salaries, and other
+          spending are outside this dashboard’s scope.
+        </p>
+        <p>
+          Obligations are legal commitments; outlays are actual payments. Award
+          totals are not earmarks and do not establish a lawmaker’s role in
+          securing funding.
+        </p>
+        <h3>Geography and unallocated amounts</h3>
+        <p>
+          The API aggregates using its derived current congressional-district
+          identifiers, not the districts originally submitted. The map uses
+          Census 2025 cartographic boundaries for the 119th Congress, including
+          435 voting districts and 6 delegate/resident-commissioner areas.
+          Historical data are presented against those identifiers; this is not
+          an original-year district comparison. Redistricting and geocoding
+          updates can change historical assignments.
+        </p>
+        <p>
+          Only API identifiers that join to those 441 boundary features enter
+          the mapped totals and rankings. Unknown, multiple-district, and
+          unmatched rows are excluded and retained in the download and raw
+          evidence; excluded totals describe only rows returned by this
+          endpoint, not all unmappable federal spending.
+        </p>
+        <div id="coverage-details"></div>
+        <h3>Per-resident comparisons</h3>
+        <p>
+          Per-resident amounts divide obligations by the district population
+          returned by USAspending. These are API-supplied reference populations,
+          not annual population estimates or inflation-adjusted amounts. A
+          missing or zero population produces an unavailable value. Population
+          vintage is not specified in the API response. Large institutions and
+          regional awards can dominate a district without representing benefits
+          exclusive to its residents.
+        </p>
+        <h3>Earmarks and sponsorship</h3>
+        <p>
+          The separate GAO compilation covers enacted Community Project Funding
+          and Congressionally Directed Spending for FY2022–FY2024. A project is
+          counted once by GAO ID, including joint House/Senate requests.
+          Requester names are shown as recorded; a requester is not a project
+          location. State totals include only projects with a single state
+          location. Multi-location projects remain separate. Project district
+          totals require further location research.
+        </p>
+        <p>
+          Congress designated no new CPF/CDS funds in FY2025 according to GAO.
+          That does not mean payments on earlier projects stopped. FY2026
+          enacted tables, CAGW’s broader pork classification, historical TCS
+          sponsorship files, and POPVOX requests are not merged into the
+          official series here.
+        </p>
+        <h3>Official sources</h3>
+        <ul>
+          <li>
+            <a
+              href="https://api.usaspending.gov/docs/endpoints"
+              target="_blank"
+              rel="noreferrer"
+              >USAspending public API</a
+            >
+            and
+            <a
+              href="https://github.com/fedspendingtransparency/usaspending-api/blob/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_geography.md"
+              target="_blank"
+              rel="noreferrer"
+              >geography endpoint contract</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.usaspending.gov/federal-spending-guide"
+              target="_blank"
+              rel="noreferrer"
+              >USAspending Federal Spending Guide</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_us_cd119_500k.zip"
+              >Census 119th Congress boundary ZIP</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.gao.gov/tracking-funds"
+              target="_blank"
+              rel="noreferrer"
+              >GAO Tracking the Funds</a
+            >
+            and
+            <a
+              href="https://files.gao.gov/multimedia/gao-26-107944/interactive/GAO_Tracking_the_Funds_data_2022-2024_GAO-26-107944.zip"
+              >official compilation ZIP</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://appropriations.house.gov/committee-activity/enacted-legislation/fiscal-year-2026-enacted-legislation"
+              target="_blank"
+              rel="noreferrer"
+              >House FY2026 enacted appropriations</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.cagw.org/earmark-database/"
+              target="_blank"
+              rel="noreferrer"
+              >CAGW earmark database</a
+            >,
+            <a
+              href="https://www.taxpayer.net/budget-appropriations-tax/earmark-data/"
+              target="_blank"
+              rel="noreferrer"
+              >Taxpayers for Common Sense historical files</a
+            >,
+            <a
+              href="https://popvox.com/appropriations.html"
+              target="_blank"
+              rel="noreferrer"
+              >POPVOX Appropriations Explorer</a
+            >
+            (context only)
+          </li>
+        </ul>
+        <h3>Freshness and reproduction</h3>
+        <p id="freshness"></p>
+        <p>
+          Map data are saved snapshots. Agency and program details load on
+          request from the public API and may reflect later revisions; their
+          retrieval time is shown separately. No automatic update schedule is
+          enabled. Raw responses and refresh scripts are included in the local
+          project.
+        </p>
+      </div>
+    </dialog>
+  </body>
+</html>
