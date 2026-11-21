@@ -39,4 +39,5 @@ User requested removal of the inline obligation/influence explanation and asked 
 
 - [x] Verify removal and remaining navigation/filter behavior in browser.
   Evidence: managed local preview passes 441-path render, AL filters/search, both About links/Escape, and mobile overflow checks with no JavaScript errors. Node syntax and git whitespace checks pass. Initial preview process exited before connection; rerun used the server lifecycle helper and passed.
-- [ ] Push and republish to the existing GitHub Pages site; verify hosted result.
+- [x] Push and republish to the existing GitHub Pages site; verify hosted result.
+  Evidence: Pages reports built for f2a0195090d82234e12ea490dfe8b657aec0d9b8. Hosted browser removal/navigation/filter/mobile checks pass; deployed HTML, JS, and CSS hashes match local files.
