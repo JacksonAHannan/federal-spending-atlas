@@ -9,3 +9,7 @@ The [geography API contract](https://github.com/fedspendingtransparency/usaspend
 The [endpoint implementation](https://github.com/fedspendingtransparency/usaspending-api/blob/master/usaspending_api/search/v2/views/spending_by_geography.py) sums award `total_outlays` after applying award search filters. It does not restrict those payments to a payment-date period. Inference: simply replacing annual obligations with this field would mislabel cumulative payment amounts as annual spending. A defensible annual payments map needs separate financial-report aggregation, verified fiscal-period handling, award linkage, and district joins. The guide explains that some financial/account records cannot be linked to an award.
 
 No metric values, data files used by the dashboard, or geographic assignments changed in this update. The requested inline explanation and its redundant Details button were removed; About the data remains accessible from the header and footer.
+
+## Implementation update
+
+The national File C export route was subsequently verified and integrated; this note’s earlier investigation-only status is superseded. See research/annual-outlays-api.md and scripts/build_outlays.py. Annual payments FY2022–FY2026 and calendar-cycle payments (except the missing-opening-quarter 2017–2018 cycle) are now implemented. A separate cumulative reported-payment view is retained with its own period key.

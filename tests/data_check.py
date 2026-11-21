@@ -41,5 +41,7 @@ def check():
     assert sum(s['amount'] for s in earmarks['states'].values())+earmarks['multistate']['amount']==earmarks['totals']['amount']
     assert sum(s['projects'] for s in earmarks['states'].values())+earmarks['multistate']['projects']==20294
     assert earmarks['multistate']['projects']==47
+    from period_data_check import check_cycles,check_payments
+    check_cycles(spending);check_payments()
     print('PASS: 441 district joins across 5 years; 10 raw-response reconciliations; independent combined-type reconciliation; 20,294 GAO unique-project/source/partition checks.')
 if __name__=='__main__':check()

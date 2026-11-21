@@ -1,0 +1,133 @@
+{
+  "source_url": "https://files.usaspending.gov/generated_downloads/FY2017Q1-Q4_All_FA_AccountBreakdownByAward_2026-11-21_H21M03S18323120.zip",
+  "archive_bytes": 38790998,
+  "archive_sha256": "1c8d2d84bdc6386a5aca4b07a63ce035a40127fa135e6cb4d3fa6aebcf544508",
+  "csv_files": {
+    "FY2017Q1-QNone_All_FA_Assistance_AccountBreakdownByAward_2026-11-21_H21M06S13_02.csv": {
+      "rows": 680053,
+      "periods": {
+        "FY2017Q4": 394242,
+        "FY2017Q2": 106265,
+        "FY2017Q3": 179546
+      },
+      "non_null_periods": {
+        "FY2017Q4": 269438
+      },
+      "nonzero_periods": {
+        "FY2017Q4": 21360
+      },
+      "outlay_sums_by_period": {
+        "FY2017Q4": "9909580223.74"
+      },
+      "award_type_counts": {
+        "11": 119880,
+        "10": 199917,
+        "F001": 5035,
+        "04": 93219,
+        "03": 57372,
+        "06": 149490,
+        "07": 26032,
+        "05": 23362,
+        "02": 2842,
+        "F002": 1682,
+        "08": 760,
+        "F010": 74,
+        "F006": 127,
+        "09": 261
+      },
+      "negative_rows": 45,
+      "null_rows": 410615
+    },
+    "FY2017Q1-QNone_All_FA_Assistance_AccountBreakdownByAward_2026-11-21_H21M06S13_01.csv": {
+      "rows": 680054,
+      "periods": {
+        "FY2017Q2": 105406,
+        "FY2017Q4": 394385,
+        "FY2017Q3": 180263
+      },
+      "non_null_periods": {
+        "FY2017Q4": 269235
+      },
+      "nonzero_periods": {
+        "FY2017Q4": 21254
+      },
+      "outlay_sums_by_period": {
+        "FY2017Q4": "9957520779.22"
+      },
+      "award_type_counts": {
+        "10": 199291,
+        "06": 149521,
+        "04": 92394,
+        "05": 23409,
+        "03": 56856,
+        "11": 121658,
+        "07": 26286,
+        "09": 270,
+        "F001": 5048,
+        "F006": 133,
+        "02": 2734,
+        "08": 781,
+        "F002": 1616,
+        "F010": 56,
+        "F005": 1
+      },
+      "negative_rows": 43,
+      "null_rows": 410819
+    },
+    "FY2017Q1-QNone_All_FA_Contracts_AccountBreakdownByAward_2026-11-21_H21M06S13_01.csv": {
+      "rows": 627506,
+      "periods": {
+        "FY2017Q3": 197562,
+        "FY2017Q4": 308213,
+        "FY2017Q2": 121731
+      },
+      "non_null_periods": {
+        "FY2017Q4": 99878
+      },
+      "nonzero_periods": {
+        "FY2017Q4": 2020
+      },
+      "outlay_sums_by_period": {
+        "FY2017Q4": "473787924.21"
+      },
+      "award_type_counts": {
+        "D": 60496,
+        "B": 236888,
+        "C": 232601,
+        "A": 83307,
+        "IDV_B_B": 5598,
+        "IDV_B_C": 1654,
+        "IDV_B_A": 2207,
+        "IDV_E": 2678,
+        "IDV_C": 1928,
+        "IDV_D": 42,
+        "IDV_A": 86,
+        "IDV_B": 21
+      },
+      "negative_rows": 8,
+      "null_rows": 527628
+    },
+    "FY2017Q1-QNone_All_FA_Unlinked_AccountBreakdownByAward_2026-11-21_H21M06S13_01.csv": {
+      "rows": 638288,
+      "periods": {
+        "FY2017Q4": 390350,
+        "FY2017Q3": 221140,
+        "FY2017Q2": 26798
+      },
+      "non_null_periods": {
+        "FY2017Q4": 57581
+      },
+      "nonzero_periods": {
+        "FY2017Q4": 81
+      },
+      "outlay_sums_by_period": {
+        "FY2017Q4": "12577704.53"
+      },
+      "award_type_counts": {
+        "": 638288
+      },
+      "negative_rows": 4,
+      "null_rows": 580707
+    }
+  }
+}

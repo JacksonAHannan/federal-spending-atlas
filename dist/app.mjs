@@ -1,4 +1,14 @@
-import { obligation, measure, ranking, csv } from "./core.mjs";
+import {
+  obligation,
+  measure,
+  ranking,
+  csv,
+  getPeriod,
+  periodLabel,
+  sumKnown,
+  combinedCategories,
+} from "./core.mjs?v=20261121-payments-cycles";
+const DATA_VERSION = "20261121-payments-cycles";
 const $ = (id) => document.getElementById(id);
 const states = Object.fromEntries(
   "AL:Alabama|AK:Alaska|AZ:Arizona|AR:Arkansas|CA:California|CO:Colorado|CT:Connecticut|DE:Delaware|DC:District of Columbia|FL:Florida|GA:Georgia|HI:Hawaii|ID:Idaho|IL:Illinois|IN:Indiana|IA:Iowa|KS:Kansas|KY:Kentucky|LA:Louisiana|ME:Maine|MD:Maryland|MA:Massachusetts|MI:Michigan|MN:Minnesota|MS:Mississippi|MO:Missouri|MT:Montana|NE:Nebraska|NV:Nevada|NH:New Hampshire|NJ:New Jersey|NM:New Mexico|NY:New York|NC:North Carolina|ND:North Dakota|OH:Ohio|OK:Oklahoma|OR:Oregon|PA:Pennsylvania|RI:Rhode Island|SC:South Carolina|SD:South Dakota|TN:Tennessee|TX:Texas|UT:Utah|VT:Vermont|VA:Virginia|WA:Washington|WV:West Virginia|WI:Wisconsin|WY:Wyoming|AS:American Samoa|GU:Guam|MP:Northern Mariana Islands|PR:Puerto Rico|VI:U.S. Virgin Islands"
@@ -37,6 +47,7 @@ const exact = (n) =>
       }).format(n);
 const num = (n) => (n == null ? "Unavailable" : n.toLocaleString("en-US"));
 let spending,
+  outlays,
   geo,
   earmarks,
   rows = [],
@@ -59,10 +70,15 @@ const palette = [
 ];
 const filter = () => ({
   year: $("year").value,
+  measure: $("measure").value,
   kind: $("kind").value,
   capita: $("metric").value === "capita",
   state: $("state").value,
 });
+const dataset = () => ($("measure").value === "outlays" ? outlays : spending);
+const amountLabel = () =>
+  $("measure").value === "outlays" ? "Payments" : "Obligations";
+const currentPeriod = () => getPeriod(dataset(), $("year").value);
 const stateOf = (r) => r.name?.split("-")[0] || fips[r.id.slice(0, 2)];
 const value = (r) => measure(r, filter().kind, filter().capita);
 function download(name, content, type = "text/csv;charset=utf-8") {
@@ -79,7 +95,7 @@ function mix(r, mini = false) {
     total = Math.max(0, g ?? 0) + Math.max(0, c ?? 0);
   if (g == null || c == null)
     return '<span class="tiny">Mix unavailable</span>';
-  if (total <= 0) return '<span class="tiny">No positive obligations</span>';
+  if (total <= 0) return '<span class="tiny">No positive amounts</span>';
   return `<div class="${mini ? "mini-mix" : "mix-track"}" title="Grants ${exact(g)}; contracts ${exact(c)}"><span class="mix-grants" style="width:${(100 * Math.max(0, g)) / total}%"></span><span class="mix-contracts" style="width:${(100 * Math.max(0, c)) / total}%"></span></div>`;
 }
 function createMap() {
@@ -195,26 +211,36 @@ function showTooltip(event, feature) {
 }
 function render() {
   const f = filter();
-  rows = spending.years[f.year].districts;
+  const period = currentPeriod();
+  rows = period.districts;
   const scoped = rows.filter((r) => !f.state || stateOf(r) === f.state);
   sorted = ranking(scoped, f.kind, f.capita);
   const known = scoped.filter((r) => obligation(r, f.kind) != null),
-    total = d3.sum(known, (r) => obligation(r, f.kind));
+    total = sumKnown(known, f.kind);
   $("total").textContent = money(total);
   $("total").title = exact(total);
   $("total-label").textContent = f.state
-    ? `${f.state} mapped obligations`
-    : "Mapped obligations";
+    ? `${f.state} ${amountLabel().toLowerCase()}`
+    : `Mapped ${amountLabel().toLowerCase()}`;
   $("district-count").textContent = `${known.length} / ${scoped.length}`;
   $("median").textContent = money(
     d3.median(known, (r) => obligation(r, f.kind)) ?? null,
   );
 
   $("map-title").textContent = f.capita
-    ? "Obligations per resident"
-    : "Federal award obligations";
+    ? `${amountLabel()} per resident`
+    : `Federal award ${amountLabel().toLowerCase()}`;
   $("map-subtitle").textContent =
-    `FY ${f.year} · ${f.kind === "all" ? "Grants & contracts" : f.kind === "grants" ? "Grants" : "Contracts"} · Place of performance`;
+    `${periodLabel(dataset(), f.year)}${period.partial ? " · through " + period.end : ""}${period.as_of ? " · as of " + period.as_of : ""} · ${f.kind === "all" ? "Grants & contracts" : f.kind === "grants" ? "Grants" : "Contracts"}`;
+  $("amount-heading").textContent = amountLabel();
+  $("coverage").hidden =
+    !period.reporting || ["mandatory", "cumulative"].includes(period.reporting);
+  $("coverage").textContent =
+    period.reporting === "optional-years"
+      ? "Includes optional-reporting years"
+      : period.reporting === "cumulative"
+        ? "Cumulative reported payments"
+        : (period.missing_reason ?? "Payment reports unavailable");
   // Quantiles expose geographic differences without allowing a few large awards to flatten the map.
   const positives = sorted.map(value).filter((v) => v > 0);
   scale = d3.scaleQuantile().domain(positives).range(palette);
@@ -233,7 +259,7 @@ function render() {
     .classed("selected", (d) => d.properties.GEOID === selected)
     .classed("faded", (d) => f.state && fips[d.properties.STATEFP] !== f.state);
   $("legend-title").textContent =
-    `${f.capita ? "Per resident" : "Net obligations"} · six equal-count bands`;
+    `${f.capita ? "Per resident" : amountLabel()} · six equal-count bands`;
   const limits = [0, ...scale.quantiles()];
   $("legend").innerHTML =
     palette
@@ -243,18 +269,32 @@ function render() {
       )
       .join("") +
     '<span><i style="background:#fff"></i>$0</span><span><i style="background:#ba703b"></i>Negative</span><span><i style="background:#c8d0d6"></i>Unavailable</span>';
+  if (!known.length)
+    $("legend").innerHTML =
+      '<span><i style="background:#c8d0d6"></i>Unavailable</span>';
   if (!selected || !scoped.some((r) => r.id === selected))
-    selected = sorted[0]?.id ?? null;
+    selected = sorted[0]?.id ?? scoped[0]?.id ?? null;
   paths.classed("selected", (d) => d.properties.GEOID === selected);
   renderDetail();
   renderRankings();
   renderCoverage();
+  renderCycles();
+  document
+    .querySelectorAll('[data-view="districts"], [data-view="cycles"]')
+    .forEach((b) => {
+      const active =
+        b.dataset.view ===
+        (f.year.startsWith("cycle") ? "cycles" : "districts");
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-pressed", active);
+    });
 }
 function selectDistrict(id) {
   selected = id;
   paths.classed("selected", (d) => d.properties.GEOID === id);
   renderDetail();
   renderRankings();
+  renderCycles();
 }
 function renderDetail() {
   const r = rows.find((r) => r.id === selected),
@@ -262,12 +302,16 @@ function renderDetail() {
   liveSerial++;
   if (!r) {
     $("district-detail").innerHTML =
-      "<p>Select a district to see its federal award obligations.</p>";
+      "<p>Select a district to see its federal award amounts.</p>";
     return;
   }
   const rank = sorted.findIndex((x) => x.id === r.id) + 1;
-  const trend = Object.entries(spending.years).map(([year, data]) => ({
-    year,
+  const useCycles = f.year.startsWith("cycle");
+  const trend = Object.entries(
+    useCycles ? (dataset().cycles ?? {}) : (dataset().years ?? {}),
+  ).map(([id, data]) => ({
+    year: id,
+    label: useCycles ? data.start.slice(0, 4) + "–" + data.label.slice(-2) : id,
     value: obligation(
       data.districts.find((x) => x.id === r.id),
       f.kind,
@@ -279,9 +323,9 @@ function renderDetail() {
   const stateAmount = d3.sum(keys, (k) => earmarks.states[k]?.amount ?? 0),
     stateProjects = d3.sum(keys, (k) => earmarks.states[k]?.projects ?? 0);
   $("district-detail").innerHTML =
-    `<div><div class="district-title"><h2>${esc(r.name)}</h2><span class="rank-tag">${rank ? "#" + rank + " of " + sorted.length : "Outside filter"}</span></div><p class="state-name">${esc(states[st])}${r.name.endsWith("-00") ? " · At-large district" : ""}</p><span class="tiny">Net obligations</span><div class="big-amount" title="${exact(obligation(r, f.kind))}">${money(obligation(r, f.kind))}</div></div>
+    `<div><div class="district-title"><h2>${esc(r.name)}</h2><span class="rank-tag">${rank ? "#" + rank + " of " + sorted.length : currentPeriod().reporting === "unavailable" ? "Unavailable" : "Outside filter"}</span></div><p class="state-name">${esc(states[st])}${r.name.endsWith("-00") ? " · At-large district" : ""}</p><span class="tiny">${amountLabel()}</span><div class="big-amount" title="${exact(obligation(r, f.kind))}">${money(obligation(r, f.kind))}</div></div>
  <div><div class="detail-stats"><div>Per resident<strong>${money(measure(r, f.kind, true))}</strong></div><div>Reference population<strong>${num(r.population)}</strong></div></div><h3>Award mix</h3>${mix(r)}<div class="mix-label"><span>Grants</span><strong>${money(r.grants)}</strong></div><div class="mix-label"><span>Contracts</span><strong>${money(r.contracts)}</strong></div><p class="tiny">Both award types shown.</p></div>
- <div><h3>Annual obligations</h3><div class="trend" role="img" aria-label="${esc(trend.map((d) => `FY ${d.year}: ${exact(d.value)}`).join("; "))}">${trend.map((d) => `<div class="trend-item ${d.year === f.year ? "current" : ""}" title="FY ${d.year}: ${exact(d.value)}"><div class="trend-bar" style="height:${Math.max(2, (Math.abs(d.value ?? 0) / high) * 65)}px;${d.value < 0 ? "background:#ba703b;" : ""}"></div><span>${d.year}</span></div>`).join("")}</div></div>
+ <div ${trend.length ? "" : "hidden"}><h3>${useCycles ? "Cycle totals" : "Annual totals"}</h3><div class="trend" role="img" aria-label="${esc(trend.map((d) => `${d.label}: ${exact(d.value)}`).join("; "))}">${trend.map((d) => `<div class="trend-item ${d.year === f.year ? "current" : ""}" title="${d.label}: ${exact(d.value)}"><div class="trend-bar" style="height:${d.value == null ? 0 : Math.max(2, (Math.abs(d.value) / high) * 65)}px;${d.value < 0 ? "background:#ba703b;" : ""}"></div><span>${d.label}</span></div>`).join("")}</div></div>
  <div class="context-note"><strong>${esc(st)} earmarks · FY2022–2024</strong>${money(stateAmount)} across ${num(stateProjects)} projects.<br>State total; no district allocation.<br><button id="state-earmarks" class="text-button">View projects</button></div>
  <button id="load-live" class="live-button">Agencies & programs</button><div id="live-detail" class="live-section" aria-live="polite"></div>`;
   $("state-earmarks").onclick = () => {
@@ -293,8 +337,55 @@ function renderDetail() {
     renderEarmarks();
   };
   $("load-live").onclick = () => loadLive(r, f);
+  if (
+    f.measure === "outlays" &&
+    (currentPeriod().reporting === "unavailable" ||
+      (!currentPeriod().details && !currentPeriod().details_file))
+  )
+    $("load-live").hidden = true;
 }
 async function loadLive(r, f) {
+  if (f.measure === "outlays") {
+    const serial = ++liveSerial,
+      button = $("load-live"),
+      period = currentPeriod();
+    button.disabled = true;
+    button.textContent = "Loading payment detail…";
+    try {
+      if (!period.details) {
+        const response = await fetch(
+          "data/" + period.details_file + "?v=" + DATA_VERSION,
+          {
+            signal: AbortSignal.timeout(45000),
+          },
+        );
+        if (!response.ok) throw Error("Payment detail could not load");
+        period.details = await response.json();
+      }
+      if (serial !== liveSerial) return;
+      const details = period.details[r.id];
+      const cats = [
+        "awarding_agency",
+        ...(f.kind !== "contracts" ? ["cfda"] : []),
+        ...(f.kind !== "grants" ? ["naics"] : []),
+      ];
+      $("live-detail").innerHTML = cats
+        .map((cat) => {
+          const values = combinedCategories(details, f.kind, cat).slice(0, 6);
+          return `<h3>${cat === "awarding_agency" ? "Top awarding agencies" : cat === "cfda" ? "Top assistance programs" : "Top contract industries"}</h3>${values.length ? values.map((v) => `<div class="live-item"><span>${esc(v.name)}</span><strong>${money(v.amount)}</strong></div>`).join("") : "<p>No linked detail reported.</p>"}`;
+        })
+        .join("");
+      button.textContent = "Agencies & programs";
+    } catch (error) {
+      if (serial === liveSerial) {
+        $("live-detail").textContent = error.message;
+        button.textContent = "Retry details";
+      }
+    } finally {
+      if (serial === liveSerial) button.disabled = false;
+    }
+    return;
+  }
   const serial = ++liveSerial,
     button = $("load-live");
   button.disabled = true;
@@ -310,7 +401,7 @@ async function loadLive(r, f) {
     ];
     const filters = {
       time_period: [
-        { start_date: `${+f.year - 1}-10-01`, end_date: `${f.year}-09-30` },
+        { start_date: currentPeriod().start, end_date: currentPeriod().end },
       ],
       award_type_codes: spending.award_type_codes[f.kind] || [
         ...spending.award_type_codes.grants,
@@ -385,7 +476,9 @@ function renderRankings() {
           `<tr class="${r.id === selected ? "row-selected" : ""}"><td>${sorted.indexOf(r) + 1}</td><td><button class="district-link" data-select="${r.id}">${esc(r.name)}<span>${esc(states[stateOf(r)])}</span></button></td><td title="${exact(obligation(r, filter().kind))}">${money(obligation(r, filter().kind))}</td><td>${money(measure(r, filter().kind, true))}</td><td>${mix(r, true)}</td></tr>`,
       )
       .join("") ||
-    '<tr><td colspan="5" class="empty">No districts match. Try a state name or district code such as AL-05.</td></tr>';
+    (currentPeriod().reporting === "unavailable"
+      ? '<tr><td colspan="5" class="empty">Payment data are unavailable for this cycle.</td></tr>'
+      : '<tr><td colspan="5" class="empty">No districts match. Try a state name or district code such as AL-05.</td></tr>');
   $("rank-count").textContent = matches.length
     ? `${start + 1}–${Math.min(start + 12, matches.length)} of ${matches.length} districts`
     : "0 districts";
@@ -393,24 +486,130 @@ function renderRankings() {
   $("prev").disabled = page === 0;
   $("next").disabled = page >= pages - 1;
   $("rank-subtitle").textContent =
-    `${filter().capita ? "Per resident" : "Total net obligations"} · ${filter().state || "All states & territories"}`;
+    `${filter().capita ? "Per resident" : "Total " + amountLabel().toLowerCase()} · ${filter().state || "All states & territories"}`;
   $("rankings")
     .querySelectorAll("[data-select]")
     .forEach((b) => (b.onclick = () => selectDistrict(b.dataset.select)));
 }
 function renderCoverage() {
   const f = filter(),
-    data = spending.years[f.year],
-    kinds = f.kind === "all" ? ["grants", "contracts"] : [f.kind],
-    excluded = d3.sum(kinds, (k) =>
-      d3.sum(data.unmapped[k], (r) => r.aggregated_amount),
-    );
+    data = currentPeriod(),
+    kinds = f.kind === "all" ? ["grants", "contracts"] : [f.kind];
+  const excluded = d3.sum(kinds, (k) =>
+    d3.sum(data.unmapped?.[k] ?? [], (r) => r.aggregated_amount),
+  );
   $("coverage-details").innerHTML =
-    `<p><strong>FY ${f.year} snapshot:</strong> ${data.districts.length} matched district areas. ${exact(excluded)} in non-matching rows for ${f.kind === "all" ? "grants and contracts" : f.kind}, excluded from mapped totals. This coverage statement is nationwide, independent of the state filter.</p>`;
+    `<p><strong>${esc(periodLabel(dataset(), f.year))}:</strong> ${data.districts.filter((r) => obligation(r, f.kind) != null).length} district areas with amounts. ${exact(excluded)} in unmatched rows, excluded from mapped totals. Nationwide coverage; independent of the state filter.</p>`;
+}
+function renderCycles() {
+  const f = filter(),
+    source = dataset(),
+    available = Object.keys(source.cycles ?? {}).length === 5;
+  $("cycle-combined").textContent = source.cycle_total
+    ? "View combined total"
+    : source.available_cycle_total
+      ? "Combine available cycles"
+      : "View cycle obligations";
+  $("cycle-total-heading").textContent = "Total " + amountLabel().toLowerCase();
+  $("cycle-district-heading").textContent =
+    rows.find((r) => r.id === selected)?.name ?? "Selected district";
+  $("cycle-scope").textContent =
+    `${f.state ? states[f.state] : "All states & territories"} · ${f.kind === "all" ? "Grants & contracts" : f.kind}`;
+  $("cycle-comparison").closest(".table-scroll").hidden = !available;
+  if (!available)
+    $("cycle-scope").textContent = "Cycle views currently use obligations.";
+  $("cycle-comparison").innerHTML = Object.entries(spending.cycles)
+    .map(([id, base]) => {
+      const data = source.cycles?.[id];
+      const scoped =
+        data?.districts.filter((r) => !f.state || stateOf(r) === f.state) ?? [];
+      const district = data?.districts.find((r) => r.id === selected);
+      const coverage = !data
+        ? "Annual exports unavailable"
+        : data.reporting === "unavailable"
+          ? (data.missing_reason ?? "Unavailable")
+          : data.reporting === "optional-years"
+            ? "Partial reporting"
+            : data.partial
+              ? "Through " + data.end
+              : "Full period";
+      return `<tr class="${f.year === id ? "row-selected" : ""}"><td>${data ? `<button class="district-link" data-cycle="${id}">${esc(base.label)}</button>` : esc(base.label)}</td><td>${money(sumKnown(scoped, f.kind))}</td><td>${money(obligation(district, f.kind))}</td><td>${esc(coverage)}</td></tr>`;
+    })
+    .join("");
+  $("cycle-comparison")
+    .querySelectorAll("[data-cycle]")
+    .forEach(
+      (b) =>
+        (b.onclick = () => {
+          $("year").value = b.dataset.cycle;
+          page = 0;
+          render();
+        }),
+    );
+}
+function populatePeriods(preferred = $("year").value) {
+  const source = dataset();
+  const years = Object.keys(source.years ?? {})
+    .sort()
+    .reverse();
+  const cycles = Object.keys(source.cycles ?? {})
+    .sort()
+    .reverse();
+  $("year").innerHTML =
+    (source.all_reported
+      ? '<option value="all-reported">All reported payments</option>'
+      : "") +
+    (years.length
+      ? '<optgroup label="Fiscal years">' +
+        years.map((y) => `<option value="${y}">FY ${y}</option>`).join("") +
+        "</optgroup>"
+      : "") +
+    (cycles.length
+      ? '<optgroup label="Congressional cycles">' +
+        cycles
+          .map(
+            (id) =>
+              `<option value="${id}">${esc(source.cycles[id].label)}</option>`,
+          )
+          .join("") +
+        (source.cycle_total
+          ? '<option value="cycles-all">Five cycles combined</option>'
+          : "") +
+        (source.available_cycle_total
+          ? '<option value="cycles-available">Four available cycles · 2019–2026</option>'
+          : "") +
+        "</optgroup>"
+      : "");
+  if ([...$("year").options].some((o) => o.value === preferred))
+    $("year").value = preferred;
+  else
+    $("year").value =
+      preferred?.startsWith("cycle") && source.cycle_total
+        ? "cycles-all"
+        : preferred?.startsWith("cycle") && source.available_cycle_total
+          ? "cycles-available"
+          : source.all_reported
+            ? "all-reported"
+            : years.includes("2025")
+              ? "2025"
+              : (years[0] ?? cycles[0]);
 }
 function setView(view) {
-  $("district-view").hidden = view !== "districts";
+  $("district-view").hidden = view === "earmarks";
   $("earmark-view").hidden = view !== "earmarks";
+  if (view === "cycles") {
+    if (!dataset().cycle_total && !dataset().available_cycle_total)
+      $("measure").value = "obligations";
+    const combined = dataset().cycle_total ? "cycles-all" : "cycles-available";
+    populatePeriods(combined);
+    $("year").value = combined;
+    page = 0;
+    render();
+  } else if (view === "districts" && $("year").value.startsWith("cycle")) {
+    populatePeriods(dataset().all_reported ? "all-reported" : "2025");
+    page = 0;
+    render();
+  }
   document.querySelectorAll("[data-view]").forEach((b) => {
     b.classList.toggle("active", b.dataset.view === view);
     b.setAttribute("aria-pressed", b.dataset.view === view);
@@ -458,27 +657,42 @@ function renderEarmarks() {
 }
 function downloadDistricts() {
   const f = filter(),
-    header = [
-      "row_type",
-      "fiscal_year",
-      "boundary_congress",
-      "district_id",
-      "district",
-      "state",
-      "award_types",
-      "net_obligations_usd",
-      "population_api_reference",
-      "obligations_per_resident",
-      "grants_usd",
-      "contracts_usd",
-      "snapshot_retrieved_at",
-    ];
+    period = currentPeriod();
+  const header = [
+    "row_type",
+    "measure",
+    "period",
+    "period_start",
+    "period_end",
+    "reporting_coverage",
+    "boundary_congress",
+    "district_id",
+    "district",
+    "state",
+    "award_types",
+    "amount_usd",
+    "population_api_reference",
+    "amount_per_resident",
+    "grants_usd",
+    "contracts_usd",
+    "snapshot_retrieved_at",
+  ];
+  const meta = [
+    f.measure,
+    periodLabel(dataset(), f.year),
+    period.start ?? "",
+    period.end ?? "",
+    period.reporting ?? "transaction obligations",
+    119,
+  ];
+  const exportRows = sorted.length
+    ? sorted
+    : rows.filter((r) => !f.state || stateOf(r) === f.state);
   const result = [
     header,
-    ...sorted.map((r) => [
+    ...exportRows.map((r) => [
       "district",
-      f.year,
-      119,
+      ...meta,
       r.id,
       r.name,
       stateOf(r),
@@ -488,17 +702,15 @@ function downloadDistricts() {
       measure(r, f.kind, true),
       r.grants,
       r.contracts,
-      spending.fetched_at,
+      dataset().fetched_at,
     ]),
   ];
-  // Exclusions are national evidence; never silently allocate them to a filtered state.
   if (!f.state)
     for (const k of f.kind === "all" ? ["grants", "contracts"] : [f.kind])
-      for (const r of spending.years[f.year].unmapped[k])
+      for (const r of period.unmapped?.[k] ?? [])
         result.push([
           "unmapped",
-          f.year,
-          119,
+          ...meta,
           r.shape_code,
           r.display_name,
           "",
@@ -508,24 +720,30 @@ function downloadDistricts() {
           r.per_capita,
           "",
           "",
-          spending.fetched_at,
+          dataset().fetched_at,
         ]);
   download(
-    `federal-obligations-fy${f.year}-${f.kind}-${f.state || "all"}.csv`,
+    `federal-${f.measure}-${f.year}-${f.kind}-${f.state || "all"}.csv`,
     csv(result),
   );
 }
 async function init() {
   try {
     const responses = await Promise.all(
-      ["spending.json", "districts.geojson", "earmarks.json"].map((name) =>
-        fetch("data/" + name).then((r) => {
+      [
+        "spending.json",
+        "districts.geojson",
+        "earmarks.json",
+        "outlays.json",
+      ].map((name) =>
+        fetch("data/" + name + "?v=" + DATA_VERSION).then((r) => {
           if (!r.ok) throw Error(`Cannot load ${name}`);
           return r.json();
         }),
       ),
     );
-    [spending, geo, earmarks] = responses;
+    [spending, geo, earmarks, outlays] = responses;
+    populatePeriods("2025");
     const options = Object.entries(states)
       .sort((a, b) => a[1].localeCompare(b[1]))
       .map(
@@ -549,11 +767,20 @@ async function init() {
     $("snapshot").textContent =
       `Data retrieved ${new Date(spending.fetched_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
     $("freshness").textContent =
-      `USAspending snapshots retrieved ${spending.fetched_at}. GAO compilation retrieved ${earmarks.metadata.retrieved_at}. FY2026 has recently ended and agency reporting can still be revised. Figures are nominal dollars.`;
+      `Obligation snapshots retrieved ${spending.fetched_at}; cycle snapshots ${spending.cycle_fetched_at}. Payment snapshot ${outlays.fetched_at}. GAO compilation retrieved ${earmarks.metadata.retrieved_at}. FY2026 has recently ended and agency reporting can still be revised. Figures are nominal dollars.`;
+    if (outlays.metadata?.annual_exports_available)
+      $("payment-availability").textContent =
+        "Annual and cycle payments use fiscal-year-to-date File C reports with period-end snapshots selected once. Calendar-year cycles subtract the opening fiscal quarter and add the closing fiscal quarter. Reporting before FY2022 was optional; those cycles are marked partial reporting. The 2017–2018 payment cycle is unavailable because the opening FY2017 quarter was not reported; the combined payment view covers four available cycles (2019–2026). Unlinked records and other award types are kept outside the map totals.";
     createMap();
     render();
     $("loading").hidden = true;
     $("app").hidden = false;
+    $("measure").addEventListener("change", () => {
+      populatePeriods();
+      page = 0;
+      render();
+    });
+    $("cycle-combined").onclick = () => setView("cycles");
     for (const id of ["year", "kind", "metric", "state"])
       $(id).addEventListener("change", () => {
         page = 0;

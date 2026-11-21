@@ -48,4 +48,6 @@ def main():
     output={'source':API,'fetched_at':max(e['fetched_at'] for e in entries.values()),'boundary_source':'https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_us_cd119_500k.zip','boundary_congress':119,'award_type_codes':TYPES,'years':years}
     (ROOT/'dist/data/spending.json').write_text(json.dumps(output,separators=(',',':')))
     print('Wrote spending.json; unknown/multiple/unmatched rows retained separately.')
+    from build_cycles import main as build_cycles
+    build_cycles()
 if __name__=='__main__':main()

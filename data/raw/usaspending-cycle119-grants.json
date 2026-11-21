@@ -1,0 +1,3128 @@
+{
+  "fetched_at": "2026-11-21T21:00:42.062387+00:00",
+  "endpoint": "https://api.usaspending.gov/api/v2/search/spending_by_geography/",
+  "request": {
+    "scope": "place_of_performance",
+    "geo_layer": "district",
+    "spending_level": "transactions",
+    "filters": {
+      "time_period": [
+        {
+          "start_date": "2025-01-01",
+          "end_date": "2026-09-30"
+        }
+      ],
+      "award_type_codes": [
+        "02",
+        "03",
+        "04",
+        "05"
+      ]
+    }
+  },
+  "response": {
+    "scope": "place_of_performance",
+    "geo_layer": "district",
+    "spending_level": "transactions",
+    "results": [
+      {
+        "shape_code": "1202",
+        "display_name": "FL-02",
+        "aggregated_amount": 10388361395.73,
+        "population": 785319,
+        "per_capita": 13228.21
+      },
+      {
+        "shape_code": "7298",
+        "display_name": "PR-98",
+        "aggregated_amount": 6643836671.92,
+        "population": 3263584,
+        "per_capita": 2035.75
+      },
+      {
+        "shape_code": "0200",
+        "display_name": "AK-00",
+        "aggregated_amount": 8984544112.67,
+        "population": 732673,
+        "per_capita": 12262.69
+      },
+      {
+        "shape_code": "",
+        "display_name": null,
+        "aggregated_amount": 155983.97,
+        "population": null,
+        "per_capita": null
+      },
+      {
+        "shape_code": "1198",
+        "display_name": "DC-98",
+        "aggregated_amount": 15470883590.67,
+        "population": 670050,
+        "per_capita": 23089.15
+      },
+      {
+        "shape_code": "5000",
+        "display_name": "VT-00",
+        "aggregated_amount": 3635285560.58,
+        "population": 645570,
+        "per_capita": 5631.13
+      },
+      {
+        "shape_code": "4600",
+        "display_name": "SD-00",
+        "aggregated_amount": 4080626319.6,
+        "population": 895376,
+        "per_capita": 4557.44
+      },
+      {
+        "shape_code": "2101",
+        "display_name": "KY-01",
+        "aggregated_amount": 2624860951.22,
+        "population": 748599,
+        "per_capita": 3506.36
+      },
+      {
+        "shape_code": "1305",
+        "display_name": "GA-05",
+        "aggregated_amount": 6392097469.09,
+        "population": 765685,
+        "per_capita": 8348.21
+      },
+      {
+        "shape_code": "2507",
+        "display_name": "MA-07",
+        "aggregated_amount": 2839261836.23,
+        "population": 761699,
+        "per_capita": 3727.54
+      },
+      {
+        "shape_code": "3800",
+        "display_name": "ND-00",
+        "aggregated_amount": 4728278195.06,
+        "population": 774948,
+        "per_capita": 6101.41
+      },
+      {
+        "shape_code": "3702",
+        "display_name": "NC-02",
+        "aggregated_amount": 6665629099.54,
+        "population": 752758,
+        "per_capita": 8854.94
+      },
+      {
+        "shape_code": "5401",
+        "display_name": "WV-01",
+        "aggregated_amount": 1891741839.65,
+        "population": 881980,
+        "per_capita": 2144.88
+      },
+      {
+        "shape_code": "0606",
+        "display_name": "CA-06",
+        "aggregated_amount": 3877907487.49,
+        "population": 756779,
+        "per_capita": 5124.23
+      },
+      {
+        "shape_code": "4827",
+        "display_name": "TX-27",
+        "aggregated_amount": 1536401666.57,
+        "population": 775401,
+        "per_capita": 1981.43
+      },
+      {
+        "shape_code": "5600",
+        "display_name": "WY-00",
+        "aggregated_amount": 2541231301.54,
+        "population": 578803,
+        "per_capita": 4390.49
+      },
+      {
+        "shape_code": "2206",
+        "display_name": "LA-06",
+        "aggregated_amount": 3513489142.56,
+        "population": 784290,
+        "per_capita": 4479.83
+      },
+      {
+        "shape_code": "0802",
+        "display_name": "CO-02",
+        "aggregated_amount": 2316324999.92,
+        "population": 717177,
+        "per_capita": 3229.78
+      },
+      {
+        "shape_code": "4002",
+        "display_name": "OK-02",
+        "aggregated_amount": 1718065673.27,
+        "population": 795387,
+        "per_capita": 2160.04
+      },
+      {
+        "shape_code": "3620",
+        "display_name": "NY-20",
+        "aggregated_amount": 8592177315.31,
+        "population": 774705,
+        "per_capita": 11090.9
+      },
+      {
+        "shape_code": "2302",
+        "display_name": "ME-02",
+        "aggregated_amount": 1985590606.98,
+        "population": 685599,
+        "per_capita": 2896.14
+      },
+      {
+        "shape_code": "2407",
+        "display_name": "MD-07",
+        "aggregated_amount": 3089853595.16,
+        "population": 745963,
+        "per_capita": 4142.1
+      },
+      {
+        "shape_code": "1000",
+        "display_name": "DE-00",
+        "aggregated_amount": 4149780947.24,
+        "population": 1003384,
+        "per_capita": 4135.79
+      },
+      {
+        "shape_code": "5502",
+        "display_name": "WI-02",
+        "aggregated_amount": 2445992559.68,
+        "population": 739669,
+        "per_capita": 3306.87
+      },
+      {
+        "shape_code": "2601",
+        "display_name": "MI-01",
+        "aggregated_amount": 1028462978.14,
+        "population": 778886,
+        "per_capita": 1320.43
+      },
+      {
+        "shape_code": "5402",
+        "display_name": "WV-02",
+        "aggregated_amount": 880948703.55,
+        "population": 900979,
+        "per_capita": 977.77
+      },
+      {
+        "shape_code": "4506",
+        "display_name": "SC-06",
+        "aggregated_amount": 4663546888.73,
+        "population": 730296,
+        "per_capita": 6385.83
+      },
+      {
+        "shape_code": "3704",
+        "display_name": "NC-04",
+        "aggregated_amount": 1855551683.46,
+        "population": 750874,
+        "per_capita": 2471.19
+      },
+      {
+        "shape_code": "3002",
+        "display_name": "MT-02",
+        "aggregated_amount": 1569759827.07,
+        "population": 547971,
+        "per_capita": 2864.68
+      },
+      {
+        "shape_code": "2903",
+        "display_name": "MO-03",
+        "aggregated_amount": 2602250719.73,
+        "population": 775035,
+        "per_capita": 3357.59
+      },
+      {
+        "shape_code": "4705",
+        "display_name": "TN-05",
+        "aggregated_amount": 1780247218.25,
+        "population": 775588,
+        "per_capita": 2295.35
+      },
+      {
+        "shape_code": "5307",
+        "display_name": "WA-07",
+        "aggregated_amount": 1508862024.7,
+        "population": 770448,
+        "per_capita": 1958.42
+      },
+      {
+        "shape_code": "4003",
+        "display_name": "OK-03",
+        "aggregated_amount": 903162601.53,
+        "population": 786296,
+        "per_capita": 1148.63
+      },
+      {
+        "shape_code": "3503",
+        "display_name": "NM-03",
+        "aggregated_amount": 2506036358.59,
+        "population": 703657,
+        "per_capita": 3561.45
+      },
+      {
+        "shape_code": "3103",
+        "display_name": "NE-03",
+        "aggregated_amount": 959916062.96,
+        "population": 649325,
+        "per_capita": 1478.33
+      },
+      {
+        "shape_code": "2606",
+        "display_name": "MI-06",
+        "aggregated_amount": 1204551128.52,
+        "population": 774940,
+        "per_capita": 1554.38
+      },
+      {
+        "shape_code": "1903",
+        "display_name": "IA-03",
+        "aggregated_amount": 1891571599.03,
+        "population": 809127,
+        "per_capita": 2337.79
+      },
+      {
+        "shape_code": "1713",
+        "display_name": "IL-13",
+        "aggregated_amount": 3927640302.4,
+        "population": 729837,
+        "per_capita": 5381.53
+      },
+      {
+        "shape_code": "2803",
+        "display_name": "MS-03",
+        "aggregated_amount": 2130157537.77,
+        "population": 738621,
+        "per_capita": 2883.97
+      },
+      {
+        "shape_code": "2607",
+        "display_name": "MI-07",
+        "aggregated_amount": 3936548652.37,
+        "population": 777572,
+        "per_capita": 5062.62
+      },
+      {
+        "shape_code": "0650",
+        "display_name": "CA-50",
+        "aggregated_amount": 1759241640.43,
+        "population": 748297,
+        "per_capita": 2350.99
+      },
+      {
+        "shape_code": "0803",
+        "display_name": "CO-03",
+        "aggregated_amount": 1027648735.04,
+        "population": 734246,
+        "per_capita": 1399.6
+      },
+      {
+        "shape_code": "4215",
+        "display_name": "PA-15",
+        "aggregated_amount": 971779447.14,
+        "population": 758343,
+        "per_capita": 1281.45
+      },
+      {
+        "shape_code": "0107",
+        "display_name": "AL-07",
+        "aggregated_amount": 842770544.13,
+        "population": 716213,
+        "per_capita": 1176.7
+      },
+      {
+        "shape_code": "3613",
+        "display_name": "NY-13",
+        "aggregated_amount": 1118000702.51,
+        "population": 780825,
+        "per_capita": 1431.82
+      },
+      {
+        "shape_code": "3001",
+        "display_name": "MT-01",
+        "aggregated_amount": 1250878341.35,
+        "population": 556300,
+        "per_capita": 2248.57
+      },
+      {
+        "shape_code": "3619",
+        "display_name": "NY-19",
+        "aggregated_amount": 881312984.36,
+        "population": 779018,
+        "per_capita": 1131.31
+      },
+      {
+        "shape_code": "5104",
+        "display_name": "VA-04",
+        "aggregated_amount": 2505638015.0,
+        "population": 777131,
+        "per_capita": 3224.22
+      },
+      {
+        "shape_code": "1501",
+        "display_name": "HI-01",
+        "aggregated_amount": 1777785641.34,
+        "population": 712947,
+        "per_capita": 2493.57
+      },
+      {
+        "shape_code": "3101",
+        "display_name": "NE-01",
+        "aggregated_amount": 1067974719.41,
+        "population": 658196,
+        "per_capita": 1622.58
+      },
+      {
+        "shape_code": "1804",
+        "display_name": "IN-04",
+        "aggregated_amount": 640965786.65,
+        "population": 762956,
+        "per_capita": 840.11
+      },
+      {
+        "shape_code": "1203",
+        "display_name": "FL-03",
+        "aggregated_amount": 805450047.63,
+        "population": 779758,
+        "per_capita": 1032.95
+      },
+      {
+        "shape_code": "4005",
+        "display_name": "OK-05",
+        "aggregated_amount": 1797579515.02,
+        "population": 808407,
+        "per_capita": 2223.61
+      },
+      {
+        "shape_code": "1602",
+        "display_name": "ID-02",
+        "aggregated_amount": 1236640851.51,
+        "population": 933186,
+        "per_capita": 1325.18
+      },
+      {
+        "shape_code": "2001",
+        "display_name": "KS-01",
+        "aggregated_amount": 757995884.37,
+        "population": 733038,
+        "per_capita": 1034.05
+      },
+      {
+        "shape_code": "0611",
+        "display_name": "CA-11",
+        "aggregated_amount": 1155550780.44,
+        "population": 702058,
+        "per_capita": 1645.95
+      },
+      {
+        "shape_code": "3610",
+        "display_name": "NY-10",
+        "aggregated_amount": 4446243326.0,
+        "population": 705068,
+        "per_capita": 6306.12
+      },
+      {
+        "shape_code": "0616",
+        "display_name": "CA-16",
+        "aggregated_amount": 869060089.28,
+        "population": 742459,
+        "per_capita": 1170.52
+      },
+      {
+        "shape_code": "1712",
+        "display_name": "IL-12",
+        "aggregated_amount": 808620543.06,
+        "population": 756783,
+        "per_capita": 1068.5
+      },
+      {
+        "shape_code": "1904",
+        "display_name": "IA-04",
+        "aggregated_amount": 975925969.59,
+        "population": 795344,
+        "per_capita": 1227.05
+      },
+      {
+        "shape_code": "2906",
+        "display_name": "MO-06",
+        "aggregated_amount": 630511469.57,
+        "population": 771992,
+        "per_capita": 816.73
+      },
+      {
+        "shape_code": "2901",
+        "display_name": "MO-01",
+        "aggregated_amount": 1143570013.78,
+        "population": 761805,
+        "per_capita": 1501.13
+      },
+      {
+        "shape_code": "0501",
+        "display_name": "AR-01",
+        "aggregated_amount": 755453817.33,
+        "population": 753369,
+        "per_capita": 1002.77
+      },
+      {
+        "shape_code": "1809",
+        "display_name": "IN-09",
+        "aggregated_amount": 751342127.34,
+        "population": 757993,
+        "per_capita": 991.23
+      },
+      {
+        "shape_code": "3202",
+        "display_name": "NV-02",
+        "aggregated_amount": 1786851216.49,
+        "population": 785611,
+        "per_capita": 2274.47
+      },
+      {
+        "shape_code": "4210",
+        "display_name": "PA-10",
+        "aggregated_amount": 4790173633.18,
+        "population": 764361,
+        "per_capita": 6266.9
+      },
+      {
+        "shape_code": "3612",
+        "display_name": "NY-12",
+        "aggregated_amount": 1069777648.3,
+        "population": 689590,
+        "per_capita": 1551.32
+      },
+      {
+        "shape_code": "2708",
+        "display_name": "MN-08",
+        "aggregated_amount": 1824280397.12,
+        "population": 718176,
+        "per_capita": 2540.16
+      },
+      {
+        "shape_code": "0402",
+        "display_name": "AZ-02",
+        "aggregated_amount": 1320272069.74,
+        "population": 809339,
+        "per_capita": 1631.3
+      },
+      {
+        "shape_code": "3302",
+        "display_name": "NH-02",
+        "aggregated_amount": 893671330.58,
+        "population": 691605,
+        "per_capita": 1292.17
+      },
+      {
+        "shape_code": "4004",
+        "display_name": "OK-04",
+        "aggregated_amount": 1106367707.92,
+        "population": 797575,
+        "per_capita": 1387.16
+      },
+      {
+        "shape_code": "0903",
+        "display_name": "CT-03",
+        "aggregated_amount": 1040978678.89,
+        "population": 719381,
+        "per_capita": 1447.05
+      },
+      {
+        "shape_code": "2707",
+        "display_name": "MN-07",
+        "aggregated_amount": 608887288.02,
+        "population": 707323,
+        "per_capita": 860.83
+      },
+      {
+        "shape_code": "0502",
+        "display_name": "AR-02",
+        "aggregated_amount": 1581753097.05,
+        "population": 758976,
+        "per_capita": 2084.06
+      },
+      {
+        "shape_code": "2404",
+        "display_name": "MD-04",
+        "aggregated_amount": 917681025.85,
+        "population": 746989,
+        "per_capita": 1228.51
+      },
+      {
+        "shape_code": "2505",
+        "display_name": "MA-05",
+        "aggregated_amount": 2123807826.65,
+        "population": 766453,
+        "per_capita": 2770.96
+      },
+      {
+        "shape_code": "2908",
+        "display_name": "MO-08",
+        "aggregated_amount": 456224875.68,
+        "population": 771929,
+        "per_capita": 591.02
+      },
+      {
+        "shape_code": "4203",
+        "display_name": "PA-03",
+        "aggregated_amount": 1380810219.77,
+        "population": 741180,
+        "per_capita": 1862.99
+      },
+      {
+        "shape_code": "4825",
+        "display_name": "TX-25",
+        "aggregated_amount": 807728848.22,
+        "population": 784447,
+        "per_capita": 1029.68
+      },
+      {
+        "shape_code": "4104",
+        "display_name": "OR-04",
+        "aggregated_amount": 799188018.11,
+        "population": 708207,
+        "per_capita": 1128.47
+      },
+      {
+        "shape_code": "3903",
+        "display_name": "OH-03",
+        "aggregated_amount": 1532253530.85,
+        "population": 794704,
+        "per_capita": 1928.08
+      },
+      {
+        "shape_code": "0612",
+        "display_name": "CA-12",
+        "aggregated_amount": 948707679.55,
+        "population": 737766,
+        "per_capita": 1285.92
+      },
+      {
+        "shape_code": "4810",
+        "display_name": "TX-10",
+        "aggregated_amount": 1355551562.57,
+        "population": 775543,
+        "per_capita": 1747.87
+      },
+      {
+        "shape_code": "2002",
+        "display_name": "KS-02",
+        "aggregated_amount": 1195514021.01,
+        "population": 731232,
+        "per_capita": 1634.93
+      },
+      {
+        "shape_code": "1601",
+        "display_name": "ID-01",
+        "aggregated_amount": 503951915.04,
+        "population": 967737,
+        "per_capita": 520.75
+      },
+      {
+        "shape_code": "5507",
+        "display_name": "WI-07",
+        "aggregated_amount": 480453091.99,
+        "population": 744643,
+        "per_capita": 645.21
+      },
+      {
+        "shape_code": "4212",
+        "display_name": "PA-12",
+        "aggregated_amount": 1024851436.66,
+        "population": 756600,
+        "per_capita": 1354.55
+      },
+      {
+        "shape_code": "4901",
+        "display_name": "UT-01",
+        "aggregated_amount": 1476348020.51,
+        "population": 836389,
+        "per_capita": 1765.15
+      },
+      {
+        "shape_code": "0407",
+        "display_name": "AZ-07",
+        "aggregated_amount": 967376722.69,
+        "population": 793370,
+        "per_capita": 1219.33
+      },
+      {
+        "shape_code": "2502",
+        "display_name": "MA-02",
+        "aggregated_amount": 601044474.89,
+        "population": 781228,
+        "per_capita": 769.36
+      },
+      {
+        "shape_code": "5109",
+        "display_name": "VA-09",
+        "aggregated_amount": 754580310.86,
+        "population": 783312,
+        "per_capita": 963.32
+      },
+      {
+        "shape_code": "2106",
+        "display_name": "KY-06",
+        "aggregated_amount": 1237522548.67,
+        "population": 750964,
+        "per_capita": 1647.91
+      },
+      {
+        "shape_code": "2701",
+        "display_name": "MN-01",
+        "aggregated_amount": 736789867.47,
+        "population": 714441,
+        "per_capita": 1031.28
+      },
+      {
+        "shape_code": "1807",
+        "display_name": "IN-07",
+        "aggregated_amount": 2199502444.32,
+        "population": 749635,
+        "per_capita": 2934.1
+      },
+      {
+        "shape_code": "2704",
+        "display_name": "MN-04",
+        "aggregated_amount": 1355760091.0,
+        "population": 705033,
+        "per_capita": 1922.97
+      },
+      {
+        "shape_code": "2202",
+        "display_name": "LA-02",
+        "aggregated_amount": 743328646.94,
+        "population": 762623,
+        "per_capita": 974.7
+      },
+      {
+        "shape_code": "3902",
+        "display_name": "OH-02",
+        "aggregated_amount": 503227943.35,
+        "population": 785898,
+        "per_capita": 640.32
+      },
+      {
+        "shape_code": "0504",
+        "display_name": "AR-04",
+        "aggregated_amount": 805997356.18,
+        "population": 747069,
+        "per_capita": 1078.88
+      },
+      {
+        "shape_code": "0636",
+        "display_name": "CA-36",
+        "aggregated_amount": 636704180.67,
+        "population": 722961,
+        "per_capita": 880.69
+      },
+      {
+        "shape_code": "1901",
+        "display_name": "IA-01",
+        "aggregated_amount": 732279081.09,
+        "population": 794325,
+        "per_capita": 921.89
+      },
+      {
+        "shape_code": "0103",
+        "display_name": "AL-03",
+        "aggregated_amount": 652143488.32,
+        "population": 721289,
+        "per_capita": 904.14
+      },
+      {
+        "shape_code": "2105",
+        "display_name": "KY-05",
+        "aggregated_amount": 883266064.62,
+        "population": 749196,
+        "per_capita": 1178.95
+      },
+      {
+        "shape_code": "1707",
+        "display_name": "IL-07",
+        "aggregated_amount": 2442465822.92,
+        "population": 712378,
+        "per_capita": 3428.61
+      },
+      {
+        "shape_code": "2904",
+        "display_name": "MO-04",
+        "aggregated_amount": 487244953.6,
+        "population": 772047,
+        "per_capita": 631.11
+      },
+      {
+        "shape_code": "0602",
+        "display_name": "CA-02",
+        "aggregated_amount": 1640964198.4,
+        "population": 764439,
+        "per_capita": 2146.63
+      },
+      {
+        "shape_code": "1808",
+        "display_name": "IN-08",
+        "aggregated_amount": 527577803.78,
+        "population": 754451,
+        "per_capita": 699.29
+      },
+      {
+        "shape_code": "2705",
+        "display_name": "MN-05",
+        "aggregated_amount": 847230432.72,
+        "population": 708012,
+        "per_capita": 1196.63
+      },
+      {
+        "shape_code": "7898",
+        "display_name": "VI-98",
+        "aggregated_amount": 6636841336.8,
+        "population": 105870,
+        "per_capita": 62688.59
+      },
+      {
+        "shape_code": "0604",
+        "display_name": "CA-04",
+        "aggregated_amount": 583783703.34,
+        "population": 758825,
+        "per_capita": 769.33
+      },
+      {
+        "shape_code": "4703",
+        "display_name": "TN-03",
+        "aggregated_amount": 573699447.9,
+        "population": 776693,
+        "per_capita": 738.64
+      },
+      {
+        "shape_code": "2602",
+        "display_name": "MI-02",
+        "aggregated_amount": 235116304.49,
+        "population": 775529,
+        "per_capita": 303.17
+      },
+      {
+        "shape_code": "0902",
+        "display_name": "CT-02",
+        "aggregated_amount": 966314394.52,
+        "population": 729071,
+        "per_capita": 1325.41
+      },
+      {
+        "shape_code": "6698",
+        "display_name": "GU-98",
+        "aggregated_amount": 1232906778.26,
+        "population": 170534,
+        "per_capita": 7229.68
+      },
+      {
+        "shape_code": "0102",
+        "display_name": "AL-02",
+        "aggregated_amount": 1843603564.51,
+        "population": 716212,
+        "per_capita": 2574.1
+      },
+      {
+        "shape_code": "4402",
+        "display_name": "RI-02",
+        "aggregated_amount": 1217135764.82,
+        "population": 550525,
+        "per_capita": 2210.86
+      },
+      {
+        "shape_code": "4401",
+        "display_name": "RI-01",
+        "aggregated_amount": 575744028.99,
+        "population": 545085,
+        "per_capita": 1056.25
+      },
+      {
+        "shape_code": "5503",
+        "display_name": "WI-03",
+        "aggregated_amount": 492987906.4,
+        "population": 734834,
+        "per_capita": 670.88
+      },
+      {
+        "shape_code": "2605",
+        "display_name": "MI-05",
+        "aggregated_amount": 403323467.23,
+        "population": 776969,
+        "per_capita": 519.1
+      },
+      {
+        "shape_code": "5504",
+        "display_name": "WI-04",
+        "aggregated_amount": 887944500.01,
+        "population": 732094,
+        "per_capita": 1212.88
+      },
+      {
+        "shape_code": "1803",
+        "display_name": "IN-03",
+        "aggregated_amount": 458352439.47,
+        "population": 755001,
+        "per_capita": 607.09
+      },
+      {
+        "shape_code": "5305",
+        "display_name": "WA-05",
+        "aggregated_amount": 989631471.7,
+        "population": 781418,
+        "per_capita": 1266.46
+      },
+      {
+        "shape_code": "1717",
+        "display_name": "IL-17",
+        "aggregated_amount": 423860925.2,
+        "population": 749520,
+        "per_capita": 565.51
+      },
+      {
+        "shape_code": "3911",
+        "display_name": "OH-11",
+        "aggregated_amount": 665991015.23,
+        "population": 767086,
+        "per_capita": 868.21
+      },
+      {
+        "shape_code": "3412",
+        "display_name": "NJ-12",
+        "aggregated_amount": 2532036733.45,
+        "population": 779815,
+        "per_capita": 3246.97
+      },
+      {
+        "shape_code": "2508",
+        "display_name": "MA-08",
+        "aggregated_amount": 1312549569.21,
+        "population": 772956,
+        "per_capita": 1698.09
+      },
+      {
+        "shape_code": "2802",
+        "display_name": "MS-02",
+        "aggregated_amount": 886874623.22,
+        "population": 723186,
+        "per_capita": 1226.34
+      },
+      {
+        "shape_code": "5105",
+        "display_name": "VA-05",
+        "aggregated_amount": 664664628.42,
+        "population": 790423,
+        "per_capita": 840.9
+      },
+      {
+        "shape_code": "3625",
+        "display_name": "NY-25",
+        "aggregated_amount": 777836349.56,
+        "population": 776267,
+        "per_capita": 1002.02
+      },
+      {
+        "shape_code": "3502",
+        "display_name": "NM-02",
+        "aggregated_amount": 897656460.29,
+        "population": 702024,
+        "per_capita": 1278.67
+      },
+      {
+        "shape_code": "2203",
+        "display_name": "LA-03",
+        "aggregated_amount": 577907377.44,
+        "population": 762255,
+        "per_capita": 758.15
+      },
+      {
+        "shape_code": "1802",
+        "display_name": "IN-02",
+        "aggregated_amount": 469074751.7,
+        "population": 752280,
+        "per_capita": 623.54
+      },
+      {
+        "shape_code": "1312",
+        "display_name": "GA-12",
+        "aggregated_amount": 449822991.1,
+        "population": 766372,
+        "per_capita": 586.95
+      },
+      {
+        "shape_code": "1310",
+        "display_name": "GA-10",
+        "aggregated_amount": 662247640.06,
+        "population": 790768,
+        "per_capita": 837.47
+      },
+      {
+        "shape_code": "1715",
+        "display_name": "IL-15",
+        "aggregated_amount": 293939886.23,
+        "population": 754165,
+        "per_capita": 389.76
+      },
+      {
+        "shape_code": "3621",
+        "display_name": "NY-21",
+        "aggregated_amount": 430777839.85,
+        "population": 776503,
+        "per_capita": 554.77
+      },
+      {
+        "shape_code": "2301",
+        "display_name": "ME-01",
+        "aggregated_amount": 467150941.68,
+        "population": 686648,
+        "per_capita": 680.34
+      },
+      {
+        "shape_code": "3906",
+        "display_name": "OH-06",
+        "aggregated_amount": 421209669.24,
+        "population": 778845,
+        "per_capita": 540.81
+      },
+      {
+        "shape_code": "2509",
+        "display_name": "MA-09",
+        "aggregated_amount": 1596135694.36,
+        "population": 792963,
+        "per_capita": 2012.88
+      },
+      {
+        "shape_code": "0901",
+        "display_name": "CT-01",
+        "aggregated_amount": 1277624476.59,
+        "population": 717721,
+        "per_capita": 1780.11
+      },
+      {
+        "shape_code": "0801",
+        "display_name": "CO-01",
+        "aggregated_amount": 1524140032.39,
+        "population": 716790,
+        "per_capita": 2126.34
+      },
+      {
+        "shape_code": "3501",
+        "display_name": "NM-01",
+        "aggregated_amount": 906801736.66,
+        "population": 710196,
+        "per_capita": 1276.83
+      },
+      {
+        "shape_code": "0807",
+        "display_name": "CO-07",
+        "aggregated_amount": 452491492.74,
+        "population": 716843,
+        "per_capita": 631.23
+      },
+      {
+        "shape_code": "5310",
+        "display_name": "WA-10",
+        "aggregated_amount": 2374674242.97,
+        "population": 769533,
+        "per_capita": 3085.86
+      },
+      {
+        "shape_code": "4102",
+        "display_name": "OR-02",
+        "aggregated_amount": 524670681.13,
+        "population": 710992,
+        "per_capita": 737.94
+      },
+      {
+        "shape_code": "4106",
+        "display_name": "OR-06",
+        "aggregated_amount": 1434942896.08,
+        "population": 713197,
+        "per_capita": 2011.99
+      },
+      {
+        "shape_code": "1218",
+        "display_name": "FL-18",
+        "aggregated_amount": 481028543.78,
+        "population": 785291,
+        "per_capita": 612.55
+      },
+      {
+        "shape_code": "4708",
+        "display_name": "TN-08",
+        "aggregated_amount": 372875762.79,
+        "population": 764865,
+        "per_capita": 487.51
+      },
+      {
+        "shape_code": "3403",
+        "display_name": "NJ-03",
+        "aggregated_amount": 712015308.49,
+        "population": 779042,
+        "per_capita": 913.96
+      },
+      {
+        "shape_code": "3624",
+        "display_name": "NY-24",
+        "aggregated_amount": 325335271.78,
+        "population": 772455,
+        "per_capita": 421.17
+      },
+      {
+        "shape_code": "2907",
+        "display_name": "MO-07",
+        "aggregated_amount": 569497503.01,
+        "population": 775102,
+        "per_capita": 734.74
+      },
+      {
+        "shape_code": "0806",
+        "display_name": "CO-06",
+        "aggregated_amount": 7229696.03,
+        "population": 725034,
+        "per_capita": 9.97
+      },
+      {
+        "shape_code": "3301",
+        "display_name": "NH-01",
+        "aggregated_amount": 514452401.3,
+        "population": 697387,
+        "per_capita": 737.69
+      },
+      {
+        "shape_code": "4709",
+        "display_name": "TN-09",
+        "aggregated_amount": 586178865.11,
+        "population": 767682,
+        "per_capita": 763.57
+      },
+      {
+        "shape_code": "2608",
+        "display_name": "MI-08",
+        "aggregated_amount": 243228698.31,
+        "population": 771412,
+        "per_capita": 315.3
+      },
+      {
+        "shape_code": "4101",
+        "display_name": "OR-01",
+        "aggregated_amount": 630502765.95,
+        "population": 701594,
+        "per_capita": 898.67
+      },
+      {
+        "shape_code": "3711",
+        "display_name": "NC-11",
+        "aggregated_amount": 3462418073.97,
+        "population": 750100,
+        "per_capita": 4615.94
+      },
+      {
+        "shape_code": "0104",
+        "display_name": "AL-04",
+        "aggregated_amount": 375725313.23,
+        "population": 723070,
+        "per_capita": 519.63
+      },
+      {
+        "shape_code": "4813",
+        "display_name": "TX-13",
+        "aggregated_amount": 690946685.68,
+        "population": 770850,
+        "per_capita": 896.34
+      },
+      {
+        "shape_code": "4702",
+        "display_name": "TN-02",
+        "aggregated_amount": 553240374.35,
+        "population": 783395,
+        "per_capita": 706.21
+      },
+      {
+        "shape_code": "3701",
+        "display_name": "NC-01",
+        "aggregated_amount": 504840274.01,
+        "population": 747139,
+        "per_capita": 675.7
+      },
+      {
+        "shape_code": "5304",
+        "display_name": "WA-04",
+        "aggregated_amount": 543838591.95,
+        "population": 778838,
+        "per_capita": 698.27
+      },
+      {
+        "shape_code": "3623",
+        "display_name": "NY-23",
+        "aggregated_amount": 528557133.38,
+        "population": 778483,
+        "per_capita": 678.96
+      },
+      {
+        "shape_code": "3622",
+        "display_name": "NY-22",
+        "aggregated_amount": 1096640109.85,
+        "population": 771373,
+        "per_capita": 1421.67
+      },
+      {
+        "shape_code": "5306",
+        "display_name": "WA-06",
+        "aggregated_amount": 562024766.53,
+        "population": 776259,
+        "per_capita": 724.02
+      },
+      {
+        "shape_code": "4817",
+        "display_name": "TX-17",
+        "aggregated_amount": 501465378.26,
+        "population": 787536,
+        "per_capita": 636.75
+      },
+      {
+        "shape_code": "3901",
+        "display_name": "OH-01",
+        "aggregated_amount": 475492602.52,
+        "population": 786192,
+        "per_capita": 604.8
+      },
+      {
+        "shape_code": "4213",
+        "display_name": "PA-13",
+        "aggregated_amount": 461469409.88,
+        "population": 762589,
+        "per_capita": 605.14
+      },
+      {
+        "shape_code": "3905",
+        "display_name": "OH-05",
+        "aggregated_amount": 496437141.58,
+        "population": 786607,
+        "per_capita": 631.11
+      },
+      {
+        "shape_code": "4819",
+        "display_name": "TX-19",
+        "aggregated_amount": 813883857.8,
+        "population": 772398,
+        "per_capita": 1053.71
+      },
+      {
+        "shape_code": "5508",
+        "display_name": "WI-08",
+        "aggregated_amount": 856225736.32,
+        "population": 736848,
+        "per_capita": 1162.01
+      },
+      {
+        "shape_code": "1302",
+        "display_name": "GA-02",
+        "aggregated_amount": 374159753.33,
+        "population": 769411,
+        "per_capita": 486.29
+      },
+      {
+        "shape_code": "5103",
+        "display_name": "VA-03",
+        "aggregated_amount": 559238926.12,
+        "population": 782300,
+        "per_capita": 714.87
+      },
+      {
+        "shape_code": "2204",
+        "display_name": "LA-04",
+        "aggregated_amount": 663182417.01,
+        "population": 768157,
+        "per_capita": 863.34
+      },
+      {
+        "shape_code": "2804",
+        "display_name": "MS-04",
+        "aggregated_amount": 690494917.69,
+        "population": 742632,
+        "per_capita": 929.79
+      },
+      {
+        "shape_code": "3912",
+        "display_name": "OH-12",
+        "aggregated_amount": 409999217.83,
+        "population": 793802,
+        "per_capita": 516.5
+      },
+      {
+        "shape_code": "3626",
+        "display_name": "NY-26",
+        "aggregated_amount": 420966086.02,
+        "population": 767330,
+        "per_capita": 548.61
+      },
+      {
+        "shape_code": "0101",
+        "display_name": "AL-01",
+        "aggregated_amount": 734008618.33,
+        "population": 727212,
+        "per_capita": 1009.35
+      },
+      {
+        "shape_code": "4503",
+        "display_name": "SC-03",
+        "aggregated_amount": 619690484.39,
+        "population": 740035,
+        "per_capita": 837.38
+      },
+      {
+        "shape_code": "0601",
+        "display_name": "CA-01",
+        "aggregated_amount": 709149139.51,
+        "population": 766941,
+        "per_capita": 924.65
+      },
+      {
+        "shape_code": "3909",
+        "display_name": "OH-09",
+        "aggregated_amount": 455654190.11,
+        "population": 783751,
+        "per_capita": 581.38
+      },
+      {
+        "shape_code": "6998",
+        "display_name": "MP-98",
+        "aggregated_amount": -12755291.04,
+        "population": 49481,
+        "per_capita": -257.78
+      },
+      {
+        "shape_code": "4902",
+        "display_name": "UT-02",
+        "aggregated_amount": 727509331.59,
+        "population": 833949,
+        "per_capita": 872.37
+      },
+      {
+        "shape_code": "3904",
+        "display_name": "OH-04",
+        "aggregated_amount": 335417659.64,
+        "population": 793670,
+        "per_capita": 422.62
+      },
+      {
+        "shape_code": "1308",
+        "display_name": "GA-08",
+        "aggregated_amount": 257144681.49,
+        "population": 760317,
+        "per_capita": 338.21
+      },
+      {
+        "shape_code": "0624",
+        "display_name": "CA-24",
+        "aggregated_amount": 554820694.62,
+        "population": 763077,
+        "per_capita": 727.08
+      },
+      {
+        "shape_code": "0804",
+        "display_name": "CO-04",
+        "aggregated_amount": 258934763.84,
+        "population": 746626,
+        "per_capita": 346.81
+      },
+      {
+        "shape_code": "0503",
+        "display_name": "AR-03",
+        "aggregated_amount": 710025959.46,
+        "population": 766477,
+        "per_capita": 926.35
+      },
+      {
+        "shape_code": "3410",
+        "display_name": "NJ-10",
+        "aggregated_amount": 454948180.86,
+        "population": 768400,
+        "per_capita": 592.07
+      },
+      {
+        "shape_code": "4208",
+        "display_name": "PA-08",
+        "aggregated_amount": 625731368.76,
+        "population": 763499,
+        "per_capita": 819.56
+      },
+      {
+        "shape_code": "3910",
+        "display_name": "OH-10",
+        "aggregated_amount": 421363522.07,
+        "population": 784794,
+        "per_capita": 536.91
+      },
+      {
+        "shape_code": "5108",
+        "display_name": "VA-08",
+        "aggregated_amount": 600838872.65,
+        "population": 770372,
+        "per_capita": 779.93
+      },
+      {
+        "shape_code": "2604",
+        "display_name": "MI-04",
+        "aggregated_amount": 251315162.63,
+        "population": 770400,
+        "per_capita": 326.21
+      },
+      {
+        "shape_code": "0647",
+        "display_name": "CA-47",
+        "aggregated_amount": 437315359.15,
+        "population": 755464,
+        "per_capita": 578.87
+      },
+      {
+        "shape_code": "2609",
+        "display_name": "MI-09",
+        "aggregated_amount": 169887321.86,
+        "population": 774843,
+        "per_capita": 219.25
+      },
+      {
+        "shape_code": "3710",
+        "display_name": "NC-10",
+        "aggregated_amount": 551156659.18,
+        "population": 754893,
+        "per_capita": 730.11
+      },
+      {
+        "shape_code": "0634",
+        "display_name": "CA-34",
+        "aggregated_amount": 588392012.87,
+        "population": 750705,
+        "per_capita": 783.79
+      },
+      {
+        "shape_code": "4801",
+        "display_name": "TX-01",
+        "aggregated_amount": 615343573.75,
+        "population": 775770,
+        "per_capita": 793.2
+      },
+      {
+        "shape_code": "2613",
+        "display_name": "MI-13",
+        "aggregated_amount": 849346166.51,
+        "population": 752657,
+        "per_capita": 1128.46
+      },
+      {
+        "shape_code": "2205",
+        "display_name": "LA-05",
+        "aggregated_amount": 681002131.41,
+        "population": 770753,
+        "per_capita": 883.55
+      },
+      {
+        "shape_code": "4830",
+        "display_name": "TX-30",
+        "aggregated_amount": 458311588.69,
+        "population": 780295,
+        "per_capita": 587.36
+      },
+      {
+        "shape_code": "3914",
+        "display_name": "OH-14",
+        "aggregated_amount": 361013437.98,
+        "population": 785721,
+        "per_capita": 459.47
+      },
+      {
+        "shape_code": "0105",
+        "display_name": "AL-05",
+        "aggregated_amount": 464153427.29,
+        "population": 729384,
+        "per_capita": 636.36
+      },
+      {
+        "shape_code": "3913",
+        "display_name": "OH-13",
+        "aggregated_amount": 452296048.57,
+        "population": 783099,
+        "per_capita": 577.57
+      },
+      {
+        "shape_code": "4214",
+        "display_name": "PA-14",
+        "aggregated_amount": 419571062.24,
+        "population": 761114,
+        "per_capita": 551.26
+      },
+      {
+        "shape_code": "2801",
+        "display_name": "MS-01",
+        "aggregated_amount": 538613425.67,
+        "population": 745526,
+        "per_capita": 722.46
+      },
+      {
+        "shape_code": "1902",
+        "display_name": "IA-02",
+        "aggregated_amount": 695135116.52,
+        "population": 794283,
+        "per_capita": 875.17
+      },
+      {
+        "shape_code": "0404",
+        "display_name": "AZ-04",
+        "aggregated_amount": 309885884.65,
+        "population": 804813,
+        "per_capita": 385.04
+      },
+      {
+        "shape_code": "4707",
+        "display_name": "TN-07",
+        "aggregated_amount": 2053688636.35,
+        "population": 784694,
+        "per_capita": 2617.18
+      },
+      {
+        "shape_code": "4809",
+        "display_name": "TX-09",
+        "aggregated_amount": 583466740.4,
+        "population": 738398,
+        "per_capita": 790.18
+      },
+      {
+        "shape_code": "3402",
+        "display_name": "NJ-02",
+        "aggregated_amount": 485202454.76,
+        "population": 782031,
+        "per_capita": 620.44
+      },
+      {
+        "shape_code": "1701",
+        "display_name": "IL-01",
+        "aggregated_amount": 461035186.44,
+        "population": 731895,
+        "per_capita": 629.92
+      },
+      {
+        "shape_code": "2408",
+        "display_name": "MD-08",
+        "aggregated_amount": 1221622743.16,
+        "population": 776724,
+        "per_capita": 1572.79
+      },
+      {
+        "shape_code": "4209",
+        "display_name": "PA-09",
+        "aggregated_amount": 466088546.19,
+        "population": 766968,
+        "per_capita": 607.7
+      },
+      {
+        "shape_code": "5106",
+        "display_name": "VA-06",
+        "aggregated_amount": 331738397.35,
+        "population": 785188,
+        "per_capita": 422.5
+      },
+      {
+        "shape_code": "2905",
+        "display_name": "MO-05",
+        "aggregated_amount": 829878344.61,
+        "population": 771274,
+        "per_capita": 1075.98
+      },
+      {
+        "shape_code": "3102",
+        "display_name": "NE-02",
+        "aggregated_amount": 400885452.84,
+        "population": 656171,
+        "per_capita": 610.95
+      },
+      {
+        "shape_code": "1227",
+        "display_name": "FL-27",
+        "aggregated_amount": 498973268.63,
+        "population": 747914,
+        "per_capita": 667.15
+      },
+      {
+        "shape_code": "4823",
+        "display_name": "TX-23",
+        "aggregated_amount": 343129576.37,
+        "population": 778183,
+        "per_capita": 440.94
+      },
+      {
+        "shape_code": "4701",
+        "display_name": "TN-01",
+        "aggregated_amount": 673834629.09,
+        "population": 772206,
+        "per_capita": 872.61
+      },
+      {
+        "shape_code": "3408",
+        "display_name": "NJ-08",
+        "aggregated_amount": 414026686.3,
+        "population": 743665,
+        "per_capita": 556.74
+      },
+      {
+        "shape_code": "2004",
+        "display_name": "KS-04",
+        "aggregated_amount": 357634071.28,
+        "population": 732928,
+        "per_capita": 487.95
+      },
+      {
+        "shape_code": "2103",
+        "display_name": "KY-03",
+        "aggregated_amount": 899527312.27,
+        "population": 745141,
+        "per_capita": 1207.19
+      },
+      {
+        "shape_code": "4216",
+        "display_name": "PA-16",
+        "aggregated_amount": 585962342.49,
+        "population": 763417,
+        "per_capita": 767.55
+      },
+      {
+        "shape_code": "4815",
+        "display_name": "TX-15",
+        "aggregated_amount": 310817296.01,
+        "population": 778024,
+        "per_capita": 399.5
+      },
+      {
+        "shape_code": "5302",
+        "display_name": "WA-02",
+        "aggregated_amount": 467592818.48,
+        "population": 775616,
+        "per_capita": 602.87
+      },
+      {
+        "shape_code": "3705",
+        "display_name": "NC-05",
+        "aggregated_amount": 443559396.51,
+        "population": 743662,
+        "per_capita": 596.45
+      },
+      {
+        "shape_code": "2401",
+        "display_name": "MD-01",
+        "aggregated_amount": 413139050.03,
+        "population": 780224,
+        "per_capita": 529.51
+      },
+      {
+        "shape_code": "1806",
+        "display_name": "IN-06",
+        "aggregated_amount": 541131334.32,
+        "population": 753496,
+        "per_capita": 718.16
+      },
+      {
+        "shape_code": "4207",
+        "display_name": "PA-07",
+        "aggregated_amount": 386907019.87,
+        "population": 771318,
+        "per_capita": 501.62
+      },
+      {
+        "shape_code": "3401",
+        "display_name": "NJ-01",
+        "aggregated_amount": 500049548.31,
+        "population": 772510,
+        "per_capita": 647.3
+      },
+      {
+        "shape_code": "1301",
+        "display_name": "GA-01",
+        "aggregated_amount": 547567018.84,
+        "population": 776100,
+        "per_capita": 705.54
+      },
+      {
+        "shape_code": "4507",
+        "display_name": "SC-07",
+        "aggregated_amount": 376369836.0,
+        "population": 746084,
+        "per_capita": 504.46
+      },
+      {
+        "shape_code": "1502",
+        "display_name": "HI-02",
+        "aggregated_amount": 2189008786.68,
+        "population": 728606,
+        "per_capita": 3004.38
+      },
+      {
+        "shape_code": "2104",
+        "display_name": "KY-04",
+        "aggregated_amount": 800673017.96,
+        "population": 759552,
+        "per_capita": 1054.14
+      },
+      {
+        "shape_code": "2406",
+        "display_name": "MD-06",
+        "aggregated_amount": 501991278.38,
+        "population": 779649,
+        "per_capita": 643.87
+      },
+      {
+        "shape_code": "0628",
+        "display_name": "CA-28",
+        "aggregated_amount": 544429180.59,
+        "population": 739036,
+        "per_capita": 736.67
+      },
+      {
+        "shape_code": "1805",
+        "display_name": "IN-05",
+        "aggregated_amount": 504418432.84,
+        "population": 766044,
+        "per_capita": 658.47
+      },
+      {
+        "shape_code": "4903",
+        "display_name": "UT-03",
+        "aggregated_amount": 384937126.05,
+        "population": 827399,
+        "per_capita": 465.24
+      },
+      {
+        "shape_code": "2603",
+        "display_name": "MI-03",
+        "aggregated_amount": 344423801.84,
+        "population": 781872,
+        "per_capita": 440.51
+      },
+      {
+        "shape_code": "0905",
+        "display_name": "CT-05",
+        "aggregated_amount": 181431591.41,
+        "population": 720784,
+        "per_capita": 251.71
+      },
+      {
+        "shape_code": "6098",
+        "display_name": "AS-98",
+        "aggregated_amount": 366666611.43,
+        "population": 45035,
+        "per_capita": 8141.81
+      },
+      {
+        "shape_code": "2102",
+        "display_name": "KY-02",
+        "aggregated_amount": 305575917.41,
+        "population": 755942,
+        "per_capita": 404.23
+      },
+      {
+        "shape_code": "1801",
+        "display_name": "IN-01",
+        "aggregated_amount": 401588916.09,
+        "population": 754129,
+        "per_capita": 532.52
+      },
+      {
+        "shape_code": "1709",
+        "display_name": "IL-09",
+        "aggregated_amount": 271294009.77,
+        "population": 746898,
+        "per_capita": 363.23
+      },
+      {
+        "shape_code": "5506",
+        "display_name": "WI-06",
+        "aggregated_amount": 181492178.22,
+        "population": 738026,
+        "per_capita": 245.92
+      },
+      {
+        "shape_code": "1705",
+        "display_name": "IL-05",
+        "aggregated_amount": 580545072.3,
+        "population": 779160,
+        "per_capita": 745.09
+      },
+      {
+        "shape_code": "4820",
+        "display_name": "TX-20",
+        "aggregated_amount": 256064239.83,
+        "population": 776074,
+        "per_capita": 329.95
+      },
+      {
+        "shape_code": "0904",
+        "display_name": "CT-04",
+        "aggregated_amount": 677405934.72,
+        "population": 718640,
+        "per_capita": 942.62
+      },
+      {
+        "shape_code": "1201",
+        "display_name": "FL-01",
+        "aggregated_amount": 551576354.75,
+        "population": 775137,
+        "per_capita": 711.59
+      },
+      {
+        "shape_code": "4837",
+        "display_name": "TX-37",
+        "aggregated_amount": 15349675598.85,
+        "population": 772674,
+        "per_capita": 19865.66
+      },
+      {
+        "shape_code": "1208",
+        "display_name": "FL-08",
+        "aggregated_amount": 491416610.07,
+        "population": 781963,
+        "per_capita": 628.44
+      },
+      {
+        "shape_code": "4706",
+        "display_name": "TN-06",
+        "aggregated_amount": 406706372.87,
+        "population": 768525,
+        "per_capita": 529.2
+      },
+      {
+        "shape_code": "0403",
+        "display_name": "AZ-03",
+        "aggregated_amount": 1798030284.49,
+        "population": 799570,
+        "per_capita": 2248.75
+      },
+      {
+        "shape_code": "4811",
+        "display_name": "TX-11",
+        "aggregated_amount": 633556945.13,
+        "population": 766787,
+        "per_capita": 826.25
+      },
+      {
+        "shape_code": "3707",
+        "display_name": "NC-07",
+        "aggregated_amount": 443768487.66,
+        "population": 757948,
+        "per_capita": 585.49
+      },
+      {
+        "shape_code": "0106",
+        "display_name": "AL-06",
+        "aggregated_amount": 480663234.75,
+        "population": 706497,
+        "per_capita": 680.35
+      },
+      {
+        "shape_code": "4704",
+        "display_name": "TN-04",
+        "aggregated_amount": 366653349.34,
+        "population": 781570,
+        "per_capita": 469.12
+      },
+      {
+        "shape_code": "5303",
+        "display_name": "WA-03",
+        "aggregated_amount": 333471039.74,
+        "population": 782709,
+        "per_capita": 426.05
+      },
+      {
+        "shape_code": "4217",
+        "display_name": "PA-17",
+        "aggregated_amount": 264046976.85,
+        "population": 756635,
+        "per_capita": 348.98
+      },
+      {
+        "shape_code": "2501",
+        "display_name": "MA-01",
+        "aggregated_amount": 376448655.45,
+        "population": 776085,
+        "per_capita": 485.06
+      },
+      {
+        "shape_code": "1303",
+        "display_name": "GA-03",
+        "aggregated_amount": 134818382.29,
+        "population": 773245,
+        "per_capita": 174.35
+      },
+      {
+        "shape_code": "3601",
+        "display_name": "NY-01",
+        "aggregated_amount": 301973573.48,
+        "population": 780204,
+        "per_capita": 387.04
+      },
+      {
+        "shape_code": "4834",
+        "display_name": "TX-34",
+        "aggregated_amount": 272412207.33,
+        "population": 768385,
+        "per_capita": 354.53
+      },
+      {
+        "shape_code": "4818",
+        "display_name": "TX-18",
+        "aggregated_amount": 374409637.0,
+        "population": 758643,
+        "per_capita": 493.53
+      },
+      {
+        "shape_code": "1226",
+        "display_name": "FL-26",
+        "aggregated_amount": 555540506.3,
+        "population": 775668,
+        "per_capita": 716.21
+      },
+      {
+        "shape_code": "5101",
+        "display_name": "VA-01",
+        "aggregated_amount": 420877003.12,
+        "population": 805071,
+        "per_capita": 522.78
+      },
+      {
+        "shape_code": "2403",
+        "display_name": "MD-03",
+        "aggregated_amount": 1333207152.97,
+        "population": 771084,
+        "per_capita": 1729.0
+      },
+      {
+        "shape_code": "1716",
+        "display_name": "IL-16",
+        "aggregated_amount": 603205496.2,
+        "population": 744298,
+        "per_capita": 810.44
+      },
+      {
+        "shape_code": "3406",
+        "display_name": "NJ-06",
+        "aggregated_amount": 215261178.6,
+        "population": 770928,
+        "per_capita": 279.22
+      },
+      {
+        "shape_code": "5111",
+        "display_name": "VA-11",
+        "aggregated_amount": 805838269.73,
+        "population": 774154,
+        "per_capita": 1040.93
+      },
+      {
+        "shape_code": "1714",
+        "display_name": "IL-14",
+        "aggregated_amount": 164358974.0,
+        "population": 757967,
+        "per_capita": 216.84
+      },
+      {
+        "shape_code": "1221",
+        "display_name": "FL-21",
+        "aggregated_amount": 197309886.38,
+        "population": 785345,
+        "per_capita": 251.24
+      },
+      {
+        "shape_code": "1206",
+        "display_name": "FL-06",
+        "aggregated_amount": 331283043.18,
+        "population": 786354,
+        "per_capita": 421.29
+      },
+      {
+        "shape_code": "4502",
+        "display_name": "SC-02",
+        "aggregated_amount": 543249098.46,
+        "population": 744260,
+        "per_capita": 729.92
+      },
+      {
+        "shape_code": "1314",
+        "display_name": "GA-14",
+        "aggregated_amount": 267437926.26,
+        "population": 777456,
+        "per_capita": 343.99
+      },
+      {
+        "shape_code": "4814",
+        "display_name": "TX-14",
+        "aggregated_amount": 347503481.9,
+        "population": 767371,
+        "per_capita": 452.85
+      },
+      {
+        "shape_code": "4505",
+        "display_name": "SC-05",
+        "aggregated_amount": 156554624.58,
+        "population": 737349,
+        "per_capita": 212.32
+      },
+      {
+        "shape_code": "4205",
+        "display_name": "PA-05",
+        "aggregated_amount": 413739519.48,
+        "population": 754121,
+        "per_capita": 548.64
+      },
+      {
+        "shape_code": "1210",
+        "display_name": "FL-10",
+        "aggregated_amount": 275572933.66,
+        "population": 777189,
+        "per_capita": 354.58
+      },
+      {
+        "shape_code": "5309",
+        "display_name": "WA-09",
+        "aggregated_amount": 219590184.77,
+        "population": 750581,
+        "per_capita": 292.56
+      },
+      {
+        "shape_code": "0637",
+        "display_name": "CA-37",
+        "aggregated_amount": 237578815.83,
+        "population": 752632,
+        "per_capita": 315.66
+      },
+      {
+        "shape_code": "0607",
+        "display_name": "CA-07",
+        "aggregated_amount": 8712139505.55,
+        "population": 760350,
+        "per_capita": 11458.06
+      },
+      {
+        "shape_code": "3703",
+        "display_name": "NC-03",
+        "aggregated_amount": 506727177.03,
+        "population": 749741,
+        "per_capita": 675.87
+      },
+      {
+        "shape_code": "0401",
+        "display_name": "AZ-01",
+        "aggregated_amount": 572593950.69,
+        "population": 796924,
+        "per_capita": 718.51
+      },
+      {
+        "shape_code": "1204",
+        "display_name": "FL-04",
+        "aggregated_amount": 215674539.25,
+        "population": 786011,
+        "per_capita": 274.39
+      },
+      {
+        "shape_code": "3617",
+        "display_name": "NY-17",
+        "aggregated_amount": 345707192.81,
+        "population": 776481,
+        "per_capita": 445.22
+      },
+      {
+        "shape_code": "2503",
+        "display_name": "MA-03",
+        "aggregated_amount": 139878204.99,
+        "population": 775520,
+        "per_capita": 180.37
+      },
+      {
+        "shape_code": "0613",
+        "display_name": "CA-13",
+        "aggregated_amount": 245190464.22,
+        "population": 783282,
+        "per_capita": 313.03
+      },
+      {
+        "shape_code": "4001",
+        "display_name": "OK-01",
+        "aggregated_amount": 394541390.49,
+        "population": 798974,
+        "per_capita": 493.81
+      },
+      {
+        "shape_code": "3618",
+        "display_name": "NY-18",
+        "aggregated_amount": 290475594.14,
+        "population": 776747,
+        "per_capita": 373.96
+      },
+      {
+        "shape_code": "0808",
+        "display_name": "CO-08",
+        "aggregated_amount": 140094815.94,
+        "population": 724072,
+        "per_capita": 193.48
+      },
+      {
+        "shape_code": "4816",
+        "display_name": "TX-16",
+        "aggregated_amount": 321852188.82,
+        "population": 772269,
+        "per_capita": 416.76
+      },
+      {
+        "shape_code": "0805",
+        "display_name": "CO-05",
+        "aggregated_amount": 265686214.47,
+        "population": 731281,
+        "per_capita": 363.32
+      },
+      {
+        "shape_code": "2504",
+        "display_name": "MA-04",
+        "aggregated_amount": 158995884.56,
+        "population": 777691,
+        "per_capita": 204.45
+      },
+      {
+        "shape_code": "4504",
+        "display_name": "SC-04",
+        "aggregated_amount": 357680831.37,
+        "population": 747967,
+        "per_capita": 478.2
+      },
+      {
+        "shape_code": "4835",
+        "display_name": "TX-35",
+        "aggregated_amount": 391645843.2,
+        "population": 760005,
+        "per_capita": 515.32
+      },
+      {
+        "shape_code": "2506",
+        "display_name": "MA-06",
+        "aggregated_amount": 550524840.19,
+        "population": 780128,
+        "per_capita": 705.69
+      },
+      {
+        "shape_code": "0603",
+        "display_name": "CA-03",
+        "aggregated_amount": 630856985.39,
+        "population": 768419,
+        "per_capita": 820.98
+      },
+      {
+        "shape_code": "4828",
+        "display_name": "TX-28",
+        "aggregated_amount": 881997837.96,
+        "population": 771913,
+        "per_capita": 1142.61
+      },
+      {
+        "shape_code": "1213",
+        "display_name": "FL-13",
+        "aggregated_amount": 1195610824.27,
+        "population": 768563,
+        "per_capita": 1555.64
+      },
+      {
+        "shape_code": "0639",
+        "display_name": "CA-39",
+        "aggregated_amount": 211168872.26,
+        "population": 767831,
+        "per_capita": 275.02
+      },
+      {
+        "shape_code": "3713",
+        "display_name": "NC-13",
+        "aggregated_amount": 232668172.8,
+        "population": 770237,
+        "per_capita": 302.07
+      },
+      {
+        "shape_code": "1219",
+        "display_name": "FL-19",
+        "aggregated_amount": 414802147.42,
+        "population": 788513,
+        "per_capita": 526.06
+      },
+      {
+        "shape_code": "0619",
+        "display_name": "CA-19",
+        "aggregated_amount": 226164871.75,
+        "population": 767441,
+        "per_capita": 294.7
+      },
+      {
+        "shape_code": "1215",
+        "display_name": "FL-15",
+        "aggregated_amount": 547497005.09,
+        "population": 800482,
+        "per_capita": 683.96
+      },
+      {
+        "shape_code": "5501",
+        "display_name": "WI-01",
+        "aggregated_amount": 199475576.67,
+        "population": 732414,
+        "per_capita": 272.35
+      },
+      {
+        "shape_code": "0651",
+        "display_name": "CA-51",
+        "aggregated_amount": 153573911.55,
+        "population": 762785,
+        "per_capita": 201.33
+      },
+      {
+        "shape_code": "0605",
+        "display_name": "CA-05",
+        "aggregated_amount": 104358730.13,
+        "population": 773398,
+        "per_capita": 134.94
+      },
+      {
+        "shape_code": "3411",
+        "display_name": "NJ-11",
+        "aggregated_amount": 413701950.41,
+        "population": 769512,
+        "per_capita": 537.62
+      },
+      {
+        "shape_code": "4807",
+        "display_name": "TX-07",
+        "aggregated_amount": 632799091.42,
+        "population": 793128,
+        "per_capita": 797.85
+      },
+      {
+        "shape_code": "4202",
+        "display_name": "PA-02",
+        "aggregated_amount": 270038383.9,
+        "population": 767191,
+        "per_capita": 351.98
+      },
+      {
+        "shape_code": "3915",
+        "display_name": "OH-15",
+        "aggregated_amount": 2324612882.12,
+        "population": 778819,
+        "per_capita": 2984.79
+      },
+      {
+        "shape_code": "4831",
+        "display_name": "TX-31",
+        "aggregated_amount": 290380885.09,
+        "population": 801721,
+        "per_capita": 362.2
+      },
+      {
+        "shape_code": "1217",
+        "display_name": "FL-17",
+        "aggregated_amount": 392159598.76,
+        "population": 801807,
+        "per_capita": 489.09
+      },
+      {
+        "shape_code": "0618",
+        "display_name": "CA-18",
+        "aggregated_amount": 276786355.82,
+        "population": 734119,
+        "per_capita": 377.03
+      },
+      {
+        "shape_code": "1702",
+        "display_name": "IL-02",
+        "aggregated_amount": 131668107.85,
+        "population": 758903,
+        "per_capita": 173.5
+      },
+      {
+        "shape_code": "1311",
+        "display_name": "GA-11",
+        "aggregated_amount": 229778622.05,
+        "population": 772858,
+        "per_capita": 297.31
+      },
+      {
+        "shape_code": "5505",
+        "display_name": "WI-05",
+        "aggregated_amount": 198349677.37,
+        "population": 737380,
+        "per_capita": 268.99
+      },
+      {
+        "shape_code": "4806",
+        "display_name": "TX-06",
+        "aggregated_amount": 195409188.94,
+        "population": 766924,
+        "per_capita": 254.8
+      },
+      {
+        "shape_code": "2201",
+        "display_name": "LA-01",
+        "aggregated_amount": 251411395.57,
+        "population": 775969,
+        "per_capita": 324.0
+      },
+      {
+        "shape_code": "3614",
+        "display_name": "NY-14",
+        "aggregated_amount": 176892796.92,
+        "population": 696136,
+        "per_capita": 254.11
+      },
+      {
+        "shape_code": "5102",
+        "display_name": "VA-02",
+        "aggregated_amount": 193499882.68,
+        "population": 784186,
+        "per_capita": 246.75
+      },
+      {
+        "shape_code": "0626",
+        "display_name": "CA-26",
+        "aggregated_amount": 242198001.28,
+        "population": 751524,
+        "per_capita": 322.28
+      },
+      {
+        "shape_code": "2003",
+        "display_name": "KS-03",
+        "aggregated_amount": 611739802.12,
+        "population": 737384,
+        "per_capita": 829.61
+      },
+      {
+        "shape_code": "3714",
+        "display_name": "NC-14",
+        "aggregated_amount": 445782570.91,
+        "population": 764197,
+        "per_capita": 583.33
+      },
+      {
+        "shape_code": "3407",
+        "display_name": "NJ-07",
+        "aggregated_amount": 151437230.4,
+        "population": 777024,
+        "per_capita": 194.89
+      },
+      {
+        "shape_code": "3708",
+        "display_name": "NC-08",
+        "aggregated_amount": 213660540.14,
+        "population": 756029,
+        "per_capita": 282.61
+      },
+      {
+        "shape_code": "0409",
+        "display_name": "AZ-09",
+        "aggregated_amount": 348671626.8,
+        "population": 842342,
+        "per_capita": 413.93
+      },
+      {
+        "shape_code": "3908",
+        "display_name": "OH-08",
+        "aggregated_amount": 140451542.03,
+        "population": 784419,
+        "per_capita": 179.05
+      },
+      {
+        "shape_code": "3907",
+        "display_name": "OH-07",
+        "aggregated_amount": 128404490.34,
+        "population": 792610,
+        "per_capita": 162.0
+      },
+      {
+        "shape_code": "4836",
+        "display_name": "TX-36",
+        "aggregated_amount": 156049929.4,
+        "population": 782741,
+        "per_capita": 199.36
+      },
+      {
+        "shape_code": "1205",
+        "display_name": "FL-05",
+        "aggregated_amount": 224880262.18,
+        "population": 784246,
+        "per_capita": 286.75
+      },
+      {
+        "shape_code": "4804",
+        "display_name": "TX-04",
+        "aggregated_amount": 211322463.59,
+        "population": 788283,
+        "per_capita": 268.08
+      },
+      {
+        "shape_code": "4206",
+        "display_name": "PA-06",
+        "aggregated_amount": 244349964.22,
+        "population": 768151,
+        "per_capita": 318.1
+      },
+      {
+        "shape_code": "2702",
+        "display_name": "MN-02",
+        "aggregated_amount": 263333352.68,
+        "population": 722101,
+        "per_capita": 364.68
+      },
+      {
+        "shape_code": "1710",
+        "display_name": "IL-10",
+        "aggregated_amount": 152289080.1,
+        "population": 751134,
+        "per_capita": 202.75
+      },
+      {
+        "shape_code": "5107",
+        "display_name": "VA-07",
+        "aggregated_amount": 187386913.34,
+        "population": 798670,
+        "per_capita": 234.62
+      },
+      {
+        "shape_code": "0648",
+        "display_name": "CA-48",
+        "aggregated_amount": 157658628.52,
+        "population": 752792,
+        "per_capita": 209.43
+      },
+      {
+        "shape_code": "1216",
+        "display_name": "FL-16",
+        "aggregated_amount": 462044672.52,
+        "population": 789177,
+        "per_capita": 585.48
+      },
+      {
+        "shape_code": "2706",
+        "display_name": "MN-06",
+        "aggregated_amount": 1215484722.81,
+        "population": 725893,
+        "per_capita": 1674.47
+      },
+      {
+        "shape_code": "3201",
+        "display_name": "NV-01",
+        "aggregated_amount": 359609755.2,
+        "population": 757119,
+        "per_capita": 474.97
+      },
+      {
+        "shape_code": "3709",
+        "display_name": "NC-09",
+        "aggregated_amount": 113927786.94,
+        "population": 755891,
+        "per_capita": 150.72
+      },
+      {
+        "shape_code": "1309",
+        "display_name": "GA-09",
+        "aggregated_amount": 120939758.15,
+        "population": 797012,
+        "per_capita": 151.74
+      },
+      {
+        "shape_code": "3706",
+        "display_name": "NC-06",
+        "aggregated_amount": 368790220.01,
+        "population": 754077,
+        "per_capita": 489.06
+      },
+      {
+        "shape_code": "0625",
+        "display_name": "CA-25",
+        "aggregated_amount": 129032160.29,
+        "population": 767946,
+        "per_capita": 168.02
+      },
+      {
+        "shape_code": "4904",
+        "display_name": "UT-04",
+        "aggregated_amount": 184467958.11,
+        "population": 840238,
+        "per_capita": 219.54
+      },
+      {
+        "shape_code": "3204",
+        "display_name": "NV-04",
+        "aggregated_amount": 165603723.84,
+        "population": 794707,
+        "per_capita": 208.38
+      },
+      {
+        "shape_code": "2405",
+        "display_name": "MD-05",
+        "aggregated_amount": 189926145.06,
+        "population": 789756,
+        "per_capita": 240.49
+      },
+      {
+        "shape_code": "5308",
+        "display_name": "WA-08",
+        "aggregated_amount": 203575026.66,
+        "population": 782989,
+        "per_capita": 260.0
+      },
+      {
+        "shape_code": "3712",
+        "display_name": "NC-12",
+        "aggregated_amount": 378610481.72,
+        "population": 743616,
+        "per_capita": 509.15
+      },
+      {
+        "shape_code": "0621",
+        "display_name": "CA-21",
+        "aggregated_amount": 189211350.25,
+        "population": 755683,
+        "per_capita": 250.38
+      },
+      {
+        "shape_code": "4105",
+        "display_name": "OR-05",
+        "aggregated_amount": 274138936.68,
+        "population": 713162,
+        "per_capita": 384.4
+      },
+      {
+        "shape_code": "4103",
+        "display_name": "OR-03",
+        "aggregated_amount": 293782835.54,
+        "population": 699003,
+        "per_capita": 420.29
+      },
+      {
+        "shape_code": "5110",
+        "display_name": "VA-10",
+        "aggregated_amount": 401704013.71,
+        "population": 791467,
+        "per_capita": 507.54
+      },
+      {
+        "shape_code": "0406",
+        "display_name": "AZ-06",
+        "aggregated_amount": 714863131.99,
+        "population": 803556,
+        "per_capita": 889.62
+      },
+      {
+        "shape_code": "4805",
+        "display_name": "TX-05",
+        "aggregated_amount": 88438117.82,
+        "population": 774952,
+        "per_capita": 114.12
+      },
+      {
+        "shape_code": "1214",
+        "display_name": "FL-14",
+        "aggregated_amount": 1154713116.93,
+        "population": 775035,
+        "per_capita": 1489.89
+      },
+      {
+        "shape_code": "4824",
+        "display_name": "TX-24",
+        "aggregated_amount": 301278107.13,
+        "population": 746916,
+        "per_capita": 403.36
+      },
+      {
+        "shape_code": "0630",
+        "display_name": "CA-30",
+        "aggregated_amount": 205072169.38,
+        "population": 731165,
+        "per_capita": 280.47
+      },
+      {
+        "shape_code": "4812",
+        "display_name": "TX-12",
+        "aggregated_amount": 152523888.59,
+        "population": 783568,
+        "per_capita": 194.65
+      },
+      {
+        "shape_code": "3616",
+        "display_name": "NY-16",
+        "aggregated_amount": 232610411.73,
+        "population": 765635,
+        "per_capita": 303.81
+      },
+      {
+        "shape_code": "2902",
+        "display_name": "MO-02",
+        "aggregated_amount": 80123803.38,
+        "population": 769003,
+        "per_capita": 104.19
+      },
+      {
+        "shape_code": "4211",
+        "display_name": "PA-11",
+        "aggregated_amount": 133460939.7,
+        "population": 772986,
+        "per_capita": 172.66
+      },
+      {
+        "shape_code": "1223",
+        "display_name": "FL-23",
+        "aggregated_amount": 366992913.05,
+        "population": 773856,
+        "per_capita": 474.24
+      },
+      {
+        "shape_code": "0620",
+        "display_name": "CA-20",
+        "aggregated_amount": 118601847.75,
+        "population": 766063,
+        "per_capita": 154.82
+      },
+      {
+        "shape_code": "0609",
+        "display_name": "CA-09",
+        "aggregated_amount": 303117919.0,
+        "population": 770460,
+        "per_capita": 393.42
+      },
+      {
+        "shape_code": "2402",
+        "display_name": "MD-02",
+        "aggregated_amount": 333130402.74,
+        "population": 774740,
+        "per_capita": 429.99
+      },
+      {
+        "shape_code": "3603",
+        "display_name": "NY-03",
+        "aggregated_amount": 108562907.74,
+        "population": 781920,
+        "per_capita": 138.84
+      },
+      {
+        "shape_code": "1212",
+        "display_name": "FL-12",
+        "aggregated_amount": 705802707.01,
+        "population": 778826,
+        "per_capita": 906.24
+      },
+      {
+        "shape_code": "0622",
+        "display_name": "CA-22",
+        "aggregated_amount": 69247567.5,
+        "population": 795088,
+        "per_capita": 87.09
+      },
+      {
+        "shape_code": "3404",
+        "display_name": "NJ-04",
+        "aggregated_amount": 103696249.4,
+        "population": 782528,
+        "per_capita": 132.51
+      },
+      {
+        "shape_code": "4501",
+        "display_name": "SC-01",
+        "aggregated_amount": 99746940.14,
+        "population": 744714,
+        "per_capita": 133.94
+      },
+      {
+        "shape_code": "4821",
+        "display_name": "TX-21",
+        "aggregated_amount": 284197938.38,
+        "population": 799871,
+        "per_capita": 355.3
+      },
+      {
+        "shape_code": "4808",
+        "display_name": "TX-08",
+        "aggregated_amount": 49559070.71,
+        "population": 821153,
+        "per_capita": 60.35
+      },
+      {
+        "shape_code": "0614",
+        "display_name": "CA-14",
+        "aggregated_amount": 89346883.7,
+        "population": 752226,
+        "per_capita": 118.78
+      },
+      {
+        "shape_code": "3409",
+        "display_name": "NJ-09",
+        "aggregated_amount": 304852466.26,
+        "population": 760340,
+        "per_capita": 400.94
+      },
+      {
+        "shape_code": "1207",
+        "display_name": "FL-07",
+        "aggregated_amount": 144037586.36,
+        "population": 768702,
+        "per_capita": 187.38
+      },
+      {
+        "shape_code": "4822",
+        "display_name": "TX-22",
+        "aggregated_amount": 242064424.02,
+        "population": 811754,
+        "per_capita": 298.2
+      },
+      {
+        "shape_code": "1228",
+        "display_name": "FL-28",
+        "aggregated_amount": 130104563.22,
+        "population": 765935,
+        "per_capita": 169.86
+      },
+      {
+        "shape_code": "4201",
+        "display_name": "PA-01",
+        "aggregated_amount": 96223768.19,
+        "population": 763834,
+        "per_capita": 125.97
+      },
+      {
+        "shape_code": "0631",
+        "display_name": "CA-31",
+        "aggregated_amount": 143694304.16,
+        "population": 738315,
+        "per_capita": 194.62
+      },
+      {
+        "shape_code": "3405",
+        "display_name": "NJ-05",
+        "aggregated_amount": 91660816.4,
+        "population": 781335,
+        "per_capita": 117.31
+      },
+      {
+        "shape_code": "0623",
+        "display_name": "CA-23",
+        "aggregated_amount": 106280907.12,
+        "population": 761286,
+        "per_capita": 139.61
+      },
+      {
+        "shape_code": "1209",
+        "display_name": "FL-09",
+        "aggregated_amount": 272164422.33,
+        "population": 762639,
+        "per_capita": 356.87
+      },
+      {
+        "shape_code": "3604",
+        "display_name": "NY-04",
+        "aggregated_amount": 74975390.36,
+        "population": 774038,
+        "per_capita": 96.86
+      },
+      {
+        "shape_code": "0617",
+        "display_name": "CA-17",
+        "aggregated_amount": 53355287.59,
+        "population": 733185,
+        "per_capita": 72.77
+      },
+      {
+        "shape_code": "2610",
+        "display_name": "MI-10",
+        "aggregated_amount": 64182356.08,
+        "population": 775839,
+        "per_capita": 82.73
+      },
+      {
+        "shape_code": "0642",
+        "display_name": "CA-42",
+        "aggregated_amount": 439482015.47,
+        "population": 742949,
+        "per_capita": 591.54
+      },
+      {
+        "shape_code": "0615",
+        "display_name": "CA-15",
+        "aggregated_amount": 314196011.83,
+        "population": 738342,
+        "per_capita": 425.54
+      },
+      {
+        "shape_code": "0632",
+        "display_name": "CA-32",
+        "aggregated_amount": 88672368.59,
+        "population": 763531,
+        "per_capita": 116.13
+      },
+      {
+        "shape_code": "2612",
+        "display_name": "MI-12",
+        "aggregated_amount": 64334921.02,
+        "population": 775033,
+        "per_capita": 83.01
+      },
+      {
+        "shape_code": "2611",
+        "display_name": "MI-11",
+        "aggregated_amount": 21845506.05,
+        "population": 764859,
+        "per_capita": 28.56
+      },
+      {
+        "shape_code": "0646",
+        "display_name": "CA-46",
+        "aggregated_amount": 112864969.55,
+        "population": 757761,
+        "per_capita": 148.95
+      },
+      {
+        "shape_code": "1225",
+        "display_name": "FL-25",
+        "aggregated_amount": 60544152.61,
+        "population": 768532,
+        "per_capita": 78.78
+      },
+      {
+        "shape_code": "0608",
+        "display_name": "CA-08",
+        "aggregated_amount": 96075081.27,
+        "population": 746240,
+        "per_capita": 128.75
+      },
+      {
+        "shape_code": "1307",
+        "display_name": "GA-07",
+        "aggregated_amount": 107086357.92,
+        "population": 749673,
+        "per_capita": 142.84
+      },
+      {
+        "shape_code": "0633",
+        "display_name": "CA-33",
+        "aggregated_amount": 95168773.39,
+        "population": 760127,
+        "per_capita": 125.2
+      },
+      {
+        "shape_code": "1222",
+        "display_name": "FL-22",
+        "aggregated_amount": 97738681.09,
+        "population": 774317,
+        "per_capita": 126.23
+      },
+      {
+        "shape_code": "1220",
+        "display_name": "FL-20",
+        "aggregated_amount": 30576429.66,
+        "population": 750268,
+        "per_capita": 40.75
+      },
+      {
+        "shape_code": "0644",
+        "display_name": "CA-44",
+        "aggregated_amount": 49924362.24,
+        "population": 754013,
+        "per_capita": 66.21
+      },
+      {
+        "shape_code": "1313",
+        "display_name": "GA-13",
+        "aggregated_amount": 38364001.05,
+        "population": 763561,
+        "per_capita": 50.24
+      },
+      {
+        "shape_code": "4838",
+        "display_name": "TX-38",
+        "aggregated_amount": 202491157.67,
+        "population": 783719,
+        "per_capita": 258.37
+      },
+      {
+        "shape_code": "0652",
+        "display_name": "CA-52",
+        "aggregated_amount": 83066618.54,
+        "population": 759409,
+        "per_capita": 109.38
+      },
+      {
+        "shape_code": "1211",
+        "display_name": "FL-11",
+        "aggregated_amount": 75545142.21,
+        "population": 807589,
+        "per_capita": 93.54
+      },
+      {
+        "shape_code": "1304",
+        "display_name": "GA-04",
+        "aggregated_amount": 252788093.59,
+        "population": 756440,
+        "per_capita": 334.18
+      },
+      {
+        "shape_code": "0610",
+        "display_name": "CA-10",
+        "aggregated_amount": 94409876.69,
+        "population": 762072,
+        "per_capita": 123.89
+      },
+      {
+        "shape_code": "4803",
+        "display_name": "TX-03",
+        "aggregated_amount": 80043366.22,
+        "population": 804464,
+        "per_capita": 99.5
+      },
+      {
+        "shape_code": "0635",
+        "display_name": "CA-35",
+        "aggregated_amount": 97747915.58,
+        "population": 774713,
+        "per_capita": 126.17
+      },
+      {
+        "shape_code": "1711",
+        "display_name": "IL-11",
+        "aggregated_amount": 51672055.6,
+        "population": 746018,
+        "per_capita": 69.26
+      },
+      {
+        "shape_code": "4204",
+        "display_name": "PA-04",
+        "aggregated_amount": 56013783.61,
+        "population": 771749,
+        "per_capita": 72.58
+      },
+      {
+        "shape_code": "1306",
+        "display_name": "GA-06",
+        "aggregated_amount": 33376964.82,
+        "population": 780668,
+        "per_capita": 42.75
+      },
+      {
+        "shape_code": "3605",
+        "display_name": "NY-05",
+        "aggregated_amount": 285564198.66,
+        "population": 822717,
+        "per_capita": 347.1
+      },
+      {
+        "shape_code": "1224",
+        "display_name": "FL-24",
+        "aggregated_amount": 69259838.0,
+        "population": 756692,
+        "per_capita": 91.53
+      },
+      {
+        "shape_code": "1703",
+        "display_name": "IL-03",
+        "aggregated_amount": 320431286.81,
+        "population": 723029,
+        "per_capita": 443.18
+      },
+      {
+        "shape_code": "2703",
+        "display_name": "MN-03",
+        "aggregated_amount": 43720532.38,
+        "population": 706411,
+        "per_capita": 61.89
+      },
+      {
+        "shape_code": "0645",
+        "display_name": "CA-45",
+        "aggregated_amount": 53613573.11,
+        "population": 748285,
+        "per_capita": 71.65
+      },
+      {
+        "shape_code": "0649",
+        "display_name": "CA-49",
+        "aggregated_amount": 60291390.72,
+        "population": 765147,
+        "per_capita": 78.8
+      },
+      {
+        "shape_code": "3602",
+        "display_name": "NY-02",
+        "aggregated_amount": 49817789.41,
+        "population": 775593,
+        "per_capita": 64.23
+      },
+      {
+        "shape_code": "0643",
+        "display_name": "CA-43",
+        "aggregated_amount": 452925516.04,
+        "population": 736160,
+        "per_capita": 615.25
+      },
+      {
+        "shape_code": "3609",
+        "display_name": "NY-09",
+        "aggregated_amount": 41396036.57,
+        "population": 777866,
+        "per_capita": 53.22
+      },
+      {
+        "shape_code": "3615",
+        "display_name": "NY-15",
+        "aggregated_amount": 30154578.12,
+        "population": 757465,
+        "per_capita": 39.81
+      },
+      {
+        "shape_code": "3607",
+        "display_name": "NY-07",
+        "aggregated_amount": 79040750.53,
+        "population": 717913,
+        "per_capita": 110.1
+      },
+      {
+        "shape_code": "4826",
+        "display_name": "TX-26",
+        "aggregated_amount": 196588351.65,
+        "population": 800175,
+        "per_capita": 245.68
+      },
+      {
+        "shape_code": "3611",
+        "display_name": "NY-11",
+        "aggregated_amount": 59017943.98,
+        "population": 766546,
+        "per_capita": 76.99
+      },
+      {
+        "shape_code": "5301",
+        "display_name": "WA-01",
+        "aggregated_amount": 49790084.66,
+        "population": 770301,
+        "per_capita": 64.64
+      },
+      {
+        "shape_code": "0638",
+        "display_name": "CA-38",
+        "aggregated_amount": 47567205.69,
+        "population": 743870,
+        "per_capita": 63.95
+      },
+      {
+        "shape_code": "0641",
+        "display_name": "CA-41",
+        "aggregated_amount": 70055825.14,
+        "population": 789845,
+        "per_capita": 88.7
+      },
+      {
+        "shape_code": "4832",
+        "display_name": "TX-32",
+        "aggregated_amount": 28350390.27,
+        "population": 755403,
+        "per_capita": 37.53
+      },
+      {
+        "shape_code": "3606",
+        "display_name": "NY-06",
+        "aggregated_amount": 21723319.68,
+        "population": 736965,
+        "per_capita": 29.48
+      },
+      {
+        "shape_code": "1706",
+        "display_name": "IL-06",
+        "aggregated_amount": 26356935.62,
+        "population": 754571,
+        "per_capita": 34.93
+      },
+      {
+        "shape_code": "1708",
+        "display_name": "IL-08",
+        "aggregated_amount": 40803098.04,
+        "population": 752922,
+        "per_capita": 54.19
+      },
+      {
+        "shape_code": "1704",
+        "display_name": "IL-04",
+        "aggregated_amount": 119698771.33,
+        "population": 721991,
+        "per_capita": 165.79
+      },
+      {
+        "shape_code": "4833",
+        "display_name": "TX-33",
+        "aggregated_amount": 45785246.7,
+        "population": 785806,
+        "per_capita": 58.27
+      },
+      {
+        "shape_code": "0640",
+        "display_name": "CA-40",
+        "aggregated_amount": 22882937.0,
+        "population": 753484,
+        "per_capita": 30.37
+      },
+      {
+        "shape_code": "0627",
+        "display_name": "CA-27",
+        "aggregated_amount": 18027284.22,
+        "population": 748536,
+        "per_capita": 24.08
+      },
+      {
+        "shape_code": "0629",
+        "display_name": "CA-29",
+        "aggregated_amount": 42015047.1,
+        "population": 738555,
+        "per_capita": 56.89
+      },
+      {
+        "shape_code": "4829",
+        "display_name": "TX-29",
+        "aggregated_amount": 32359965.77,
+        "population": 740023,
+        "per_capita": 43.73
+      },
+      {
+        "shape_code": "0408",
+        "display_name": "AZ-08",
+        "aggregated_amount": 21044371.02,
+        "population": 813094,
+        "per_capita": 25.88
+      },
+      {
+        "shape_code": "0405",
+        "display_name": "AZ-05",
+        "aggregated_amount": 10338577.78,
+        "population": 813308,
+        "per_capita": 12.71
+      },
+      {
+        "shape_code": "3608",
+        "display_name": "NY-08",
+        "aggregated_amount": 5476830.63,
+        "population": 758070,
+        "per_capita": 7.22
+      },
+      {
+        "shape_code": "4802",
+        "display_name": "TX-02",
+        "aggregated_amount": 21440681.23,
+        "population": 756374,
+        "per_capita": 28.35
+      },
+      {
+        "shape_code": "3203",
+        "display_name": "NV-03",
+        "aggregated_amount": 6128493.0,
+        "population": 806554,
+        "per_capita": 7.6
+      }
+    ],
+    "messages": [
+      "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+      "The 'subawards' field will be deprecated in the future. Set 'spending_level' to 'subawards' instead. See documentation for more information."
+    ]
+  }
+}

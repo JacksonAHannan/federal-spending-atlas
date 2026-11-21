@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#142f44" />
     <meta
       name="description"
-      content="Explore federal grant and contract obligations by congressional district, with GAO earmark project records and transparent sources."
+      content="Explore federal grant and contract payments and obligations by congressional district, with GAO earmark project records and transparent sources."
     />
     <title>Federal Spending Atlas</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20261121-payments-cycles" />
     <script src="vendor/d3.min.js" defer></script>
-    <script src="app.mjs" type="module"></script>
+    <script src="app.mjs?v=20261121-payments-cycles" type="module"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to dashboard</a>
@@ -29,8 +29,10 @@
       <nav aria-label="Main">
         <button class="nav active" data-view="districts" aria-pressed="true">
           District map</button
+        ><button class="nav" data-view="cycles" aria-pressed="false">
+          Cycles</button
         ><button class="nav" data-view="earmarks" aria-pressed="false">
-          Earmark explorer</button
+          Earmarks</button
         ><button id="method-open" class="nav">About the data</button>
       </nav>
     </header>
@@ -49,13 +51,12 @@
         <section id="district-view" aria-label="District spending dashboard">
           <div class="filterbar">
             <label
-              >Fiscal year<select id="year">
-                <option value="2026">FY 2026</option>
-                <option value="2025" selected>FY 2025</option>
-                <option value="2024">FY 2024</option>
-                <option value="2023">FY 2023</option>
-                <option value="2022">FY 2022</option>
+              >Measure<select id="measure">
+                <option value="outlays" selected>Payments (outlays)</option>
+                <option value="obligations">Obligations</option>
               </select></label
+            >
+            <label>Period<select id="year"></select></label
             ><label
               >Award types<select id="kind">
                 <option value="all">Grants & contracts</option>
@@ -64,8 +65,8 @@
               </select></label
             ><label
               >Compare by<select id="metric">
-                <option value="total">Total obligations</option>
-                <option value="capita">Obligations per resident</option>
+                <option value="total">Total</option>
+                <option value="capita">Per resident</option>
               </select></label
             ><label
               >State or territory<select id="state">
@@ -94,6 +95,7 @@
                 <div>
                   <h2 id="map-title">Federal award obligations</h2>
                   <p id="map-subtitle">Place of performance</p>
+                  <span id="coverage" class="coverage" hidden></span>
                 </div>
                 <button id="reset-map" class="text-button">Reset map</button>
               </div>
@@ -122,6 +124,44 @@
               <div id="district-detail" aria-live="polite"></div>
             </aside>
           </div>
+          <section
+            class="rank-panel cycle-panel"
+            aria-labelledby="cycles-heading"
+          >
+            <div class="panel-head">
+              <div>
+                <h2 id="cycles-heading">Five congressional cycles</h2>
+                <p id="cycle-scope"></p>
+              </div>
+              <button id="cycle-combined" class="outline">
+                View combined total
+              </button>
+            </div>
+            <div
+              class="table-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="Cycle comparison"
+            >
+              <table>
+                <caption class="sr-only">
+                  Federal spending across five two-year congressional reporting
+                  cycles
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Congress / reporting years</th>
+                    <th scope="col" id="cycle-total-heading">Total payments</th>
+                    <th scope="col" id="cycle-district-heading">
+                      Selected district
+                    </th>
+                    <th scope="col">Coverage</th>
+                  </tr>
+                </thead>
+                <tbody id="cycle-comparison"></tbody>
+              </table>
+            </div>
+          </section>
           <section class="rank-panel">
             <div class="panel-head">
               <div>
@@ -145,14 +185,14 @@
             >
               <table>
                 <caption class="sr-only">
-                  Congressional district federal award obligations, ranked by
+                  Congressional district federal award amounts, ranked by
                   selected measure
                 </caption>
                 <thead>
                   <tr>
                     <th scope="col">Rank</th>
                     <th scope="col">District</th>
-                    <th scope="col">Net obligations</th>
+                    <th scope="col" id="amount-heading">Payments</th>
                     <th scope="col">Per resident</th>
                     <th scope="col">Grant / contract mix</th>
                   </tr>
@@ -238,19 +278,40 @@
         <button id="method-close" aria-label="Close methodology">×</button>
       </div>
       <div class="dialog-content">
-        <h3>What the map measures</h3>
+        <h3>Payments and obligations</h3>
         <p>
-          Transaction-level net obligations for federal prime grants (award
-          types 02–05) and contracts (A–D), grouped by primary place of
-          performance. Dates run October 1–September 30 for each fiscal year.
-          Negative obligations reduce earlier commitments and remain in the
-          totals. Loans, direct payments, subawards, federal salaries, and other
-          spending are outside this dashboard’s scope.
+          Payments are reported award outlays. The “All reported payments” view
+          sums USAspending’s total_outlays for indexed prime grants (types
+          02–05) and contracts (A–D), by place of performance, without an
+          award-date filter. These are cumulative reported payments, not
+          payments made during a selected fiscal year or Congress. They are a
+          reporting snapshot, not every federal payment.
         </p>
         <p>
-          Obligations are legal commitments; outlays are actual payments. Award
-          totals are not earmarks and do not establish a lawmaker’s role in
-          securing funding.
+          Obligations use transaction-level federal commitments, including
+          negative adjustments, within the selected dates. Loans, direct
+          payments, subawards, federal salaries, and other award types are
+          outside both measures.
+        </p>
+        <p id="payment-availability">
+          Annual and cycle payments use fiscal-year-to-date File C financial
+          reports. Period-end snapshots are counted once. Calendar cycles
+          subtract their opening fiscal quarter and add their closing fiscal
+          quarter. Payment reporting before FY2022 was optional. The 2017–2018
+          payment cycle is unavailable because FY2017’s opening-quarter report
+          did not exist; combined payments cover the four measurable cycles from
+          2019. Financial records that cannot be linked to a grant or contract
+          are excluded.
+        </p>
+        <h3>Congressional reporting cycles</h3>
+        <p>
+          The five cycle views use the calendar years corresponding to the
+          115th–119th Congresses: 2017–2018, 2019–2020, 2021–2022, 2023–2024,
+          and 2025–2026. Reporting cycles begin January 1 and end December 31;
+          they are not exact January 3 swearing-in boundaries. The current cycle
+          ends September 30, 2026 in this snapshot. The combined view adds the
+          five disjoint ranges once. Cycle totals are nominal dollars and are
+          not annualized.
         </p>
         <h3>Geography and unallocated amounts</h3>
         <p>
@@ -272,13 +333,13 @@
         <div id="coverage-details"></div>
         <h3>Per-resident comparisons</h3>
         <p>
-          Per-resident amounts divide obligations by the district population
-          returned by USAspending. These are API-supplied reference populations,
-          not annual population estimates or inflation-adjusted amounts. A
-          missing or zero population produces an unavailable value. Population
-          vintage is not specified in the API response. Large institutions and
-          regional awards can dominate a district without representing benefits
-          exclusive to its residents.
+          Per-resident amounts divide the selected amount by the district
+          population returned by USAspending. These are API-supplied reference
+          populations, not annual population estimates or inflation-adjusted
+          amounts. A missing or zero population produces an unavailable value.
+          Population vintage is not specified in the API response. Large
+          institutions and regional awards can dominate a district without
+          representing benefits exclusive to its residents.
         </p>
         <h3>Earmarks and sponsorship</h3>
         <p>

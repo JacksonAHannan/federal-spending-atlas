@@ -1,0 +1,40 @@
+{
+  "contracts": {
+    "rows": 442,
+    "mapped_rows": 441,
+    "unmapped_rows": [
+      {
+        "shape_code": "",
+        "display_name": null,
+        "aggregated_amount": 28630.96,
+        "population": null,
+        "per_capita": null,
+        "total_outlays": 0.0
+      }
+    ],
+    "null_outlays": 0,
+    "zero_outlays": 1,
+    "negative_outlays": 1,
+    "total_outlays_usd": "1153877806252.20",
+    "fetched_at": "2026-11-21T21:05:47.723646+00:00"
+  },
+  "grants": {
+    "rows": 442,
+    "mapped_rows": 441,
+    "unmapped_rows": [
+      {
+        "shape_code": "",
+        "display_name": null,
+        "aggregated_amount": 395933.0,
+        "population": null,
+        "per_capita": null,
+        "total_outlays": 0.0
+      }
+    ],
+    "null_outlays": 0,
+    "zero_outlays": 1,
+    "negative_outlays": 0,
+    "total_outlays_usd": "1384012395850.09",
+    "fetched_at": "2026-11-21T21:05:23.588403+00:00"
+  }
+}

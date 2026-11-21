@@ -1,2 +1,4 @@
 requests==2.34.2
 playwright==1.65.2
+
+pyarrow==26.0.1

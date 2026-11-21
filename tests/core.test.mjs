@@ -34,3 +34,55 @@ test("rankings sort chosen award type, preserve negatives and exclude unavailabl
 test("CSV safely quotes project names, multiline descriptions, and missing values", () => {
   assert.equal(csv([['a,"b"', "line\n2", null]]), '"a,""b""","line\n2",""');
 });
+
+test("period selection keeps annual, cycle, combined and cumulative datasets separate", async () => {
+  const { getPeriod, periodLabel } = await import("../dist/core.mjs");
+  const sample = {
+    years: { 2025: { id: "annual" } },
+    cycles: { cycle119: { id: "cycle", label: "119th Congress" } },
+    cycle_total: { id: "combined" },
+    all_reported: { id: "cumulative" },
+  };
+  assert.equal(getPeriod(sample, "2025").id, "annual");
+  assert.equal(getPeriod(sample, "cycle119").id, "cycle");
+  assert.equal(getPeriod(sample, "cycles-all").id, "combined");
+  assert.equal(getPeriod(sample, "all-reported").id, "cumulative");
+  assert.equal(getPeriod(sample, "missing"), null);
+  assert.equal(periodLabel(sample, "2025"), "FY 2025");
+});
+test("unavailable period amounts do not become zero totals", async () => {
+  const { sumKnown } = await import("../dist/core.mjs");
+  assert.equal(sumKnown([{ grants: null, contracts: null }], "all"), null);
+  assert.equal(
+    sumKnown(
+      [
+        { grants: 10, contracts: -2 },
+        { grants: 0, contracts: 0 },
+      ],
+      "all",
+    ),
+    8,
+  );
+});
+test("combined agency rankings use full-period combined data before top-six truncation", async () => {
+  const { combinedCategories } = await import("../dist/core.mjs");
+  const details = {
+    all: { awarding_agency: [{ name: "Combined leader", amount: 90 }] },
+    grants: { awarding_agency: [{ name: "Grant leader", amount: 60 }] },
+    contracts: { awarding_agency: [{ name: "Contract leader", amount: 60 }] },
+  };
+  assert.equal(
+    combinedCategories(details, "all", "awarding_agency")[0].name,
+    "Combined leader",
+  );
+});
+
+test("available-cycle aggregation has a separate period key from all five cycles", async () => {
+  const { getPeriod } = await import("../dist/core.mjs");
+  const sample = {
+    cycle_total: null,
+    available_cycle_total: { start: "2019-01-01" },
+  };
+  assert.equal(getPeriod(sample, "cycles-all"), null);
+  assert.equal(getPeriod(sample, "cycles-available").start, "2019-01-01");
+});

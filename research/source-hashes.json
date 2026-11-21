@@ -40,6 +40,371 @@
     "sha256": "9d6ea7724c32bd339b34db7e053b4e8806103721ecff72fc8206401b0688257b"
   },
   {
+    "path": "data/raw/outlay-research-account-abstract.py",
+    "bytes": 1941,
+    "sha256": "e3fd4032c709cc777e275999465f0b88eb4fff6e708d933ce82ef6675bd4b43d"
+  },
+  {
+    "path": "data/raw/outlay-research-account-filters.py",
+    "bytes": 4828,
+    "sha256": "62f571cb1f9277a9cfd3f184dac3923c98511e59771582532d89cc7019946852"
+  },
+  {
+    "path": "data/raw/outlay-research-account-tests.py",
+    "bytes": 26871,
+    "sha256": "bf616aee449ff3529c0fe2d6c733d2013fc1372b03f95e3fe397cae7a9585faf"
+  },
+  {
+    "path": "data/raw/outlay-research-accounts-contract.md",
+    "bytes": 5531,
+    "sha256": "45fae1ce80d720bc71e38a8c0278a610158dc714323de4d0b4b46386a92d3c77"
+  },
+  {
+    "path": "data/raw/outlay-research-award-financial-delta.py",
+    "bytes": 19665,
+    "sha256": "2cb543219e172bc77ea9abbf20037efb41dc670d6a6e77366fe9a7d3501f3f02"
+  },
+  {
+    "path": "data/raw/outlay-research-base-download.py",
+    "bytes": 1742,
+    "sha256": "b8b811ecf60332bc8d33362a3852943592d5caadd07e21485ec99f04436ad274"
+  },
+  {
+    "path": "data/raw/outlay-research-category-district.md",
+    "bytes": 9163,
+    "sha256": "32d643ed88345c3b36bdf6d245a5a4918de4901642afcce3429d1225923b3afa"
+  },
+  {
+    "path": "data/raw/outlay-research-category.py",
+    "bytes": 14638,
+    "sha256": "737ad7633ccd9dcb92dade50d067d31fd1a7966aa91fc73c9814aee959060b98"
+  },
+  {
+    "path": "data/raw/outlay-research-column-lookups.py",
+    "bytes": 190029,
+    "sha256": "c47d825e3bf37c8dc7e9021a4d8902bfa99f05aae5c8bce4449494b113d81278"
+  },
+  {
+    "path": "data/raw/outlay-research-delta-helpers.py",
+    "bytes": 471,
+    "sha256": "e5390ff3c0f37ba62383b6236db667336ac9f6f54388cf36d0c62db14ffc7cbc"
+  },
+  {
+    "path": "data/raw/outlay-research-disaster-base.py",
+    "bytes": 20390,
+    "sha256": "60a92de20d0924a78a7d937ac9f99a308c6325fe8002a770ecb642936a75e937"
+  },
+  {
+    "path": "data/raw/outlay-research-disaster-geography-contract.md",
+    "bytes": 4946,
+    "sha256": "1c98e1aba863998950a6ca1154330abbdd7f8c611a2d3ae6b1937d53b70a2b56"
+  },
+  {
+    "path": "data/raw/outlay-research-disaster-geography.py",
+    "bytes": 15986,
+    "sha256": "3f58abcf8841209c673400831fd5b97d3925f0d0a615e9b4046b9a44b2e1d641"
+  },
+  {
+    "path": "data/raw/outlay-research-financial-download.py",
+    "bytes": 10162,
+    "sha256": "c992e43b99091cb70b9f22e34cb5eafb8fa0d733ce3a5a11bf9da58e66b0535f"
+  },
+  {
+    "path": "data/raw/outlay-research-financial-download.sql",
+    "bytes": 642,
+    "sha256": "61847892876f30bb5a89d217474d6e8768d66ed2a45aef697efc2c2cb2788361"
+  },
+  {
+    "path": "data/raw/outlay-research-financial-model.py",
+    "bytes": 1247,
+    "sha256": "6a539f1d4e3727de993d90d62945fd97017c5e3e530253c5522da0d8f098b1b6"
+  },
+  {
+    "path": "data/raw/outlay-research-lifetime-contracts.json",
+    "bytes": 100139,
+    "sha256": "39ad87c8a842568b19aca49cc6059f1454597d1c600673b2f67b8e88979588e1"
+  },
+  {
+    "path": "data/raw/outlay-research-lifetime-grants.json",
+    "bytes": 99804,
+    "sha256": "d318933cd48090f8d47311c7a66f6ea796051496bb374270425958ea7a84a4c9"
+  },
+  {
+    "path": "data/raw/outlay-research-lifetime-validation.json",
+    "bytes": 920,
+    "sha256": "e8c13fd7c029c83aa29cb01957acc0d69be7326c93147c50043627ba24778286"
+  },
+  {
+    "path": "data/raw/outlay-research-locations.py",
+    "bytes": 9720,
+    "sha256": "5eeff6c16b017df40f5f4e1ba0a81ad993f6bb2740c30ddaafda08a93b3a255e"
+  },
+  {
+    "path": "data/raw/outlay-research-national-fy2017-p12-audit.json",
+    "bytes": 3272,
+    "sha256": "139fa2c6508b5cfca0e4c4292b7ab0c1f93b2e8edd3cd46aad47b45686184299"
+  },
+  {
+    "path": "data/raw/outlay-research-probe-default-columns-status.json",
+    "bytes": 367,
+    "sha256": "af8ff264964bf7c73a82257c859d70fa9e7b34d649ec8a0d09b50d1462ef21c9"
+  },
+  {
+    "path": "data/raw/outlay-research-probe-default-columns.json",
+    "bytes": 1283,
+    "sha256": "bc82b8dbdf0a6831893a5c0013d21848a4b08650abbead80576a82324127dc2e"
+  },
+  {
+    "path": "data/raw/outlay-research-probe-request.json",
+    "bytes": 1715,
+    "sha256": "f4eb6005e8de8cb722d93d32bd407fbcd9936c5382fd034dc2c03b4d2786789e"
+  },
+  {
+    "path": "data/raw/outlay-research-probe-status.json",
+    "bytes": 367,
+    "sha256": "25e8828467ef50f61c7b52f6bf9c95fea8aaa07d0042183406eda3420a7a6090"
+  },
+  {
+    "path": "data/raw/outlay-research-probe-treasury-status.json",
+    "bytes": 369,
+    "sha256": "87b7df48866928407c06acd077fabb382ed89fb3cfbcc0280cd7ca243d136331"
+  },
+  {
+    "path": "data/raw/outlay-research-probe-treasury.json",
+    "bytes": 1720,
+    "sha256": "13eae6861ef4c284e140b3939dadd6fb13a70d50b7721369a2afb8e3aa1e6a94"
+  },
+  {
+    "path": "data/raw/outlay-research-spark-utils.py",
+    "bytes": 4001,
+    "sha256": "4d3542dc0a3bdfc839d62fe03c243ab39103b87ee1a1952c8507357e6588a6f4"
+  },
+  {
+    "path": "data/raw/outlay-research-submission-helpers.py",
+    "bytes": 12974,
+    "sha256": "997b528823c857e87d330a28795212655bc81b17d494676d140322b749d1c615"
+  },
+  {
+    "path": "data/raw/outlays-fy2017-p12-aggregate.json",
+    "bytes": 345511,
+    "sha256": "3b48bf72a51447319373ab050ba0a53cb8b74149cd2a77f8efb38fc2b816ae93"
+  },
+  {
+    "path": "data/raw/outlays-fy2017-p12-request.json",
+    "bytes": 1939,
+    "sha256": "fc52e0f9aa5e04a230aec2ff13f461f668d64c5ceaa108c2e3bebd15c404bee1"
+  },
+  {
+    "path": "data/raw/outlays-fy2017-p12-status.json",
+    "bytes": 441,
+    "sha256": "860ba535dcd6a285c893fdf8e55a14d33f61958ad6fe7b44eb2800c324796795"
+  },
+  {
+    "path": "data/raw/outlays-fy2018-p12-aggregate.json",
+    "bytes": 345593,
+    "sha256": "24a6b50c1355a6bc77382878e3a5eaceaa779701b2b66ea53a4e07c13ee38d81"
+  },
+  {
+    "path": "data/raw/outlays-fy2018-p12-request.json",
+    "bytes": 1939,
+    "sha256": "b33f6da7513ca03d2d2fcf20f5d87a70d8549aa0fdcca8256a8606d0723962d2"
+  },
+  {
+    "path": "data/raw/outlays-fy2018-p12-status.json",
+    "bytes": 388,
+    "sha256": "5b3ec29b22a1a16229dc3e73440a17c79e8d029fa1f9f5306807395d7c971e24"
+  },
+  {
+    "path": "data/raw/outlays-fy2019-p03-aggregate.json",
+    "bytes": 296792,
+    "sha256": "6c5f68bacd92b6f356d6dc60b2be90939db122f09556a9ce550c401862562c41"
+  },
+  {
+    "path": "data/raw/outlays-fy2019-p03-request.json",
+    "bytes": 1928,
+    "sha256": "c17ae97d6715bf89d39e2551526e1f2a616ff7265684b4df834794f01a2035ad"
+  },
+  {
+    "path": "data/raw/outlays-fy2019-p03-status.json",
+    "bytes": 383,
+    "sha256": "be53c485ebce35ff533b13175a45c27158c16ac3cdcfd18bac77a1400d70fba4"
+  },
+  {
+    "path": "data/raw/outlays-fy2019-p12-aggregate.json",
+    "bytes": 331442,
+    "sha256": "a24695cac6a9c2e621a1dc1d1521749b9c4ce723bdfbf49afaaf0bc2357f7f91"
+  },
+  {
+    "path": "data/raw/outlays-fy2019-p12-request.json",
+    "bytes": 1939,
+    "sha256": "c0ca27e06acd7ad576eaf1778a85f74d9e6437341c306abb0ea66270e939e196"
+  },
+  {
+    "path": "data/raw/outlays-fy2019-p12-status.json",
+    "bytes": 389,
+    "sha256": "be9e437a32a3032fa2320768a83eeda2c3aedbe4eaedae214749035818e13ebb"
+  },
+  {
+    "path": "data/raw/outlays-fy2020-p12-aggregate.json",
+    "bytes": 6068129,
+    "sha256": "3d87eeb89b8bcda4165f962fd5bc609001cd6f1a3c2d1bd1d13097dd04d57812"
+  },
+  {
+    "path": "data/raw/outlays-fy2020-p12-request.json",
+    "bytes": 1942,
+    "sha256": "b37c4ce421dcfd5d06c1e51cb5aaa017c09c64dd595e816069cb25369d757334"
+  },
+  {
+    "path": "data/raw/outlays-fy2020-p12-status.json",
+    "bytes": 394,
+    "sha256": "b2f12a5db27097a29f0d56f8f49fb1004d4eb027aba24ba3cf94879cd10713f5"
+  },
+  {
+    "path": "data/raw/outlays-fy2021-p03-aggregate.json",
+    "bytes": 4310175,
+    "sha256": "827f1db8ea152277b439e92da75729beae7577580701360c21ea0fec354f03d3"
+  },
+  {
+    "path": "data/raw/outlays-fy2021-p03-request.json",
+    "bytes": 1943,
+    "sha256": "054bf65ae50ae85aab885b6ddbced5f6777c84d38b1a6a4fe38e99afea1c616c"
+  },
+  {
+    "path": "data/raw/outlays-fy2021-p03-status.json",
+    "bytes": 394,
+    "sha256": "126e1538b021676c2e549eca418f068f417ad4d29dae4e02ea7f975e161e76c9"
+  },
+  {
+    "path": "data/raw/outlays-fy2021-p12-aggregate.json",
+    "bytes": 5966076,
+    "sha256": "66367c57b7e07a2dc641ef9bc8751da70c9b3c3aa5402571531dd4d6372e8c8c"
+  },
+  {
+    "path": "data/raw/outlays-fy2021-p12-request.json",
+    "bytes": 1945,
+    "sha256": "9708c6e89f896a49ddddb4d173b7cb0c3730d6227d98c1a9c42b5b08a9318da3"
+  },
+  {
+    "path": "data/raw/outlays-fy2021-p12-status.json",
+    "bytes": 397,
+    "sha256": "bc5a3b349566e64e1c829799b1e16dbe64a74b31fb7ba01afc75faec61600bc5"
+  },
+  {
+    "path": "data/raw/outlays-fy2022-p12-aggregate.json",
+    "bytes": 7850939,
+    "sha256": "f7045fca75ed4b78e6ef6c863072e05d6373921f34ecaf671094b6ee37c57a17"
+  },
+  {
+    "path": "data/raw/outlays-fy2022-p12-request.json",
+    "bytes": 1945,
+    "sha256": "7cb5b8356485983c10138ccacc7dc46a1e3dfc5c2ccdb0a943047b40867c5694"
+  },
+  {
+    "path": "data/raw/outlays-fy2022-p12-status.json",
+    "bytes": 395,
+    "sha256": "5ef2e3d91ce8feeaef8471f43caad1927290b67eeb69c7405502950dacab14ef"
+  },
+  {
+    "path": "data/raw/outlays-fy2023-p03-aggregate.json",
+    "bytes": 5832762,
+    "sha256": "96ce65154816fd98e15a40aa6bf7eb3617e73c8473912274fa3f0eaa1c1983a9"
+  },
+  {
+    "path": "data/raw/outlays-fy2023-p03-request.json",
+    "bytes": 1943,
+    "sha256": "af69bc0c06cd75fe1b50b80c79b8246d2eff4855982d5eb0a751b1f6ee1678bc"
+  },
+  {
+    "path": "data/raw/outlays-fy2023-p03-status.json",
+    "bytes": 394,
+    "sha256": "f1caf075378bd1435918010aade2ad01044be9f6e3f72d9f0338ab74cd00b910"
+  },
+  {
+    "path": "data/raw/outlays-fy2023-p12-aggregate.json",
+    "bytes": 8464296,
+    "sha256": "22416f9d7af48cc3c0976ff7716768f386ff50685e2023582c06ee9a074e903b"
+  },
+  {
+    "path": "data/raw/outlays-fy2023-p12-request.json",
+    "bytes": 1945,
+    "sha256": "0311ba748c0a668b74226518802304bbb91b22794531a59fa826edaee0b02839"
+  },
+  {
+    "path": "data/raw/outlays-fy2023-p12-status.json",
+    "bytes": 395,
+    "sha256": "4f82ec9951b2129090d594348ff5a7e61be9737819e74bfd87c90a3ab88c083e"
+  },
+  {
+    "path": "data/raw/outlays-fy2024-p12-aggregate.json",
+    "bytes": 8669847,
+    "sha256": "5a97d96da7e2a88cb8c121f080b3975d5cf6f6a92a5993b5fa8ce07db668fc0b"
+  },
+  {
+    "path": "data/raw/outlays-fy2024-p12-request.json",
+    "bytes": 1945,
+    "sha256": "dd543cad28b7b9b38770fee2112b5c3ac2ac58509662811854b50942d886707c"
+  },
+  {
+    "path": "data/raw/outlays-fy2024-p12-status.json",
+    "bytes": 395,
+    "sha256": "0bc8bc24d27acf4f2830f4a68753ac31a0042b349e66ae7a5f1c55c9533f7ad1"
+  },
+  {
+    "path": "data/raw/outlays-fy2025-p03-aggregate.json",
+    "bytes": 5879899,
+    "sha256": "6ce5fcb2963c280bcfefba81a59c205a12c8afdbccf66a864b67ed581f1f7701"
+  },
+  {
+    "path": "data/raw/outlays-fy2025-p03-request.json",
+    "bytes": 1943,
+    "sha256": "cd0271e556bd262ee0236e45fddd04cd8d7c93708c4359f150fa786b37c5810e"
+  },
+  {
+    "path": "data/raw/outlays-fy2025-p03-status.json",
+    "bytes": 393,
+    "sha256": "899edfdd158189850b719832e385d636541ae07dcde5aef272f8da4a35452ddb"
+  },
+  {
+    "path": "data/raw/outlays-fy2025-p12-aggregate.json",
+    "bytes": 7740270,
+    "sha256": "b872065ad44f8ea054983a4760dd013001050b356674e0048cd1d5485d076c43"
+  },
+  {
+    "path": "data/raw/outlays-fy2025-p12-request.json",
+    "bytes": 1945,
+    "sha256": "217831746962c308de05d0965772516f3af23cc724cf56d388d8d51fb65898c7"
+  },
+  {
+    "path": "data/raw/outlays-fy2025-p12-status.json",
+    "bytes": 394,
+    "sha256": "38f77242914125b75f2d83c171309b8b85aca8e92a812e9cd338e67e8106bc49"
+  },
+  {
+    "path": "data/raw/outlays-fy2026-p12-aggregate.json",
+    "bytes": 7024230,
+    "sha256": "9c2e68ed49686545fda26df53102d28f74d9d92ca057bb1acc2a7b1d2547387f"
+  },
+  {
+    "path": "data/raw/outlays-fy2026-p12-request.json",
+    "bytes": 1945,
+    "sha256": "caeddf4eae76db3607392f4edad8f6a4c5e25895e661e9f004d7fa2473ae74d3"
+  },
+  {
+    "path": "data/raw/outlays-fy2026-p12-status.json",
+    "bytes": 395,
+    "sha256": "366b1924dc0be3783d6066686182ac70c9055f7e6de1789c045271a23890846f"
+  },
+  {
+    "path": "data/raw/outlays-treasury-fy2025-test-request.json",
+    "bytes": 1580,
+    "sha256": "36852304f61fb2630cafe03d5439ac033f68f96ad52c33f2742243c50ffe35ac"
+  },
+  {
+    "path": "data/raw/outlays-treasury-fy2025-test-status.json",
+    "bytes": 439,
+    "sha256": "eb814660922bfed2603f91dfbf7d794ceae288a2c59b283097961e46bbcfdac6"
+  },
+  {
     "path": "data/raw/usaspending-2022-contracts.json",
     "bytes": 81745,
     "sha256": "11b4ebc32aa4c4c3c2090799ab33c99e742dcae71f7c1323f068847884f546dd"
@@ -88,6 +453,56 @@
     "path": "data/raw/usaspending-2026-grants.json",
     "bytes": 81294,
     "sha256": "fecd63a9786149048f4978fd6f03c45e872310eaca7548361ba93163a8995085"
+  },
+  {
+    "path": "data/raw/usaspending-cycle115-contracts.json",
+    "bytes": 81949,
+    "sha256": "d40b64000795538d5056b1ccf74bb660f60e59f402627eb8c2ce6bbff4afadb8"
+  },
+  {
+    "path": "data/raw/usaspending-cycle115-grants.json",
+    "bytes": 81588,
+    "sha256": "d6d81d382a6730000ed47333b50bc8d3f023453c9548e942de3b7a93e394f881"
+  },
+  {
+    "path": "data/raw/usaspending-cycle116-contracts.json",
+    "bytes": 81995,
+    "sha256": "b62c9000d583f232770e22fae6bf1b983b7739d20e3131269a4089b50c2e90dd"
+  },
+  {
+    "path": "data/raw/usaspending-cycle116-grants.json",
+    "bytes": 81675,
+    "sha256": "e871fee286d390bdd85e790758cb1d6d69d989adc7af41d701a7bbf466ff72ec"
+  },
+  {
+    "path": "data/raw/usaspending-cycle117-contracts.json",
+    "bytes": 82011,
+    "sha256": "039610ec4ca24b5758bb6c221a25ec04f0673723193e8c06157a3adcc980e14f"
+  },
+  {
+    "path": "data/raw/usaspending-cycle117-grants.json",
+    "bytes": 81831,
+    "sha256": "1661156cf37b6b292a4b6faf42081236cd98830ea7decd52b3b7cd2a50416cbf"
+  },
+  {
+    "path": "data/raw/usaspending-cycle118-contracts.json",
+    "bytes": 82051,
+    "sha256": "300d5b01bdd6ded1074a0b555c423e2b876b2d33448717bc7cd3dc5d88e08e2a"
+  },
+  {
+    "path": "data/raw/usaspending-cycle118-grants.json",
+    "bytes": 81758,
+    "sha256": "f082a690be5ba3bd23aa0b68fd294eeb3ba89e2c1fb9082ff7637b6484aab8cd"
+  },
+  {
+    "path": "data/raw/usaspending-cycle119-contracts.json",
+    "bytes": 82005,
+    "sha256": "f1a151496e3b2ca96ab7d249ba5d25e99d2c91f4c42e38bf023356fd0a6cd018"
+  },
+  {
+    "path": "data/raw/usaspending-cycle119-grants.json",
+    "bytes": 81611,
+    "sha256": "8f95f127454f0d373dddd53d26aa7f48dde6e3d9451d5885a9e2673f1818a415"
   },
   {
     "path": "data/raw/usaspending-outlays-probe.json",

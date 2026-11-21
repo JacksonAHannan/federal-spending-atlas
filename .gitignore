@@ -3,3 +3,4 @@
 __pycache__/
 research/*.png
 research/test-export.csv
+data/downloads/

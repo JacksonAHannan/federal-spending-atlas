@@ -1209,3 +1209,63 @@ th:nth-child(4) {
     margin-top: 18px;
   }
 }
+.coverage {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #fff0d8;
+  color: #7c4800;
+  font-size: 13px;
+}
+.cycle-panel th:nth-child(2),
+.cycle-panel td:nth-child(2),
+.cycle-panel th:nth-child(3),
+.cycle-panel td:nth-child(3) {
+  text-align: right;
+}
+.cycle-panel th:nth-child(4),
+.cycle-panel td:nth-child(4) {
+  text-align: left;
+}
+.cycle-panel .district-link {
+  text-align: left;
+  line-height: 1.5;
+}
+.cycle-panel td:last-child {
+  font-size: 13px;
+  color: var(--muted);
+}
+.cycle-panel .panel-head {
+  align-items: center;
+}
+.cycle-panel .table-scroll {
+  min-width: 0;
+}
+.trend-item {
+  min-width: 0;
+}
+.trend-item span {
+  white-space: normal;
+}
+.filterbar select {
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  nav {
+    gap: 15px;
+  }
+  .nav {
+    font-size: 13px;
+  }
+  .cycle-panel td,
+  .cycle-panel th {
+    padding: 12px 14px;
+  }
+  .cycle-panel .panel-head {
+    align-items: flex-start;
+  }
+  .cycle-panel .panel-head button {
+    width: 100%;
+  }
+}
