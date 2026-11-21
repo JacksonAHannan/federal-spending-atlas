@@ -24,6 +24,11 @@ User authorized GitHub hosting/sharing and requested usability research, less co
 - [x] UI research and cleanup; source notes in research/ui-principles.md.
 - [x] Exact raw/derived data reconciliations and focused logic tests pass.
 - [x] Desktop/mobile browser checks pass, including live CORS API requests.
-- [ ] Create new GitHub repository, push reviewed source, enable Pages, verify deployed URL and browser behavior.
+- [x] Create new GitHub repository, push reviewed source, enable Pages, verify deployed URL and browser behavior.
 
-Next action: publish the verified static dist/ through GitHub Pages.
+Completed: https://jacksonahannan.github.io/federal-spending-atlas/
+Source: https://github.com/JacksonAHannan/federal-spending-atlas
+
+Published gh-pages commit b3cf8772d60d4686d4aac6b8c812648a1bcf2d8f. GitHub Pages reports built; HTTP 200. Deployed index, JavaScript, stylesheet, D3, spending, GAO, and boundary assets match local SHA-256 hashes. Full browser interaction checks pass against the hosted project subpath, including direct live API requests and 390px mobile layout. Four focused logic tests and all source reconciliation checks pass. No JavaScript errors.
+
+Historical availability question documented in research/historical-coverage.md; implemented coverage was not changed. Remaining limits: GAO does not support project district attribution; snapshots are not automatically refreshed; live top-six lists can reflect later source revisions. No blockers.

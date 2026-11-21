@@ -1,5 +1,7 @@
 # Federal Spending Atlas
 
+[Open the dashboard](https://jacksonahannan.github.io/federal-spending-atlas/)
+
 Interactive congressional district map of **federal prime grant and contract net obligations**, FY2022–FY2026. Includes a separate searchable compilation of **20,294 enacted GAO earmark projects**, FY2022–FY2024.
 
 The interface uses Arial/Helvetica, concise controls, a searchable ranking table, CSV exports, and a responsive map. See [usability research](research/ui-principles.md).
